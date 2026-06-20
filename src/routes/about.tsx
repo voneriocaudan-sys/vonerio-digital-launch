@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
 });
 
 // NOTE: Founder portrait uses an Unsplash placeholder. Swap for Loïc's brand portrait in production.
-const PORTRAIT = "";
+const PORTRAIT = "<img width="1024" height="1024" alt="ProPicture2 copy" src="https://github.com/user-attachments/assets/5541a7e2-2295-4ba5-bbcf-67c4357e298e" />";
 
 function About() {
   return (
