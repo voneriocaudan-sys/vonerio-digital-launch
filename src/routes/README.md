@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="ProPicture2 copy" src="https://github.com/user-attachments/assets/f7c19dbf-ba37-46f1-aee4-e582d45e6f14" />
+
 # Routes
 
 TanStack Start uses **file-based routing**. Every `.tsx` file in this directory
@@ -20,3 +20,6 @@ is `src/routes/__root.tsx`.
 | `__root.tsx` | app shell — wraps every page; preserve `<Outlet />` |
 
 `routeTree.gen.ts` is auto-generated. Don't edit it by hand.
+
+
+<img width="1024" height="1024" alt="ProPicture2 copy" src="https://github.com/user-attachments/assets/5541a7e2-2295-4ba5-bbcf-67c4357e298e" />
