@@ -21,5 +21,3 @@ is `src/routes/__root.tsx`.
 
 `routeTree.gen.ts` is auto-generated. Don't edit it by hand.
 
-
-<img width="1024" height="1024" alt="ProPicture2 copy" src="https://github.com/user-attachments/assets/5541a7e2-2295-4ba5-bbcf-67c4357e298e" />
