@@ -8,20 +8,20 @@ export function Logo({ className = "" }: { className?: string }) {
       >
         {/* V symbol - left stroke */}
         <path
-          d="M 58 12 L 78 12 L 58 62 L 38 62 Z"
+          d="M 72 8 L 98 8 L 99 55 L 92 55 Z"
           fill="currentColor"
           className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]"
         />
         {/* V symbol - right stroke */}
         <path
-          d="M 82 12 L 102 12 L 82 62 L 62 62 Z"
+          d="M 102 8 L 128 8 L 108 55 L 101 55 Z"
           fill="currentColor"
           className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]"
         />
         {/* TM superscript */}
         <text
-          x="105"
-          y="18"
+          x="130"
+          y="14"
           fontSize="8"
           fontFamily="sans-serif"
           fill="currentColor"
@@ -31,12 +31,11 @@ export function Logo({ className = "" }: { className?: string }) {
         </text>
         {/* vonerio wordmark */}
         <text
-          x="80"
-          y="74"
-          fontSize="28"
+          x="100"
+          y="72"
+          fontSize="24"
           fontFamily="var(--font-display), sans-serif"
           fontWeight="500"
-          letterSpacing="0.02em"
           fill="currentColor"
           textAnchor="middle"
           className="text-foreground"
