@@ -18,7 +18,7 @@ export const Route = createFileRoute("/about")({
 });
 
 // NOTE: Founder portrait uses an Unsplash placeholder. Swap for Loïc's brand portrait in production.
-const PORTRAIT = "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80";
+const PORTRAIT = "";
 
 function About() {
   return (
@@ -28,7 +28,7 @@ function About() {
           <Pill>About Vonerio</Pill>
           <h1 className="text-hero mt-6 max-w-4xl">A methodology built on the deals.</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Vonerio packages a decade of enterprise selling — territory models, CFO business cases, multi-stakeholder orchestration and negotiation frameworks — into a system teams can own.
+            Vonerio packages a decade of enterprise selling from territory models, CFO business cases, multi-stakeholder orchestration and negotiation frameworks into a system teams can own.
           </p>
         </Reveal>
       </section>
@@ -55,9 +55,9 @@ function About() {
               <span className="font-semibold text-[var(--color-violet)] dark:text-[var(--color-magenta)]">$16.2M. 12 countries. 18 months.</span> I was 28."
             </blockquote>
             <div className="mt-8 space-y-5 text-[1.0625rem] leading-relaxed text-muted-foreground">
-              <p>That deal happened because I had a system — a way of mapping buying committees before the first call, building financial models the CFO could defend internally, and running a negotiation across EMEA, LatAm, US and APAC simultaneously without losing the thread.</p>
-              <p>That system is what I've spent ten years building. It's what I now teach through Vonerio.</p>
-              <p>I sell complex enterprise technology — data platforms, cloud infrastructure, SaaS — into accounts where the average deal involves 10–15 stakeholders, 12–18 month cycles and boards that sign off across jurisdictions. <span className="font-medium text-foreground">$26M+ closed as an individual contributor</span> — carrying quota, building pipeline, and closing.</p>
+              <p>That deal happened because I had a system, a way of mapping buying committees before the first call, building financial models the CFO could defend internally, and running a negotiation across EMEA, LatAm, US and APAC simultaneously without losing the thread.</p>
+              <p>That system is what I've spent ten years building. It's what I now teach and implement through Vonerio.</p>
+              <p>I sell complex enterprise technology from data platforms, cloud infrastructure, SaaS, Data & AI into accounts where the average deal involves 10–15 stakeholders, 9-12 month cycles and boards that sign off across jurisdictions. <span className="font-medium text-foreground">$26M+ closed as an individual contributor</span> carrying quota, building pipeline, and closing.</p>
             </div>
           </Reveal>
         </div>
@@ -80,7 +80,7 @@ function About() {
           <SectionHeading
             eyebrow="Methodology"
             title="Four pillars · twenty deliverables."
-            sub="Sourced from the AI-Powered Enterprise Sales Cycle playbook. All 20 sub-items map to a named Vonerio deliverable — none of the output is generic; every artifact closes a specific gap."
+            sub="Sourced from the AI-Powered Enterprise Sales Cycle playbook. All 20 sub-items map to a named Vonerio deliverable and none of the output is generic; every artifact closes a specific gap."
           />
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-2">
@@ -93,7 +93,7 @@ function About() {
 
       <CTABand
         title="Want to see your team scored against the four pillars?"
-        sub="A Diagnostic — from a one-week Pulse Check to a multi-geo deep dive — gives you a prioritized plan within weeks."
+        sub="A Diagnostic from a one-week Pulse Check to a multi-geo deep dive gives you a prioritized plan within weeks."
         primary={{ label: "Book a diagnostic", to: "/contact", variant: "energy" }}
         secondary={{ label: "See offerings", to: "/services" }}
       />
