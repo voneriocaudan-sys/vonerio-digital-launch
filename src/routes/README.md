@@ -1,3 +1,4 @@
+<img width="1024" height="1024" alt="ProPicture2 copy" src="https://github.com/user-attachments/assets/f7c19dbf-ba37-46f1-aee4-e582d45e6f14" />
 # Routes
 
 TanStack Start uses **file-based routing**. Every `.tsx` file in this directory
