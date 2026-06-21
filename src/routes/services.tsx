@@ -9,9 +9,9 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services Vonerio" },
-      { name: "description", content: "Three offerings, nine tiers. Diagnostic, System Building and Fractional Leadership fixed prices, fixed timelines, outcome-linked payments." },
+      { name: "description", content: "Three offerings, nine tiers. Diagnostic, System Building and Fractional CRO fixed prices, fixed timelines, outcome-linked payments." },
       { property: "og:title", content: "Services Vonerio" },
-      { property: "og:description", content: "Diagnostic, System Building and Fractional Leadership sized to your team." },
+      { property: "og:description", content: "Diagnostic, System Building and Fractional CRO sized to your team." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
