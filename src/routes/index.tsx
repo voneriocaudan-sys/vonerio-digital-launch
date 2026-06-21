@@ -54,7 +54,7 @@ function Home() {
               <div className="absolute -inset-4 -z-10 rounded-[28px] bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10" />
               <img
                 src={HERO_IMG}
-                alt="Enterprise sales strategy session"
+                alt="Loïc Caudan, Founder of Vonerio Fractional CRO"
                 className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[0_40px_80px_-40px_rgba(46,26,71,0.45)]"
                 loading="eager"
               />
