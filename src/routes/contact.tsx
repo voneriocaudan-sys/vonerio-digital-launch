@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact Vonerio" },
-      { name: "description", content: "Tell me about your team and pipeline. I'll reply personally usually within 1 business day." },
-      { property: "og:title", content: "Contact Vonerio" },
+      { title: "Contact — Vonerio" },
+      { name: "description", content: "Tell me about your team and pipeline. I'll reply personally — usually within 1 business day." },
+      { property: "og:title", content: "Contact — Vonerio" },
       { property: "og:description", content: "Reach Loïc Caudan directly. Founding Cohort enquiries are prioritized." },
       { property: "og:url", content: "/contact" },
     ],
@@ -31,7 +31,7 @@ function Contact() {
     }
   }, []);
 
-  // FormSubmit.co no backend required. First submission triggers a one-time
+  // FormSubmit.co — no backend required. First submission triggers a one-time
   // confirmation email to contact@vonerio.com to activate the form.
   const nextUrl =
     typeof window !== "undefined"
@@ -56,7 +56,7 @@ function Contact() {
           <Reveal>
             <ul className="space-y-7">
               <Info icon={Mail} title="Email" lines={[<a key="m" href="mailto:contact@vonerio.com" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">contact@vonerio.com</a>]} />
-              <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
+              <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
               <Info icon={Globe} title="Regions" lines={["EMEA · APAC · LatAm", "Fluent in English, French, Spanish & Portuguese (Bahasa Indonesia ongoing)."]} />
               <Info icon={Clock} title="Response time" lines={["Within 1 business day.", "Founding Cohort enquiries are prioritized."]} />
             </ul>
@@ -93,7 +93,7 @@ function Contact() {
                     <option>Diagnostic</option>
                     <option>System Building</option>
                     <option>Fractional Leadership</option>
-                    <option>Not sure yet, help me choose</option>
+                    <option>Not sure yet — help me choose</option>
                   </select>
                 </div>
                 <div>
@@ -114,7 +114,7 @@ function Contact() {
         <div role="status" className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 px-4">
           <div className="flex items-center gap-3 rounded-full bg-[var(--color-indigo)] px-5 py-3 text-sm text-white shadow-2xl">
             <CheckCircle2 className="h-4 w-4 text-[var(--color-tangerine)]" />
-            Message sent I'll reply within 1 business day.
+            Message sent — I'll reply within 1 business day.
           </div>
         </div>
       )}
