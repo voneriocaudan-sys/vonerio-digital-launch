@@ -7,9 +7,9 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vonerio — Enterprise sales systems that close $1M+ deals" },
+      { title: "Vonerio Enterprise sales systems that close $1M+ deals" },
       { name: "description", content: "Diagnose what's slowing your pipeline, build the system to fix it with your reps, and lead the motion until it sticks. $26M+ closed by the operator behind it." },
-      { property: "og:title", content: "Vonerio — Enterprise sales systems that close $1M+ deals" },
+      { property: "og:title", content: "Vonerio Enterprise sales systems that close $1M+ deals" },
       { property: "og:description", content: "Diagnose, build, lead. An operator's sales system, not a consultant's template." },
       { property: "og:url", content: "/" },
     ],
@@ -96,12 +96,12 @@ function Home() {
           <SectionHeading
             eyebrow="What I do"
             title="Three offerings, built to compound."
-            sub="From a one-week pulse check to a 90-day system build to fractional leadership on your top deals — sized to what your team actually needs."
+            sub="From a one-week pulse check to a 90-day system build to fractional leadership on your top deals sized to what your team actually needs."
           />
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Reveal><OverviewCard n="01" icon={SearchCheck} title="Diagnostic" body="A data-driven read on what's broken — scored against the 4-pillar Prerequisites framework, with a prioritized action plan. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
-          <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="System Building" body="I build the system with your reps in 90 days — playbook, scripts, objections handling, battle cards, cadences. Co-built live, not delivered as a static document." to="/services" hash="system-building" /></Reveal>
+          <Reveal><OverviewCard n="01" icon={SearchCheck} title="Diagnostic" body="A data-driven read on what's broken scored against the 4-pillar Prerequisites framework, with a prioritized action plan. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
+          <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="System Building" body="I build the system with your reps in 90 days playbook, scripts, objections handling, battle cards, cadences. Co-built live, not delivered as a static document." to="/services" hash="system-building" /></Reveal>
           <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Fractional Leadership" body="Senior sales leadership on shared time: pipeline governance, forecasting and hands-on coaching on your top deals. Try a 6-week sprint before any commitment." to="/services" hash="fractional" /></Reveal>
         </div>
       </section>
@@ -113,7 +113,7 @@ function Home() {
             <SectionHeading
               eyebrow="Methodology"
               title="Four pillars of enterprise sales readiness."
-              sub="Twenty sub-items, each tied to a named deliverable. No generic templates — every artifact closes a specific gap."
+              sub="Twenty sub-items, each tied to a named deliverable. No generic templates every artifact closes a specific gap."
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -137,13 +137,13 @@ function Home() {
           <Reveal delay={100}>
             <SectionHeading
               eyebrow="Why Vonerio"
-              title={<>An operator's system — <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">not a consultant's template.</span></>}
+              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">not a consultant's template.</span></>}
             />
             <ul className="mt-8 space-y-5">
               <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
               <Why icon={Users} title="Co-built with your reps." body="Each artifact is tested on a real deal before it's finalized." />
               <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to a real adoption signal, not elapsed time." />
-              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system — no ongoing dependency." />
+              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system no ongoing dependency." />
             </ul>
           </Reveal>
         </div>
@@ -153,8 +153,8 @@ function Home() {
       <section className="bg-[var(--color-indigo)] text-white">
         <div className="container-page py-16 md:py-20">
           <div className="grid gap-10 md:grid-cols-4">
-            <ProofStat value="$16.2M" label="Largest single deal — 12 countries, 18 months" />
-            <ProofStat value="$279M" label="First Vonerio client — full assess-and-build cycle" />
+            <ProofStat value="$16.2M" label="Largest single deal 12 countries, 18 months" />
+            <ProofStat value="$279M" label="First Vonerio client full assess-and-build cycle" />
             <ProofStat value="$400M" label="Sales vertical that adopted the methodology" />
             <ProofStat value="4" label="Languages negotiated & closed in, live" />
           </div>
@@ -168,7 +168,7 @@ function Home() {
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Step n="01" title="Diagnose" body="Stakeholder interviews, CRM/data audit and a MEDDPICC-based pipeline review scored against the four readiness pillars." />
-          <Step n="02" title="Build" body="In 90 days I co-build the system with your reps — playbook, battle cards, cadences, dashboards — tested on live deals." />
+          <Step n="02" title="Build" body="In 90 days I co-build the system with your reps playbook, battle cards, cadences, dashboards tested on live deals." />
           <Step n="03" title="Lead & embed" body="Fractional leadership on top deals plus handover to a trained internal owner. No ongoing dependency." />
         </div>
       </section>
@@ -219,5 +219,5 @@ function Step({ n, title, body }: { n: string; title: string; body: string }) {
   );
 }
 
-// CheckItem imported but currently unused on home — kept for future modular use
+// CheckItem imported but currently unused on home kept for future modular use
 void CheckItem;

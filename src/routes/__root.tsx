@@ -57,7 +57,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vonerio — Enterprise sales systems that close $1M+ deals" },
+      { title: "Vonerio Enterprise sales systems that close $1M+ deals" },
       { name: "description", content: "Vonerio diagnoses what's slowing your pipeline, builds the system to fix it with your reps, and leads the motion until it sticks." },
       { property: "og:site_name", content: "Vonerio" },
       { property: "og:type", content: "website" },
