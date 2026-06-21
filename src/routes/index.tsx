@@ -101,7 +101,7 @@ function Home() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Reveal><OverviewCard n="01" icon={SearchCheck} title="Diagnostic" body="A data-driven read on what's broken scored against the 4-pillar Prerequisites framework, with a prioritized action plan. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
           <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="System Building" body="I build the system with your reps in 90 days playbook, scripts, objections handling, battle cards, cadences. Co-built live, not delivered as a static document." to="/services" hash="system-building" /></Reveal>
-          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Fractional Leadership" body="Senior sales leadership on shared time: pipeline governance, forecasting and hands-on coaching on your top deals. Try a 6-week sprint before any commitment." to="/services" hash="fractional" /></Reveal>
+          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Fractional CRO" body="Senior sales leadership on shared time: pipeline governance, forecasting and hands-on coaching on your top deals. Try a 6-week sprint before any commitment." to="/services" hash="fractional" /></Reveal>
         </div>
       </section>
 
