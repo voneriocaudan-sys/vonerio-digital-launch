@@ -101,7 +101,7 @@ const FAQS = [
   { q: "Do I need a Diagnostic before System Building?", a: "System Building requires a completed Diagnostic (any tier) or a fast-track mini-assessment in week one, plus a named internal owner. The Diagnostic feeds directly into the build no rework if you continue." },
   { q: "What does \"outcome-linked payment\" mean?", a: "For System Building, the final installment is due when one or more reps have logged a qualified deal using the new standard or 30 days post-handover, whichever comes first. You own the artifacts on final payment." },
   { q: "Is there a guarantee?", a: "Yes. The Diagnostic report must surface 3+ specific, actionable priorities or the fee (or delivery installment) is waived." },
-  { q: "Who is this for?", a: "Companies with $5M–$100M in revenue selling complex B2B SaaS/observability, ServiceNow, consulting & managed services, cloud transformation, and data & AI where deals involve multiple stakeholders and long cycles." },
+  { q: "Who is this for?", a: "Tech companies between $1M-$300M revenue selling SaaS, Cloud, Platforms, Data & AI, Tech Transformation or Managed Services where deals involve multiple stakeholders and long cycles. Leaders who want a repeatable system for winning 6-7 figures deals their team owns and adhere to as they scale so the company don't rely on 1 or 2 heroes." },
 ];
 
 function FAQ() {
