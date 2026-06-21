@@ -64,8 +64,7 @@ function Home() {
                     <TrendingUp className="h-4 w-4" />
                   </span>
                   <div>
-                    <div className="text-xs font-medium uppercase tracking-wider text-muted-foreground">#1 in EMEA</div>
-                    <div className="text-sm font-semibold">Ramp cut 18mo → 9mo</div>
+                    <div className="text-sm font-semibold">Fractional CRO</div>
                   </div>
                 </div>
               </div>
