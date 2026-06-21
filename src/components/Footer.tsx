@@ -13,7 +13,7 @@ export function Footer() {
             Enterprise sales systems that close $1M+ deals built by an operator who still carries a quota.
           </p>
           <div className="mt-5 flex items-center gap-2">
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white">
+            <a href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white">
               <Linkedin className="h-4 w-4" />
             </a>
             <a href="mailto:contact@vonerio.com" aria-label="Email" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white">

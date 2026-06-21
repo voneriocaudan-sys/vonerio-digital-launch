@@ -56,7 +56,7 @@ function Contact() {
           <Reveal>
             <ul className="space-y-7">
               <Info icon={Mail} title="Email" lines={[<a key="m" href="mailto:contact@vonerio.com" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">contact@vonerio.com</a>]} />
-              <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
+              <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
               <Info icon={Globe} title="Regions" lines={["EMEA · APAC · LatAm", "Fluent in English, French, Spanish & Portuguese (Bahasa Indonesia ongoing)."]} />
               <Info icon={Clock} title="Response time" lines={["Within 1 business day.", "Founding Cohort enquiries are prioritized."]} />
             </ul>
@@ -72,7 +72,7 @@ function Contact() {
           {/* Right: form */}
           <Reveal delay={100}>
             <form
-              action="https://formsubmit.co/contact@vonerio.com"
+              action="https://formsubmit.co/loic.caudan@vonerio.com"
               method="POST"
               className="rounded-2xl border border-border bg-card p-7 md:p-8"
             >
