@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="vbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8B42C7"/>
+      <stop offset="1" stop-color="#6921A9"/>
+    </linearGradient>
+  </defs>
+  <!-- Purple background tile -->
+  <rect width="512" height="512" fill="url(#vbg)"/>
+  <!-- White V mark, centered with safe-area padding -->
+  <g transform="translate(95,130) scale(2.117)" fill="#FFFFFF">
+    <path d="M0,4 L27,4 L69,76 L69,115 L64,115 Z"/>
+    <path d="M152,4 L125,4 L83,76 L83,115 L88,115 Z"/>
+  </g>
+</svg>
