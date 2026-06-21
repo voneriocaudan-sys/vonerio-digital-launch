@@ -60,7 +60,7 @@ function Services() {
 
       <ServiceSection
         id="fractional"
-        eyebrow="03 · Fractional Leadership"
+        eyebrow="03 · Fractional CRO"
         title="Senior sales leadership, on shared time."
         intro="Pipeline governance, forecasting and hands-on coaching on your top 3–5 strategic deals enterprise-caliber leadership without a $200K+ full-time hire. Try a 6-week sprint first."
         cards={[
