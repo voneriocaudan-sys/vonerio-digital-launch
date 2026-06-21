@@ -57,11 +57,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Vonerio Enterprise sales systems that close $1M+ deals" },
+      { title: "Vonerio Enterprise sales system that closes $1M+ deals" },
       { name: "description", content: "Vonerio diagnoses what's slowing your pipeline, builds the system to fix it with your reps, and leads the motion until it sticks." },
       { property: "og:site_name", content: "Vonerio" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Vonerio Enterprise sales system that closes $1M+ deals" },
+      { name: "twitter:title", content: "Vonerio Enterprise sales system that closes $1M+ deals" },
+      { property: "og:description", content: "Vonerio diagnoses what's slowing your pipeline, builds the system to fix it with your reps, and leads the motion until it sticks." },
+      { name: "twitter:description", content: "Vonerio diagnoses what's slowing your pipeline, builds the system to fix it with your reps, and leads the motion until it sticks." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xVgeoZfTC3Vz16YH5Kstbd1a0UN2/social-images/social-1782050116659-vonerio-social.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xVgeoZfTC3Vz16YH5Kstbd1a0UN2/social-images/social-1782050116659-vonerio-social.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
