@@ -24,7 +24,7 @@ export function Footer() {
         <FooterCol title="Services">
           <FooterLink to="/services" hash="diagnostic">Diagnostic</FooterLink>
           <FooterLink to="/services" hash="system-building">System Building</FooterLink>
-          <FooterLink to="/services" hash="fractional">Fractional Leadership</FooterLink>
+          <FooterLink to="/services" hash="fractional">Fractional CRO</FooterLink>
         </FooterCol>
         <FooterCol title="Company">
           <FooterLink to="/about">About</FooterLink>
