@@ -17,8 +17,7 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-// NOTE: Founder portrait uses an Unsplash placeholder. Swap for Loïc's brand portrait in production.
-const PORTRAIT = "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&q=80";
+import PORTRAIT from "@/assets/loic-caudan.jpg";
 
 function About() {
   return (
