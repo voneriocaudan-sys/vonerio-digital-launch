@@ -87,12 +87,28 @@ function Contact() {
                 <Field label="Work email" name="email" type="email" required />
                 <Field label="Company" name="company" required />
                 <div>
+                  <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground">
+                    Contact number <span className="text-muted-foreground font-normal">(WhatsApp or Telegram preferred include country prefix)</span>
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    inputMode="tel"
+                    autoComplete="tel"
+                    pattern="^\+[0-9\s().-]{6,}$"
+                    title="Include your country prefix, e.g. +33 6 12 34 56 78"
+                    placeholder="e.g. +33 6 12 34 56 78"
+                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30"
+                  />
+                </div>
+                <div>
                   <label htmlFor="interest" className="mb-2 block text-sm font-medium text-foreground">I'm interested in</label>
                   <select id="interest" name="interest" required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30">
                     <option value="">Select an option…</option>
                     <option>Diagnostic</option>
                     <option>System Building</option>
-                    <option>Fractional Leadership</option>
+                    <option>Fractional CRO</option>
                     <option>Not sure yet help me choose</option>
                   </select>
                 </div>

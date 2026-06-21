@@ -9,9 +9,9 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services Vonerio" },
-      { name: "description", content: "Three offerings, nine tiers. Diagnostic, System Building and Fractional Leadership fixed prices, fixed timelines, outcome-linked payments." },
+      { name: "description", content: "Three offerings, nine tiers. Diagnostic, System Building and Fractional CRO fixed prices, fixed timelines, outcome-linked payments." },
       { property: "og:title", content: "Services Vonerio" },
-      { property: "og:description", content: "Diagnostic, System Building and Fractional Leadership sized to your team." },
+      { property: "og:description", content: "Diagnostic, System Building and Fractional CRO sized to your team." },
       { property: "og:url", content: "/services" },
     ],
     links: [{ rel: "canonical", href: "/services" }],
@@ -51,8 +51,8 @@ function Services() {
           title="I build the system with your reps and it sticks."
           intro="Co-built live in build sprints, not delivered as a static document. Playbook, battle cards, cadences, CRM configuration and a KPI dashboard. Final payment is tied to a real adoption signal."
           cards={[
-            { name: "Core Build", tagline: "Right-sized system build for small teams (≤5 reps).", price: "$17,600", priceNote: "Founding · list $22,000 (−20%)", badge: "List $22,000 · −20%", features: ["3 pillars, 1–2 priority sub-items each", "MEDDPICC standard + core playbook", "Basic CRM stage/field configuration", "45 days · 50% kickoff / 50% handover"] },
-            { name: "Standard", tagline: "Full system built with your reps in 90 days, ready to scale.", price: "$33,600", priceNote: "Founding · list $42,000 (−20%)", badge: "List $42,000 · −20%", featured: true, ribbon: "Flagship", features: ["All 4 pillars, 12–16 priority sub-items", "Playbook, battle cards, cadences, dashboard", "CRM configured as single source of truth", "90 days, thirds · final third outcome-linked"] },
+            { name: "Core Build", tagline: "Right-sized system build for small teams (≤5 reps).", price: "$17,600", priceNote: "Founding · list $22,000 (−20%)", badge: "List $22,000 · −20%", features: ["3 pillars, 1–2 priority sub-items each", "MEDDPICC standard + core playbook", "UVP definition, positioning & sales battle cards", "45 days · 50% kickoff / 50% handover"] },
+            { name: "Standard", tagline: "Full system built with your reps in 90 days, ready to scale.", price: "$33,600", priceNote: "Founding · list $42,000 (−20%)", badge: "List $42,000 · −20%", featured: true, ribbon: "Flagship", features: ["All 4 pillars, 12–16 priority sub-items", "Playbook, ICP, account tiering and growth Plan", "UVP definition, positioning & sales battle cards", "90 days, thirds · final third outcome-linked"] },
             { name: "Complex", tagline: "8+ reps and/or multi-offering / multi-geography.", price: "$52,000", priceNote: "Founding · list $65,000 (−20%)", badge: "List $65,000 · −20%", features: ["All 4 pillars, all 20 sub-items", "Scaled across multiple BUs / geos", "Cross-functional build sessions", "90 days, thirds · final third outcome-linked"] },
           ]}
         />
@@ -60,7 +60,7 @@ function Services() {
 
       <ServiceSection
         id="fractional"
-        eyebrow="03 · Fractional Leadership"
+        eyebrow="03 · Fractional CRO"
         title="Senior sales leadership, on shared time."
         intro="Pipeline governance, forecasting and hands-on coaching on your top 3–5 strategic deals enterprise-caliber leadership without a $200K+ full-time hire. Try a 6-week sprint first."
         cards={[
@@ -101,7 +101,7 @@ const FAQS = [
   { q: "Do I need a Diagnostic before System Building?", a: "System Building requires a completed Diagnostic (any tier) or a fast-track mini-assessment in week one, plus a named internal owner. The Diagnostic feeds directly into the build no rework if you continue." },
   { q: "What does \"outcome-linked payment\" mean?", a: "For System Building, the final installment is due when one or more reps have logged a qualified deal using the new standard or 30 days post-handover, whichever comes first. You own the artifacts on final payment." },
   { q: "Is there a guarantee?", a: "Yes. The Diagnostic report must surface 3+ specific, actionable priorities or the fee (or delivery installment) is waived." },
-  { q: "Who is this for?", a: "Companies with $5M–$100M in revenue selling complex B2B SaaS/observability, ServiceNow, consulting & managed services, cloud transformation, and data & AI where deals involve multiple stakeholders and long cycles." },
+  { q: "Who is this for?", a: "Tech companies between $1M-$300M revenue selling SaaS, Cloud, Platforms, Data & AI, Tech Transformation or Managed Services where deals involve multiple stakeholders and long cycles. Leaders who want a repeatable system for winning 6-7 figures deals their team owns and adhere to as they scale so the company don't rely on 1 or 2 heroes." },
 ];
 
 function FAQ() {
