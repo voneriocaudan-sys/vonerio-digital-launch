@@ -47,7 +47,7 @@ function About() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <div className="text-eyebrow">Founder</div>
+            <div className="text-eyebrow">Founder Offering Fractional CRO expertise</div>
             <h2 className="mt-3 text-h2">Loïc Caudan</h2>
             <blockquote className="mt-8 border-l-2 border-[var(--color-violet)] pl-6 text-xl leading-relaxed text-foreground md:text-2xl" style={{ fontFamily: "var(--font-display)" }}>
               "In 2023, I closed the largest infrastructure-to-application managed services deal in my Accenture portfolio.{" "}
