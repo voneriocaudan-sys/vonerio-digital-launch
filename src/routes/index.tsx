@@ -53,16 +53,16 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="container-page grid items-center gap-12 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-24 lg:py-28">
           <Reveal>
-            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · −20% for first clients</Pill>
+            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% for first clients</Pill>
             <h1 className="text-hero mt-6">
               Build a sales system{" "}
               <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Vonerio diagnoses what is slowing your pipeline, builds one system with your reps, and runs it until it sticks, leaving you with clean data and a defined process your AI can finally act on.
+              Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Enterprise rigor built on $26M+ in closed deals, sized for a team that cannot justify a $200K VP of Sales.
+              Enterprise rigor, built on $26M+ in closed deals. Sized for a team that can't justify a $200K VP of Sales.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
@@ -70,8 +70,8 @@ function Home() {
             </div>
             <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <StatBlock value="$26" suffix="M+" label="Personally closed" />
-              <StatBlock value="214" suffix="%" label="Avg. quota · peak 323%" />
-              <StatBlock value="50" suffix="+" label="Enterprise & Mid-Market deals" />
+              <StatBlock value="214" suffix="%" label="Avg quota (peak 323%)" />
+              <StatBlock value="50" suffix="+" label="Deals closed" />
             </dl>
           </Reveal>
 
