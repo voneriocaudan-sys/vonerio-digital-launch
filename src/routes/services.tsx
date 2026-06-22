@@ -35,9 +35,9 @@ const SYSTEM_CARDS: Card[] = [
 ];
 
 const FRACTIONAL_CARDS: Card[] = [
-  { name: "Trial Sprint", tagline: "Try it for 6 weeks before you commit to 3 months.", price: "$10,000", priceNote: "single invoice", badge: "$5,000 credits toward conversion", features: ["Negotiation & Closing on 1–2 named deals", "Written charter with 3 default KPIs", "Pipeline governance notes", "6 weeks, no commitment beyond"] },
-  { name: "Core", tagline: "Direction, governance and metrics 2 days / month.", price: "$4,800/mo", priceNote: "Founding · list $6,000/mo (−20%)", badge: "List $6,000/mo · −20%", featured: true, ribbon: "Best value", features: ["Monthly business review + weekly pipeline", "Deal coaching on top 3–5 deals", "MEDDPICC forecast governance", "3-month min, renews monthly"] },
-  { name: "Extended", tagline: "Deeper weekly involvement 5 days / month.", price: "$10,400/mo", priceNote: "Founding · list $13,000/mo (−20%)", badge: "List $13,000/mo · −20%", features: ["Weekly pipeline governance", "+ 3 Account Management sub-items", "Board / investor update support", "3-month min, renews monthly"] },
+  { name: "Trial Sprint", tagline: "Try it for 6 weeks before you commit to 3 months.", price: "$10,000", priceNote: "single invoice", badge: "$5,000 credits toward conversion", features: ["Negotiation & Closing on 2 named deals, over 6 weeks", "Written charter with 3 default KPIs", "Pipeline governance notes", "6 weeks, no commitment beyond"] },
+  { name: "Core", tagline: "Direct work on top deals, 2 days / month.", price: "$4,800/mo", priceNote: "Founding · list $6,000/mo (-20%)", badge: "List $6,000/mo · -20%", featured: true, ribbon: "Best value", features: ["Direct work on your top 3 deals (calls, negotiation, closing)", "Deal coaching for your reps", "MEDDPICC forecast governance", "3-month min, renews monthly"] },
+  { name: "Extended", tagline: "Weekly direct work, 5 days / month.", price: "$10,400/mo", priceNote: "Founding · list $13,000/mo (-20%)", badge: "List $13,000/mo · -20%", features: ["Weekly direct work on your top 3-5 deals", "Deal coaching across the team", "Board-level governance and updates", "3-month min, renews monthly"] },
 ];
 
 function Services() {
@@ -45,10 +45,10 @@ function Services() {
     <>
       <section className="container-page py-16 md:py-24">
         <Reveal>
-          <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · −20% on flagship tiers</Pill>
-          <h1 className="text-hero mt-6 max-w-4xl">Offerings sized to your team not a one-size-fits-all retainer.</h1>
+          <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
+          <h1 className="text-hero mt-6 max-w-4xl">Offerings sized to your team, not a one-size-fits-all retainer.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Three offerings, Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits; the path is linear and the stops are optional. Founding Cohort clients get −20% on flagship tiers.
+            Three offerings: Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits; the path is linear and the stops are optional. Founding Cohort clients get -20% on flagship tiers.
           </p>
         </Reveal>
       </section>
@@ -82,8 +82,8 @@ function Services() {
       <OfferingBlock
         id="fractional"
         eyebrow="03 · Fractional CRO"
-        title="CRO-level leadership, on shared time."
-        intro="Pipeline governance, forecasting, and hands-on coaching on your top 3–5 strategic deals without a $200K+ full-time hire. Try a 6-week sprint first; $5,000 credits toward conversion."
+        title="A senior closer in your top deals, on shared time."
+        intro="I work your top strategic deals directly: on the calls with the buyer's decision-makers, running the negotiation and pushing to closed, alongside your reps. I coach the team as we go and keep the pipeline and forecast honest. You get a peer-level operator in the deals, plus the governance to keep them moving, without a $200K+ full-time hire. The same motion I used to close $26M+ myself, carrying a quota. Try a 6-week sprint first."
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
@@ -159,11 +159,11 @@ function OfferingBlock({
 }
 
 const FAQS = [
-  { q: "What is the Founding Cohort?", a: "A launch-and-learn phase. The goal is 3–5 referenceable cases and a validated price/channel/offer combination within ~90 days, capped at five clients. Founding Cohort clients get −20% on flagship tiers in exchange for a reference once results land." },
-  { q: "Do I need a Diagnostic before System Building?", a: "Usually, but not always. The Diagnostic is what makes the Build precise, it defines which gaps to close first. If you already have a clear, recent read on your sales org, we can fast-track a mini-assessment in week one of the Build." },
-  { q: "What does \"outcome-linked payment\" mean?", a: "The final installment of a System Build is due when a real adoption signal fires, e.g. 2+ reps have logged a qualified deal using the new standard or 30 days post-handover, whichever comes first. You pay the last part once it's in use." },
-  { q: "Is there a guarantee?", a: "Yes, on the Diagnostic: if it doesn't surface at least three specific, actionable priorities, the fee is waived. It's paid on delivery, so there's no deposit at risk." },
-  { q: "Who is this for?", a: "B2B software and tech-services companies, roughly $2M–$30M ARR, running a sales-led motion with 3–15+ reps teams that have outgrown founder-led selling but can't yet justify a $200K+ full-time VP of Sales. Below that, start with a Pulse Check or a Trial Sprint." },
+  { q: "What is the Founding Cohort?", a: "A launch-and-learn phase. The goal is 3-5 referenceable cases and a validated price, channel and offer within about 90 days. Founding Cohort clients get -20% on flagship tiers in exchange for a reference once results land." },
+  { q: "Do I need a Diagnostic before System Building?", a: "Usually yes, but a week-1 fast-track mini-assessment exists if you want to move straight into a build." },
+  { q: "What does \"outcome-linked payment\" mean?", a: "The final installment is due on a real adoption signal, for example reps logging qualified deals on the new standard, not on elapsed time." },
+  { q: "Is there a guarantee?", a: "Yes. On the Standard Diagnostic, the fee is waived if it does not surface at least three priorities worth acting on." },
+  { q: "Who is this for?", a: "B2B software and tech-services teams, $2M-$30M ARR, 3-15+ reps, deals from $20K." },
 ];
 
 function FAQ() {

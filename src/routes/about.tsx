@@ -57,7 +57,7 @@ function About() {
               <p>That deal happened because I had a system a way of mapping buying committees before the first call, building financial models the CFO could defend internally, and running a negotiation across EMEA, LatAm, US and APAC simultaneously without losing the thread.</p>
               <p>That system is what I've spent ten years building. It's what I now teach through Vonerio.</p>
               <p>I sell complex enterprise technology data platforms, cloud infrastructure, SaaS into accounts where the average deal involves 10–15 stakeholders, 12–18 month cycles and boards that sign off across jurisdictions. <span className="font-medium text-foreground">$26M+ closed as an individual contributor</span> carrying quota, building pipeline, and closing.</p>
-              <p>Most fractional consultants have only ever sold to small teams. I closed $26M carrying a quota, and the discipline that won those deals works just as well on a team of 35+ or five. You don't need a full-time CRO to get it.</p>
+              <p>Most fractional consultants have only ever sold to small teams. I closed $26M+ carrying a quota, and the discipline that won those deals works just as well on a team of five. You get enterprise rigor, sized to a team that can't justify a full-time CRO.</p>
             </div>
           </Reveal>
         </div>
