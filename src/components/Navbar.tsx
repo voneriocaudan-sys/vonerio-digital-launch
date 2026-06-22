@@ -90,10 +90,16 @@ export function Navbar() {
             ))}
             <Link
               to="/contact"
+              className="mt-2 inline-flex items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground"
+            >
+              Book a diagnostic
+            </Link>
+            <a
+              href="/scorecard"
               className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-[var(--color-violet)] px-5 py-3 text-sm font-medium text-white dark:bg-[var(--color-magenta)]"
             >
-              Book a call <ArrowUpRight className="h-4 w-4" />
-            </Link>
+              Score your team <ArrowUpRight className="h-4 w-4" />
+            </a>
           </nav>
         </div>
       )}
