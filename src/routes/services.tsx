@@ -74,7 +74,7 @@ function Services() {
           fromLine="From $22,000 · Core Build → multi-BU build"
           primaryPrice="From $22,000"
           ctaLabel="Scope a System Build"
-          ctaHref="/contact"
+          ctaHref="/contact?interest=system-building"
           cards={SYSTEM_CARDS}
         />
       </div>
