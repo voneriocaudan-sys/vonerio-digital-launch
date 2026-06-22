@@ -61,7 +61,7 @@ function Services() {
         fromLine="From $4,500 · Pulse Check → multi-geo deep dive"
         primaryPrice="From $4,500"
         ctaLabel="Start with a Pulse Check"
-        ctaHref="/contact"
+        ctaHref="/contact?interest=diagnostic"
         cards={DIAGNOSTIC_CARDS}
       />
 
