@@ -31,7 +31,7 @@ function About() {
             Vonerio packages a decade of enterprise selling into a system your team can own: territory models, CFO business cases, multi-stakeholder orchestration, and negotiation frameworks.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <CTAButton to="/contact" search={{ interest: "diagnostic" }} variant="energy">Book a diagnostic</CTAButton>
+            <CTAButton href="/contact?interest=diagnostic" variant="energy">Book a diagnostic</CTAButton>
             <CTAButton to="/scorecard" variant="ghost">Score your team</CTAButton>
           </div>
         </Reveal>
