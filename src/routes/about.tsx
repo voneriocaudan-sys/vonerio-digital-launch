@@ -80,17 +80,16 @@ function About() {
 
       {/* Framework link */}
       <section className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
-        <div className="container-page py-16 md:py-20">
+        <div className="container-page py-10 md:py-14">
           <Reveal>
-            <div className="max-w-2xl">
-              <div className="text-eyebrow mb-3">Methodology</div>
-              <h2 className="text-h2">See the four-pillar framework</h2>
-              <p className="mt-4 text-[1.0625rem] leading-relaxed text-muted-foreground">
-                Territory, offering, buying process, and enablement — the same system that closed $16.2M across 12 countries, broken down for teams of any size.
+            <div className="max-w-3xl">
+              <p className="text-[1.0625rem] leading-relaxed text-muted-foreground">
+                <span className="font-semibold text-foreground">See the four-pillar framework.</span>{" "}
+                Territory, offering, buying process, and enablement. The four prerequisites for a repeatable revenue system, sized to teams at any stage.{" "}
+                <Link to="/" hash="methodology" className="inline-flex items-center gap-1 font-medium text-[var(--color-violet)] underline underline-offset-4 decoration-[var(--color-violet)]/30 hover:decoration-[var(--color-violet)]">
+                  Explore the framework <ArrowRight className="h-3.5 w-3.5" />
+                </Link>
               </p>
-              <div className="mt-6">
-                <CTAButton to="/" hash="methodology" variant="ghost">Explore the framework</CTAButton>
-              </div>
             </div>
           </Reveal>
         </div>
