@@ -219,7 +219,7 @@ function Home() {
       {/* CTA band */}
       <CTABand
         title="Join the Founding Cohort."
-        sub="A launch-and-learn phase with −20% pricing for the first five clients. The goal: referenceable results and a validated plan within ~90 days."
+        sub="I'm building Vonerio's first case studies, so the first five clients get -20% on flagship engagements and more of my direct time, in exchange for a reference once the work pays off."
         primary={{ label: "Score your team (free)", href: "/scorecard", variant: "energy" }}
         secondary={{ label: "View pricing", to: "/services" }}
       />

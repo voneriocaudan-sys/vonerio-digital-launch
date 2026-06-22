@@ -79,18 +79,21 @@ function About() {
       </section>
 
       {/* Framework link */}
-      <section className="container-page py-16 md:py-20">
-        <Reveal>
-          <div className="text-eyebrow mb-3">Methodology</div>
-          <Link
-            to="/"
-            hash="methodology"
-            className="inline-flex items-center gap-2 text-h3 text-foreground transition hover:text-[var(--color-violet)] dark:hover:text-[var(--color-magenta)]"
-          >
-            See the four-pillar framework
-            <ArrowRight className="h-5 w-5" />
-          </Link>
-        </Reveal>
+      <section className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
+        <div className="container-page py-16 md:py-20">
+          <Reveal>
+            <div className="max-w-2xl">
+              <div className="text-eyebrow mb-3">Methodology</div>
+              <h2 className="text-h2">See the four-pillar framework</h2>
+              <p className="mt-4 text-[1.0625rem] leading-relaxed text-muted-foreground">
+                Territory, offering, buying process, and enablement — the same system that closed $16.2M across 12 countries, broken down for teams of any size.
+              </p>
+              <div className="mt-6">
+                <CTAButton to="/" hash="methodology" variant="ghost">Explore the framework</CTAButton>
+              </div>
+            </div>
+          </Reveal>
+        </div>
       </section>
     </>
   );
