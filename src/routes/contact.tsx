@@ -70,7 +70,7 @@ function Contact() {
             <ul className="space-y-7">
               <Info icon={Mail} title="Email" lines={[<a key="m" href="mailto:loic.caudan@vonerio.com" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">loic.caudan@vonerio.com</a>]} />
               <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
-              <Info icon={Globe} title="Where I work?" lines={["Remotely across APAC & EMEA.", "Fluent in English, French, Spanish & Portuguese; Bahasa Indonesia ongoing."]} />
+              <Info icon={Globe} title="Where I work" lines={["Remotely across APAC & EMEA.", "Fluent in English, French, Spanish & Portuguese; Bahasa Indonesia ongoing."]} />
               <Info icon={Clock} title="Response time" lines={["Within 1 business day.", "Founding Cohort enquiries are prioritized."]} />
             </ul>
 
@@ -131,10 +131,9 @@ function Contact() {
                     <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">What are you trying to fix?</label>
                     <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30" placeholder="A short note on your team, pipeline and where it's stuck." />
                   </div>
-                  <button type="submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-violet)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
+                  <button type="submit" data-track="contact_form_submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-violet)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-violet)] focus-visible:ring-offset-2 dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
                     <Send className="h-4 w-4" /> Send message
                   </button>
-                  <p className="text-xs text-muted-foreground">Goes straight to loic.caudan@vonerio.com · No spam, ever.</p>
                 </div>
               </form>
             </div>

@@ -53,13 +53,17 @@ export function Navbar() {
           <ThemeToggle />
           <Link
             to="/contact"
-            className="text-sm font-medium text-muted-foreground transition hover:text-foreground"
+            data-track="cta_diagnostic_click"
+            data-track-location="navbar"
+            className="text-sm font-medium text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:underline"
           >
             Book a diagnostic
           </Link>
           <a
             href="/scorecard"
-            className={`inline-flex items-center gap-1.5 rounded-full bg-[var(--color-violet)] text-white shadow-[0_8px_24px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)] ${scrolled ? "px-4 py-2 text-[13px]" : "px-5 py-2.5 text-sm"} font-medium`}
+            data-track="cta_score_click"
+            data-track-location="navbar"
+            className={`inline-flex items-center gap-1.5 rounded-full bg-[var(--color-violet)] text-white shadow-[0_8px_24px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-violet)] focus-visible:ring-offset-2 dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)] ${scrolled ? "px-4 py-2 text-[13px]" : "px-5 py-2.5 text-sm"} font-medium`}
           >
             Score your team <ArrowUpRight className="h-4 w-4" />
           </a>
@@ -90,12 +94,16 @@ export function Navbar() {
             ))}
             <Link
               to="/contact"
+              data-track="cta_diagnostic_click"
+              data-track-location="navbar_mobile"
               className="mt-2 inline-flex items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground"
             >
               Book a diagnostic
             </Link>
             <a
               href="/scorecard"
+              data-track="cta_score_click"
+              data-track-location="navbar_mobile"
               className="mt-2 inline-flex items-center justify-center gap-1.5 rounded-full bg-[var(--color-violet)] px-5 py-3 text-sm font-medium text-white dark:bg-[var(--color-magenta)]"
             >
               Score your team <ArrowUpRight className="h-4 w-4" />

@@ -78,7 +78,7 @@ function Home() {
       {/* Trust strip */}
       <section className="border-y border-border bg-[var(--color-mist)]/60 dark:bg-[var(--color-indigo)]/20">
         <div className="container-page flex flex-col items-center gap-6 py-8 md:flex-row md:justify-between md:gap-8 md:py-7">
-          <span className="text-eyebrow">Methodology trained &amp; certified in</span>
+          <span className="text-eyebrow">Methodology trained in</span>
           <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium text-foreground/80">
             <li>MEDDPICC</li>
             <li className="text-border">·</li>
