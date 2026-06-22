@@ -14,6 +14,8 @@ import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { ScorecardBand } from "../components/ScorecardBand";
+import { installAnalyticsDelegate } from "../lib/analytics";
 
 function NotFoundComponent() {
   return (
@@ -74,6 +76,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" },
+      // Preload the LCP founder portrait (used on home + about hero).
+      { rel: "preload", as: "image", href: "/src/assets/loic-caudan.jpg", fetchpriority: "high" },
+    ],
+    scripts: [
+      // Plausible analytics. Swap data-domain for your own (or replace with
+      // your GA4 snippet) — see src/lib/analytics.ts.
+      {
+        defer: true,
+        "data-domain": "vonerio.com",
+        src: "https://plausible.io/js/script.js",
+      },
+      // Stub so calls before the script loads are queued.
+      {
+        children:
+          "window.plausible = window.plausible || function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};",
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -101,12 +119,14 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  useEffect(() => { installAnalyticsDelegate(); }, []);
   return (
     <QueryClientProvider client={queryClient}>
       <Navbar />
       <main className="pt-16 md:pt-20">
         <Outlet />
       </main>
+      <ScorecardBand />
       <Footer />
     </QueryClientProvider>
   );
