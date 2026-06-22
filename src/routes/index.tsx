@@ -171,7 +171,7 @@ function Home() {
           <Reveal>
             <div className="relative">
               <div className="absolute -inset-3 -z-10 rounded-[24px] bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10" />
-              <img src={WHY_IMG} alt="Operator-grade enterprise sales work" className="aspect-[4/5] w-full rounded-2xl object-cover" />
+              <img src={WHY_IMG.url} alt="Operator-grade enterprise sales work" className="aspect-[4/5] w-full rounded-2xl object-cover" />
             </div>
           </Reveal>
           <Reveal delay={100}>
