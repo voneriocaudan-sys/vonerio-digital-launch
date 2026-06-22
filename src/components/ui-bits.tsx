@@ -35,7 +35,7 @@ export function CTAButton({ to, href, hash, variant = "primary", children, class
   const styles: Record<string, string> = {
     primary: "bg-[var(--color-violet)] text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]",
     ghost: "border border-border bg-transparent text-foreground hover:bg-accent",
-    energy: "bg-[var(--color-tangerine)] text-white shadow-[0_10px_28px_-12px_rgba(255,107,53,0.7)] hover:brightness-95",
+    energy: "bg-[var(--color-tangerine)] text-[#1A1A1A] shadow-[0_10px_28px_-12px_rgba(255,107,53,0.7)] hover:brightness-95",
     darkGhost: "border border-white/25 text-white hover:bg-white/10",
   };
   const cls = `${base} ${styles[variant]} ${className}`;
@@ -55,7 +55,7 @@ export function StatBlock({ value, suffix, label, dark = false }: { value: strin
     <div>
       <div className={`font-display text-4xl font-semibold tracking-tight md:text-5xl ${dark ? "text-white" : "text-foreground"}`} style={{ fontFamily: "var(--font-display)" }}>
         {value}
-        {suffix && <span className="text-[var(--color-tangerine)]">{suffix}</span>}
+        {suffix && <span className="text-[var(--color-tangerine-ink)] dark:text-[var(--color-tangerine)]">{suffix}</span>}
       </div>
       <div className={`mt-2 text-sm ${dark ? "text-[var(--color-amethyst)]" : "text-muted-foreground"}`}>{label}</div>
     </div>
