@@ -53,16 +53,16 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="container-page grid items-center gap-12 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-24 lg:py-28">
           <Reveal>
-            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · −20% for first clients</Pill>
+            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% for first clients</Pill>
             <h1 className="text-hero mt-6">
               Build a sales system{" "}
               <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Vonerio diagnoses what is slowing your pipeline, builds one system with your reps, and runs it until it sticks, leaving you with clean data and a defined process your AI can finally act on.
+              Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
             </p>
             <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Enterprise rigor built on $26M+ in closed deals, sized for a team that cannot justify a $200K VP of Sales.
+              Enterprise rigor, built on $26M+ in closed deals. Sized for a team that can't justify a $200K VP of Sales.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
@@ -70,8 +70,8 @@ function Home() {
             </div>
             <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <StatBlock value="$26" suffix="M+" label="Personally closed" />
-              <StatBlock value="214" suffix="%" label="Avg. quota · peak 323%" />
-              <StatBlock value="50" suffix="+" label="Enterprise & Mid-Market deals" />
+              <StatBlock value="214" suffix="%" label="Avg quota (peak 323%)" />
+              <StatBlock value="50" suffix="+" label="Deals closed" />
             </dl>
           </Reveal>
 
@@ -127,7 +127,7 @@ function Home() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Reveal><OverviewCard n="01" icon={SearchCheck} title="Think → Diagnostic" body="A data-driven read on what is slowing the pipeline, scored against the 4-pillar readiness framework. You get a prioritized plan and a clear map of which data is clean, dirty or missing. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
           <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="Build → System Building" body="In 90 days I build one system with your reps, playbook, qualification standard, battle cards, cadences, and a CRM configuration spec your admin implements. This is where your single source of truth gets built: one process, clean data, and every rep, sales lead and marketer aligned." to="/services" hash="system-building" /></Reveal>
-          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Run → Fractional CRO" body="CRO-level leadership on shared time, pipeline governance, forecasting, hands-on coaching on your top deals. The discipline that keeps the data clean and the forecast trustworthy. Try a 6-week sprint first." to="/services" hash="fractional" /></Reveal>
+          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Run → Fractional CRO" body="A senior closer on your top deals, on shared time. I get on the calls and run the negotiations, coach your reps, and keep the forecast honest. CRO-level leadership without a $200K+ hire. Try a 6-week sprint first." to="/services" hash="fractional" /></Reveal>
         </div>
       </section>
 
@@ -139,7 +139,7 @@ function Home() {
               <div className="text-eyebrow mb-4 text-[var(--color-tangerine)]">Why it matters now</div>
               <h2 className="text-h2 text-white">AI amplifies whatever is already there, including the mess.</h2>
               <p className="mt-5 text-[1.0625rem] leading-relaxed text-[var(--color-amethyst)]">
-                AI sales tools fail on dirty data and undefined process. Think → Build → Run gives you one process, one source of truth, and data your AI and AI-augmented reps can actually trust, to ramp faster, scale, and add revenue. The same three steps that fix your sales org are what make it AI-ready.
+                AI sales tools fail on dirty data and undefined process. Think → Build → Run gives you one process, one source of truth, and data your AI and AI-augmented reps can actually trust, so you ramp faster, scale, and add revenue. The same three steps that fix your sales org are what make it AI-ready.
               </p>
             </div>
           </Reveal>
@@ -152,8 +152,8 @@ function Home() {
           <Reveal>
             <SectionHeading
               eyebrow="Methodology"
-              title="Four pillars of enterprise sales readiness."
-              sub="Twenty sub-items, each tied to a named deliverable. No generic templates, every artifact closes a specific gap."
+              title="Four pillars of sales readiness."
+              sub="Twenty sub-items, each tied to a named deliverable. No generic templates. Every artifact closes a specific gap."
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -177,13 +177,13 @@ function Home() {
           <Reveal delay={100}>
             <SectionHeading
               eyebrow="Why Vonerio"
-              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">not a consultant's template.</span></>}
+              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">built in real deals, made to be yours.</span></>}
             />
             <ul className="mt-8 space-y-5">
               <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
               <Why icon={Users} title="Co-built with your reps." body="Each artifact is tested on a real deal before it's finalized." />
               <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to a real adoption signal, not elapsed time." />
-              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system no ongoing dependency." />
+              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No ongoing dependency." />
             </ul>
           </Reveal>
         </div>
@@ -194,21 +194,25 @@ function Home() {
         <div className="container-page py-16 md:py-20">
           <div className="grid gap-10 md:grid-cols-3">
             <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
-            <ProofStat value="$279M" label="First Vonerio client · full Diagnostic delivered (4 pillars, segmentation, plan)" />
+            <ProofStat value="$279M" label="First Vonerio client: a full Diagnostic delivered (4 pillars, segmentation, plan)" />
             <ProofStat value="4" label="Languages negotiated & closed in, live" />
           </div>
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Where to start */}
       <section className="container-page py-20 md:py-28">
         <Reveal>
-          <SectionHeading eyebrow="How it works" title="Think. Build. Run." sub="A linear path with optional stops. Most clients start with a Diagnostic and decide what comes next from there." />
+          <SectionHeading eyebrow="Where to start" title="A linear path with optional stops." sub="Most clients start with a Diagnostic and decide what comes next from there." />
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Step n="01 Think" title="Diagnose" body="Stakeholder interviews, CRM/data audit and a MEDDPICC-based pipeline review scored against the four readiness pillars." />
-          <Step n="02 Build" title="Build" body="In 90 days I co-build the system with your reps, playbook, battle cards, cadences, dashboards tested on live deals." />
-          <Step n="03 Run" title="Run" body="Fractional leadership on top deals plus handover to a trained internal owner. No ongoing dependency." />
+        <div className="relative mt-16">
+          {/* connector line */}
+          <div aria-hidden className="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent md:block" />
+          <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
+            <TimelineStep n="01" title="Diagnostic" body="Stakeholder interviews, a CRM/data audit and a MEDDPICC-based pipeline review, scored against the four readiness pillars." />
+            <TimelineStep n="02" title="Co-build with your reps" body="In 90 days we build the system together: playbook, battle cards, cadences and dashboards, tested on live deals." />
+            <TimelineStep n="03" title="Run your top deals, then hand over" body="I work your top 2-5 deals directly, then hand the system to a trained internal owner. No ongoing dependency." />
+          </ol>
         </div>
       </section>
 
@@ -258,5 +262,23 @@ function Step({ n, title, body }: { n: string; title: string; body: string }) {
   );
 }
 
-// CheckItem imported but currently unused on home kept for future modular use
+function TimelineStep({ n, title, body }: { n: string; title: string; body: string }) {
+  return (
+    <Reveal>
+      <li className="relative flex flex-col items-start">
+        <span
+          className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card font-semibold text-[var(--color-violet)] shadow-sm dark:text-[var(--color-magenta)]"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {n}
+        </span>
+        <h3 className="mt-5 text-lg font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>{title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+      </li>
+    </Reveal>
+  );
+}
+
+// Step and CheckItem retained for potential reuse
+void Step;
 void CheckItem;
