@@ -78,17 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" },
     ],
     scripts: [
-      // Plausible analytics. Swap data-domain for your own (or replace with
-      // your GA4 snippet) — see src/lib/analytics.ts.
+      // Plausible (privacy-friendly analytics)
       {
-        defer: true,
-        "data-domain": "vonerio.com",
-        src: "https://plausible.io/js/script.js",
+        async: true,
+        src: "https://plausible.io/js/pa-EsnW5lnV5-UJIlt352-RH.js",
       },
-      // Stub so calls before the script loads are queued.
       {
         children:
-          "window.plausible = window.plausible || function(){(window.plausible.q=window.plausible.q||[]).push(arguments)};",
+          "window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};plausible.init();",
+      },
+      // Microsoft Clarity
+      {
+        children:
+          "(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src=\"https://www.clarity.ms/tag/\"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, \"clarity\", \"script\", \"xax4uubb5e\");",
       },
     ],
   }),

@@ -185,12 +185,19 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
 }
 
 function SchedulingWidget() {
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (document.getElementById("calendly-embed-script")) return;
+    const s = document.createElement("script");
+    s.id = "calendly-embed-script";
+    s.src = "https://assets.calendly.com/assets/external/widget.js";
+    s.async = true;
+    document.body.appendChild(s);
+  }, []);
   return (
     <div
       className="rounded-2xl border border-border bg-card p-7 md:p-8"
       onClick={() => {
-        // Fires when the user engages with the scheduling area (placeholder
-        // until Cal.com/Calendly inline embed is dropped in).
         import("@/lib/analytics").then((m) => m.track("scheduling_booking_click"));
       }}
     >
@@ -198,15 +205,11 @@ function SchedulingWidget() {
         <Calendar className="h-5 w-5 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" />
         <h3 className="text-lg font-medium text-foreground">Book a 20-min scoping call</h3>
       </div>
-      <div className="relative min-h-[420px] overflow-hidden rounded-xl bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10">
-        {/* Replace this placeholder with your Calendly inline embed or Cal.com iframe */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-          <p className="text-sm font-medium text-foreground">Scheduling widget placeholder</p>
-          <p className="mt-2 max-w-xs text-xs text-muted-foreground">
-            Swap this block for your Calendly or Cal.com inline embed. The contact form below stays available as a fallback.
-          </p>
-        </div>
-      </div>
+      <div
+        className="calendly-inline-widget min-h-[700px] overflow-hidden rounded-xl"
+        data-url="https://calendly.com/vonerio-caudan/20min?hide_gdpr_banner=1"
+        style={{ minWidth: "320px", height: "700px" }}
+      />
     </div>
   );
 }

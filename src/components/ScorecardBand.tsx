@@ -9,7 +9,7 @@ export function ScorecardBand() {
     >
       <div className="container-page flex flex-col items-start justify-between gap-4 py-6 md:flex-row md:items-center md:py-5">
         <p className="text-sm leading-relaxed text-foreground md:text-[0.95rem]">
-          See how your team scores against the four pillars — free, 3 minutes.
+          See how your team scores against the four pillars, free, 3 minutes.
         </p>
         <a
           href="/scorecard"
