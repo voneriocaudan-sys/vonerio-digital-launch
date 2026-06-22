@@ -7,10 +7,10 @@ import { Reveal } from "@/components/Reveal";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vonerio Enterprise sales systems that close $1M+ deals" },
-      { name: "description", content: "Diagnose what's slowing your pipeline, build the system to fix it with your reps, and lead the motion until it sticks. $26M+ closed by the operator behind it." },
-      { property: "og:title", content: "Vonerio Enterprise sales systems that close $1M+ deals" },
-      { property: "og:description", content: "Diagnose, build, lead. An operator's sales system, not a consultant's template." },
+      { title: "Vonerio Build a sales system your team runs without you" },
+      { name: "description", content: "AI amplifies whatever's already there including the mess. Vonerio builds the sales system, clean data and process your AI actually needs. Enterprise rigor for $2M–$30M ARR teams. $26M+ closed by the operator behind it." },
+      { property: "og:title", content: "Vonerio Build a sales system your team runs without you" },
+      { property: "og:description", content: "Diagnose. Build. Run. The sales system and the clean foundation your AI can finally act on." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
