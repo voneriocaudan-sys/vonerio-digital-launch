@@ -139,7 +139,7 @@ function Home() {
               <div className="text-eyebrow mb-4 text-[var(--color-tangerine)]">Why it matters now</div>
               <h2 className="text-h2 text-white">AI amplifies whatever is already there, including the mess.</h2>
               <p className="mt-5 text-[1.0625rem] leading-relaxed text-[var(--color-amethyst)]">
-                AI sales tools fail on dirty data and undefined process. Think → Build → Run gives you one process, one source of truth, and data your AI and AI-augmented reps can actually trust, to ramp faster, scale, and add revenue. The same three steps that fix your sales org are what make it AI-ready.
+                AI sales tools fail on dirty data and undefined process. Think → Build → Run gives you one process, one source of truth, and data your AI and AI-augmented reps can actually trust, so you ramp faster, scale, and add revenue. The same three steps that fix your sales org are what make it AI-ready.
               </p>
             </div>
           </Reveal>
