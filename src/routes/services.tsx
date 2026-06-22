@@ -9,7 +9,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services Vonerio" },
-      { name: "description", content: "Three offerings, nine tiers. Diagnostic, System Building and Fractional CRO fixed prices, fixed timelines, outcome-linked payments." },
+      { name: "description", content: "Three offerings: Diagnostic, System Building and Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments." },
       { property: "og:title", content: "Services Vonerio" },
       { property: "og:description", content: "Diagnostic, System Building and Fractional CRO sized to your team." },
       { property: "og:url", content: "/services" },
@@ -19,89 +19,150 @@ export const Route = createFileRoute("/services")({
   component: Services,
 });
 
+type Card = Parameters<typeof PricingCard>[0];
+
+const DIAGNOSTIC_CARDS: Card[] = [
+  { name: "Pulse Check", tagline: "A fast, low-risk read on one function, in a week.", price: "$4,500", priceNote: "flat fee", badge: "Already low-commitment", features: ["Single-function lightweight diagnostic", "1 pillar across 2–3 sub-items", "1-page prioritized findings, 3+ actions", "Delivered in 1 week, paid on delivery"] },
+  { name: "Standard", tagline: "A detailed action plan in 3–4 weeks.", price: "$9,600", priceNote: "Founding · list $12,000 (−20%)", badge: "List $12,000 · −20%", featured: true, ribbon: "Most popular", features: ["All 4 pillars scored at sub-item level (20)", "Component depth on 2 priority pillars", "Quick-wins vs. structural-fixes plan", "30% kickoff / 70% delivery"] },
+  { name: "Complex", tagline: "Multi-function and/or multi-geography, 15+ stakeholders.", price: "$16,000", priceNote: "Founding · list $20,000 (−20%)", badge: "List $20,000 · −20%", features: ["All 4 pillars, all 20 sub-items, full depth", "Replicated across every function/geo", "Root-cause framework (Process/People/Tools/Market)", "30% kickoff / 70% delivery"] },
+];
+
+const SYSTEM_CARDS: Card[] = [
+  { name: "Core Build", tagline: "Right-sized system build for small teams (≤5 reps).", price: "$17,600", priceNote: "Founding · list $22,000 (−20%)", badge: "List $22,000 · −20%", features: ["3 pillars, 1–2 priority sub-items each", "MEDDPICC standard + core playbook", "UVP definition, positioning & sales battle cards", "45 days · 50% kickoff / 50% handover"] },
+  { name: "Standard", tagline: "Full system built with your reps in 90 days, ready to scale.", price: "$33,600", priceNote: "Founding · list $42,000 (−20%)", badge: "List $42,000 · −20%", featured: true, ribbon: "Flagship", features: ["All 4 pillars, 12–16 priority sub-items", "Playbook, ICP, account tiering and growth Plan", "UVP definition, positioning & sales battle cards", "90 days, thirds · final third outcome-linked"] },
+  { name: "Complex", tagline: "8+ reps and/or multi-offering / multi-geography.", price: "$52,000", priceNote: "Founding · list $65,000 (−20%)", badge: "List $65,000 · −20%", features: ["All 4 pillars, all 20 sub-items", "Scaled across multiple BUs / geos", "Cross-functional build sessions", "90 days, thirds · final third outcome-linked"] },
+];
+
+const FRACTIONAL_CARDS: Card[] = [
+  { name: "Trial Sprint", tagline: "Try it for 6 weeks before you commit to 3 months.", price: "$10,000", priceNote: "single invoice", badge: "$5,000 credits toward conversion", features: ["Negotiation & Closing on 1–2 named deals", "Written charter with 3 default KPIs", "Pipeline governance notes", "6 weeks, no commitment beyond"] },
+  { name: "Core", tagline: "Direction, governance and metrics 2 days / month.", price: "$4,800/mo", priceNote: "Founding · list $6,000/mo (−20%)", badge: "List $6,000/mo · −20%", featured: true, ribbon: "Best value", features: ["Monthly business review + weekly pipeline", "Deal coaching on top 3–5 deals", "MEDDPICC forecast governance", "3-month min, renews monthly"] },
+  { name: "Extended", tagline: "Deeper weekly involvement 5 days / month.", price: "$10,400/mo", priceNote: "Founding · list $13,000/mo (−20%)", badge: "List $13,000/mo · −20%", features: ["Weekly pipeline governance", "+ 3 Account Management sub-items", "Board / investor update support", "3-month min, renews monthly"] },
+];
+
 function Services() {
   return (
     <>
       <section className="container-page py-16 md:py-24">
         <Reveal>
-          <Pill tone="tangerine">Founding Cohort · −20% on discountable tiers</Pill>
+          <Pill tone="tangerine">Founding Cohort · −20% on flagship tiers</Pill>
           <h1 className="text-hero mt-6 max-w-4xl">Offerings sized to your team not a one-size-fits-all retainer.</h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Three offerings, nine tiers. Fixed prices, fixed timelines, and outcome-linked payment structures. Founding Cohort clients receive −20% while we build referenceable cases.
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
+            Three offerings, Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits; the path is linear and the stops are optional. Founding Cohort clients get −20% on flagship tiers.
           </p>
         </Reveal>
       </section>
 
-      <ServiceSection
+      <OfferingBlock
         id="diagnostic"
         eyebrow="01 · Diagnostic"
         title="A data-driven read on what's broken."
-        intro="Stakeholder interviews, a CRM/data audit and MEDDPICC-based pipeline review scored against the four readiness pillars, with a prioritized action plan. No deposit; a money-back guarantee on the core deliverable."
-        cards={[
-          { name: "Pulse Check", tagline: "A fast, low-risk read on one function, in a week.", price: "$4,500", priceNote: "flat fee", badge: "Already low-commitment", features: ["Single-function lightweight diagnostic", "1 pillar across 2–3 sub-items", "1-page prioritized findings, 3+ actions", "Delivered in 1 week, paid on delivery"] },
-          { name: "Standard", tagline: "A detailed action plan in 3–4 weeks.", price: "$9,600", priceNote: "Founding · list $12,000 (−20%)", badge: "List $12,000 · −20%", featured: true, ribbon: "Most popular", features: ["All 4 pillars scored at sub-item level (20)", "Component depth on 2 priority pillars", "Quick-wins vs. structural-fixes plan", "30% kickoff / 70% delivery"] },
-          { name: "Complex", tagline: "Multi-function and/or multi-geography, 15+ stakeholders.", price: "$16,000", priceNote: "Founding · list $20,000 (−20%)", badge: "List $20,000 · −20%", features: ["All 4 pillars, all 20 sub-items, full depth", "Replicated across every function/geo", "Root-cause framework (Process/People/Tools/Market)", "30% kickoff / 70% delivery"] },
-        ]}
+        intro="Stakeholder interviews, a CRM/data audit, and a MEDDPICC-based pipeline review scored against the four readiness pillars, with a prioritized action plan. No deposit; money-back guarantee on the core deliverable."
+        fromLine="From $4,500 · Pulse Check → multi-geo deep dive"
+        primaryPrice="From $4,500"
+        ctaLabel="Start with a Pulse Check"
+        ctaHref="/contact"
+        cards={DIAGNOSTIC_CARDS}
       />
 
       <div className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
-        <ServiceSection
+        <OfferingBlock
           id="system-building"
           eyebrow="02 · System Building"
           title="I build the system with your reps and it sticks."
-          intro="Co-built live in build sprints, not delivered as a static document. Playbook, battle cards, cadences, CRM configuration and a KPI dashboard. Final payment is tied to a real adoption signal."
-          cards={[
-            { name: "Core Build", tagline: "Right-sized system build for small teams (≤5 reps).", price: "$17,600", priceNote: "Founding · list $22,000 (−20%)", badge: "List $22,000 · −20%", features: ["3 pillars, 1–2 priority sub-items each", "MEDDPICC standard + core playbook", "UVP definition, positioning & sales battle cards", "45 days · 50% kickoff / 50% handover"] },
-            { name: "Standard", tagline: "Full system built with your reps in 90 days, ready to scale.", price: "$33,600", priceNote: "Founding · list $42,000 (−20%)", badge: "List $42,000 · −20%", featured: true, ribbon: "Flagship", features: ["All 4 pillars, 12–16 priority sub-items", "Playbook, ICP, account tiering and growth Plan", "UVP definition, positioning & sales battle cards", "90 days, thirds · final third outcome-linked"] },
-            { name: "Complex", tagline: "8+ reps and/or multi-offering / multi-geography.", price: "$52,000", priceNote: "Founding · list $65,000 (−20%)", badge: "List $65,000 · −20%", features: ["All 4 pillars, all 20 sub-items", "Scaled across multiple BUs / geos", "Cross-functional build sessions", "90 days, thirds · final third outcome-linked"] },
-          ]}
+          intro="Co-built live. Playbook, battle cards, cadences, a CRM configuration spec your admin implements, and a KPI dashboard design aligned into one single source of truth for reps, sales and marketing. The final payment is tied to a real adoption signal."
+          fromLine="From $22,000 · Core Build → multi-BU build"
+          primaryPrice="From $22,000"
+          ctaLabel="Scope a System Build"
+          ctaHref="/contact"
+          cards={SYSTEM_CARDS}
         />
       </div>
 
-      <ServiceSection
+      <OfferingBlock
         id="fractional"
         eyebrow="03 · Fractional CRO"
-        title="Senior sales leadership, on shared time."
-        intro="Pipeline governance, forecasting and hands-on coaching on your top 3–5 strategic deals enterprise-caliber leadership without a $200K+ full-time hire. Try a 6-week sprint first."
-        cards={[
-          { name: "Trial Sprint", tagline: "Try it for 6 weeks before you commit to 3 months.", price: "$10,000", priceNote: "single invoice", badge: "$5,000 credits toward conversion", features: ["Negotiation & Closing on 1–2 named deals", "Written charter with 3 default KPIs", "Pipeline governance notes", "6 weeks, no commitment beyond"] },
-          { name: "Core", tagline: "Direction, governance and metrics 2 days / month.", price: "$4,800/mo", priceNote: "Founding · list $6,000/mo (−20%)", badge: "List $6,000/mo · −20%", featured: true, ribbon: "Best value", features: ["Monthly business review + weekly pipeline", "Deal coaching on top 3–5 deals", "MEDDPICC forecast governance", "3-month min, renews monthly"] },
-          { name: "Extended", tagline: "Deeper weekly involvement 5 days / month.", price: "$10,400/mo", priceNote: "Founding · list $13,000/mo (−20%)", badge: "List $13,000/mo · −20%", features: ["Weekly pipeline governance", "+ 3 Account Management sub-items", "Board / investor update support", "3-month min, renews monthly"] },
-        ]}
+        title="CRO-level leadership, on shared time."
+        intro="Pipeline governance, forecasting, and hands-on coaching on your top 3–5 strategic deals without a $200K+ full-time hire. Try a 6-week sprint first; $5,000 credits toward conversion."
+        fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
+        primaryPrice="From $4,800/mo"
+        ctaLabel="Start a Trial Sprint"
+        ctaHref="/contact"
+        cards={FRACTIONAL_CARDS}
       />
 
       <FAQ />
 
       <CTABand
-        title="Not sure which tier fits?"
-        sub="Tell me about your team and pipeline. I'll point you to the right starting point usually a Diagnostic or a Trial Sprint."
-        primary={{ label: "Talk to Loïc", to: "/contact", variant: "energy" }}
+        title="Not sure where to start?"
+        sub="Score your team against the four pillars in a few minutes you'll get an instant read and a recommended starting point. Or tell me about your pipeline and I'll point you to the right first step."
+        primary={{ label: "Score your team (free)", to: "/scorecard", variant: "energy" }}
+        secondary={{ label: "Talk to Loïc", to: "/contact" }}
       />
     </>
   );
 }
 
-function ServiceSection({ id, eyebrow, title, intro, cards }: { id: string; eyebrow: string; title: string; intro: string; cards: Parameters<typeof PricingCard>[0][] }) {
+function OfferingBlock({
+  id, eyebrow, title, intro, fromLine, primaryPrice, ctaLabel, ctaHref, cards,
+}: {
+  id: string;
+  eyebrow: string;
+  title: string;
+  intro: string;
+  fromLine: string;
+  primaryPrice: string;
+  ctaLabel: string;
+  ctaHref: string;
+  cards: Card[];
+}) {
+  const [open, setOpen] = useState(false);
   return (
     <section id={id} className="container-page py-20 md:py-28">
       <Reveal>
         <SectionHeading eyebrow={eyebrow} title={title} sub={intro} />
       </Reveal>
-      <div className="mt-12 grid gap-6 md:grid-cols-3">
-        {cards.map((c, i) => (
-          <Reveal key={c.name} delay={i * 80}><PricingCard {...c} /></Reveal>
-        ))}
-      </div>
+      <Reveal>
+        <div className="mt-10 rounded-2xl border border-border bg-card p-6 md:p-8">
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <div>
+              <div className="text-2xl font-semibold" style={{ fontFamily: "var(--font-display)" }}>{primaryPrice}</div>
+              <div className="mt-1 text-sm text-muted-foreground">{fromLine}</div>
+            </div>
+            <a
+              href={ctaHref}
+              className="inline-flex items-center justify-center rounded-full bg-[var(--color-violet)] px-5 py-2.5 text-sm font-medium text-white transition hover:opacity-90 dark:bg-[var(--color-magenta)]"
+            >
+              {ctaLabel}
+            </a>
+          </div>
+          <button
+            type="button"
+            onClick={() => setOpen((v) => !v)}
+            aria-expanded={open}
+            className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]"
+          >
+            See all tiers
+            <ChevronDown className={`h-4 w-4 transition ${open ? "rotate-180" : ""}`} />
+          </button>
+        </div>
+      </Reveal>
+      {open && (
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {cards.map((c, i) => (
+            <Reveal key={c.name} delay={i * 80}><PricingCard {...c} /></Reveal>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
 
 const FAQS = [
-  { q: "What is the Founding Cohort?", a: "A launch-and-learn phase. The goal is 3–5 referenceable cases and a validated price/channel/offer combination within ~90 days. Founding Cohort clients receive −20% on discountable tiers in exchange for a reference once results land." },
-  { q: "Do I need a Diagnostic before System Building?", a: "System Building requires a completed Diagnostic (any tier) or a fast-track mini-assessment in week one, plus a named internal owner. The Diagnostic feeds directly into the build no rework if you continue." },
-  { q: "What does \"outcome-linked payment\" mean?", a: "For System Building, the final installment is due when one or more reps have logged a qualified deal using the new standard or 30 days post-handover, whichever comes first. You own the artifacts on final payment." },
-  { q: "Is there a guarantee?", a: "Yes. The Diagnostic report must surface 3+ specific, actionable priorities or the fee (or delivery installment) is waived." },
-  { q: "Who is this for?", a: "Tech companies between $1M-$300M revenue selling SaaS, Cloud, Platforms, Data & AI, Tech Transformation or Managed Services where deals involve multiple stakeholders and long cycles. Leaders who want a repeatable system for winning 6-7 figures deals their team owns and adhere to as they scale so the company don't rely on 1 or 2 heroes." },
+  { q: "What is the Founding Cohort?", a: "A launch-and-learn phase. The goal is 3–5 referenceable cases and a validated price/channel/offer combination within ~90 days, capped at five clients. Founding Cohort clients get −20% on flagship tiers in exchange for a reference once results land." },
+  { q: "Do I need a Diagnostic before System Building?", a: "Usually, but not always. The Diagnostic is what makes the Build precise, it defines which gaps to close first. If you already have a clear, recent read on your sales org, we can fast-track a mini-assessment in week one of the Build." },
+  { q: "What does \"outcome-linked payment\" mean?", a: "The final installment of a System Build is due when a real adoption signal fires, e.g. 2+ reps have logged a qualified deal using the new standard or 30 days post-handover, whichever comes first. You pay the last part once it's in use." },
+  { q: "Is there a guarantee?", a: "Yes, on the Diagnostic: if it doesn't surface at least three specific, actionable priorities, the fee is waived. It's paid on delivery, so there's no deposit at risk." },
+  { q: "Who is this for?", a: "B2B software and tech-services companies, roughly $2M–$30M ARR, running a sales-led motion with 3–15+ reps teams that have outgrown founder-led selling but can't yet justify a $200K+ full-time VP of Sales. Below that, start with a Pulse Check or a Trial Sprint." },
 ];
 
 function FAQ() {
@@ -116,21 +177,22 @@ function FAQ() {
           {FAQS.map((item, i) => {
             const isOpen = open === i;
             return (
-              <button
-                key={item.q}
-                type="button"
-                onClick={() => setOpen(isOpen ? null : i)}
-                className="block w-full text-left"
-                aria-expanded={isOpen}
-              >
-                <div className="flex items-center justify-between gap-6 px-6 py-5">
-                  <span className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>{item.q}</span>
-                  <ChevronDown className={`h-5 w-5 shrink-0 transition ${isOpen ? "rotate-180 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" : "text-muted-foreground"}`} />
-                </div>
+              <div key={item.q}>
+                <button
+                  type="button"
+                  onClick={() => setOpen(isOpen ? null : i)}
+                  className="block w-full text-left"
+                  aria-expanded={isOpen}
+                >
+                  <div className="flex items-center justify-between gap-6 px-6 py-5">
+                    <span className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>{item.q}</span>
+                    <ChevronDown className={`h-5 w-5 shrink-0 transition ${isOpen ? "rotate-180 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" : "text-muted-foreground"}`} />
+                  </div>
+                </button>
                 {isOpen && (
                   <div className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">{item.a}</div>
                 )}
-              </button>
+              </div>
             );
           })}
         </div>
