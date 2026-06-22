@@ -90,11 +90,3 @@ function About() {
   );
 }
 
-function Track({ value, label }: { value: string; label: string }) {
-  return (
-    <div>
-      <div className="font-display text-5xl font-semibold text-white md:text-6xl" style={{ fontFamily: "var(--font-display)" }}>{value}</div>
-      <div className="mt-3 max-w-sm text-sm leading-relaxed text-[var(--color-amethyst)]">{label}</div>
-    </div>
-  );
-}
