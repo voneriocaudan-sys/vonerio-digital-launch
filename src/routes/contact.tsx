@@ -82,59 +82,62 @@ function Contact() {
             </div>
           </Reveal>
 
-          {/* Right: form */}
+          {/* Right: scheduling + form */}
           <Reveal delay={100}>
-            <form
-              action="https://formsubmit.co/loic.caudan@vonerio.com"
-              method="POST"
-              className="rounded-2xl border border-border bg-card p-7 md:p-8"
-            >
-              <input type="hidden" name="_subject" value="New Vonerio enquiry from the website" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value={nextUrl} />
-              <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+            <div className="space-y-8">
+              <SchedulingWidget />
+              <form
+                action="https://formsubmit.co/loic.caudan@vonerio.com"
+                method="POST"
+                className="rounded-2xl border border-border bg-card p-7 md:p-8"
+              >
+                <input type="hidden" name="_subject" value="New Vonerio enquiry from the website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value={nextUrl} />
+                <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
-              <div className="grid gap-5">
-                <Field label="Full name" name="name" required />
-                <Field label="Work email" name="email" type="email" required />
-                <Field label="Company" name="company" required />
-                <div>
-                  <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground">
-                    Contact number <span className="text-muted-foreground font-normal">(WhatsApp or Telegram preferred include country prefix)</span>
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    inputMode="tel"
-                    autoComplete="tel"
-                    pattern="^\+[0-9\s().-]{6,}$"
-                    title="Include your country prefix, e.g. +33 6 12 34 56 78"
-                    placeholder="e.g. +33 6 12 34 56 78"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30"
-                  />
+                <div className="grid gap-5">
+                  <Field label="Full name" name="name" required />
+                  <Field label="Work email" name="email" type="email" required />
+                  <Field label="Company" name="company" required />
+                  <div>
+                    <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground">
+                      Contact number <span className="text-muted-foreground font-normal">(WhatsApp or Telegram preferred include country prefix)</span>
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      inputMode="tel"
+                      autoComplete="tel"
+                      pattern="^\+[0-9\s().-]{6,}$"
+                      title="Include your country prefix, e.g. +33 6 12 34 56 78"
+                      placeholder="e.g. +33 6 12 34 56 78"
+                      className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="interest" className="mb-2 block text-sm font-medium text-foreground">I'm interested in</label>
+                    <select id="interest" name="interest" required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30">
+                      <option value="">Select an option…</option>
+                      <option>Diagnostic</option>
+                      <option>System Building</option>
+                      <option>Fractional CRO</option>
+                      <option>Not sure yet help me choose</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">What are you trying to fix?</label>
+                    <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30" placeholder="A short note on your team, pipeline and where it's stuck." />
+                  </div>
+                  <button type="submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-violet)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
+                    <Send className="h-4 w-4" /> Send message
+                  </button>
+                  <p className="text-xs text-muted-foreground">Goes straight to contact@vonerio.com · No spam, ever.</p>
                 </div>
-                <div>
-                  <label htmlFor="interest" className="mb-2 block text-sm font-medium text-foreground">I'm interested in</label>
-                  <select id="interest" name="interest" required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30">
-                    <option value="">Select an option…</option>
-                    <option>Diagnostic</option>
-                    <option>System Building</option>
-                    <option>Fractional CRO</option>
-                    <option>Not sure yet help me choose</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">What are you trying to fix?</label>
-                  <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30" placeholder="A short note on your team, pipeline and where it's stuck." />
-                </div>
-                <button type="submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-violet)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
-                  <Send className="h-4 w-4" /> Send message
-                </button>
-                <p className="text-xs text-muted-foreground">Goes straight to contact@vonerio.com · No spam, ever.</p>
-              </div>
-            </form>
+              </form>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -181,6 +184,7 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
     </div>
   );
 }
+
 function SchedulingWidget() {
   return (
     <div className="rounded-2xl border border-border bg-card p-7 md:p-8">
