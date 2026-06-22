@@ -61,7 +61,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Vonerio Build a sales system your team runs without you" },
       { name: "description", content: "AI amplifies whatever's already there including the mess. Vonerio builds the sales system, clean data and process your AI actually needs. Enterprise rigor for $2M–$30M ARR teams. $26M+ closed by the operator behind it." },
-      { name: "google-site-verification", content: "Dk8LNqlyTtibIDLV-io1k5vKERWCYemja35b    bclIry4A" },
+      { name: "google-site-verification", content: "Dk8LNqlyTtibIDLV-io1k5vKERWCYemja35bclIry4A" },
       { property: "og:site_name", content: "Vonerio" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
