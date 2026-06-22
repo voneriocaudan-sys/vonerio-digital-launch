@@ -66,7 +66,7 @@ function Home() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
-              <CTAButton to="/contact" variant="ghost">Book a diagnostic</CTAButton>
+              <CTAButton href="/contact?interest=diagnostic" variant="ghost">Book a diagnostic</CTAButton>
             </div>
             <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <StatBlock value="$26" suffix="M+" label="Personally closed" />

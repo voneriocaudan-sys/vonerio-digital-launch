@@ -61,7 +61,7 @@ function Services() {
         fromLine="From $4,500 · Pulse Check → multi-geo deep dive"
         primaryPrice="From $4,500"
         ctaLabel="Start with a Pulse Check"
-        ctaHref="/contact"
+        ctaHref="/contact?interest=diagnostic"
         cards={DIAGNOSTIC_CARDS}
       />
 
@@ -74,7 +74,7 @@ function Services() {
           fromLine="From $22,000 · Core Build → multi-BU build"
           primaryPrice="From $22,000"
           ctaLabel="Scope a System Build"
-          ctaHref="/contact"
+          ctaHref="/contact?interest=system-building"
           cards={SYSTEM_CARDS}
         />
       </div>
@@ -87,7 +87,7 @@ function Services() {
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
-        ctaHref="/contact"
+        ctaHref="/contact?interest=fractional"
         cards={FRACTIONAL_CARDS}
       />
 
