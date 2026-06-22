@@ -147,7 +147,7 @@ function Home() {
       </section>
 
       {/* Methodology */}
-      <section className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
+      <section id="methodology" className="scroll-mt-24 bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
         <div className="container-page py-20 md:py-28">
           <Reveal>
             <SectionHeading
