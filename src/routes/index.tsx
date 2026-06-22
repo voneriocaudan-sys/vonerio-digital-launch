@@ -29,23 +29,25 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="container-page grid items-center gap-12 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-24 lg:py-28">
           <Reveal>
-            <Pill tone="tangerine">Founding Cohort now open · −20% for first clients</Pill>
+            <Pill tone="tangerine">Founding Cohort open, 5 spots, −20% for first clients</Pill>
             <h1 className="text-hero mt-6">
-              The enterprise sales system behind{" "}
-              <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">$26M+</span>{" "}
-              in closed deals.
+              Build a sales system{" "}
+              <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Vonerio diagnoses what's slowing your pipeline, builds the system to fix it with your reps, and leads the motion until it sticks.
+              Vonerio diagnoses what is slowing your pipeline, builds one system with your reps, and runs it until it sticks, leaving you with clean data and a defined process your AI can finally act on.
+            </p>
+            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
+              Enterprise rigor built on $26M+ in closed deals, sized for a team that cannot justify a $200K VP of Sales.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <CTAButton to="/services" variant="primary">Explore offerings</CTAButton>
+              <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
               <CTAButton to="/contact" variant="ghost">Book a diagnostic</CTAButton>
             </div>
             <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
               <StatBlock value="$26" suffix="M+" label="Personally closed" />
               <StatBlock value="214" suffix="%" label="Avg. quota · peak 323%" />
-              <StatBlock value="50" suffix="+" label="Enterprise deals" />
+              <StatBlock value="50" suffix="+" label="Enterprise & Mid-Market deals" />
             </dl>
           </Reveal>
 
@@ -89,19 +91,34 @@ function Home() {
         </div>
       </section>
 
-      {/* Offerings overview */}
+      {/* What I do */}
       <section className="container-page py-20 md:py-28">
         <Reveal>
           <SectionHeading
             eyebrow="What I do"
-            title="Three offerings, built to compound."
-            sub="From a one-week pulse check to a 90-day system build to fractional leadership on your top deals sized to what your team actually needs."
+            title="Think. Build. Run."
+            sub="Three steps that fix your sales organization and turn it into one clean foundation AI can run on."
           />
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Reveal><OverviewCard n="01" icon={SearchCheck} title="Diagnostic" body="A data-driven read on what's broken scored against the 4-pillar Prerequisites framework, with a prioritized action plan. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
-          <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="System Building" body="I build the system with your reps in 90 days playbook, scripts, objections handling, battle cards, cadences. Co-built live, not delivered as a static document." to="/services" hash="system-building" /></Reveal>
-          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Fractional CRO" body="Senior sales leadership on shared time: pipeline governance, forecasting and hands-on coaching on your top deals. Try a 6-week sprint before any commitment." to="/services" hash="fractional" /></Reveal>
+          <Reveal><OverviewCard n="01" icon={SearchCheck} title="Think → Diagnostic" body="A data-driven read on what is slowing the pipeline, scored against the 4-pillar readiness framework. You get a prioritized plan and a clear map of which data is clean, dirty or missing. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
+          <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="Build → System Building" body="In 90 days I build one system with your reps, playbook, qualification standard, battle cards, cadences, and a CRM configuration spec your admin implements. This is where your single source of truth gets built: one process, clean data, and every rep, sales lead and marketer aligned." to="/services" hash="system-building" /></Reveal>
+          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Run → Fractional CRO" body="CRO-level leadership on shared time, pipeline governance, forecasting, hands-on coaching on your top deals. The discipline that keeps the data clean and the forecast trustworthy. Try a 6-week sprint first." to="/services" hash="fractional" /></Reveal>
+        </div>
+      </section>
+
+      {/* AI foundation band */}
+      <section className="bg-[var(--color-indigo)] text-white">
+        <div className="container-page py-20 md:py-24">
+          <Reveal>
+            <div className="max-w-3xl">
+              <div className="text-eyebrow mb-4 text-[var(--color-tangerine)]">Why it matters now</div>
+              <h2 className="text-h2 text-white">AI amplifies whatever is already there, including the mess.</h2>
+              <p className="mt-5 text-[1.0625rem] leading-relaxed text-[var(--color-amethyst)]">
+                AI sales tools fail on dirty data and undefined process. Think → Build → Run gives you one process, one source of truth, and data your AI and AI-augmented reps can actually trust, to ramp faster, scale, and add revenue. The same three steps that fix your sales org are what make it AI-ready.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -112,7 +129,7 @@ function Home() {
             <SectionHeading
               eyebrow="Methodology"
               title="Four pillars of enterprise sales readiness."
-              sub="Twenty sub-items, each tied to a named deliverable. No generic templates every artifact closes a specific gap."
+              sub="Twenty sub-items, each tied to a named deliverable. No generic templates, every artifact closes a specific gap."
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -151,10 +168,9 @@ function Home() {
       {/* Proof stats band */}
       <section className="bg-[var(--color-indigo)] text-white">
         <div className="container-page py-16 md:py-20">
-          <div className="grid gap-10 md:grid-cols-4">
-            <ProofStat value="$16.2M" label="Largest single deal 12 countries, 18 months" />
-            <ProofStat value="$279M" label="First Vonerio client full assess-and-build cycle" />
-            <ProofStat value="$400M" label="Sales vertical that adopted the methodology" />
+          <div className="grid gap-10 md:grid-cols-3">
+            <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
+            <ProofStat value="$279M" label="First Vonerio client · full Diagnostic delivered (4 pillars, segmentation, plan)" />
             <ProofStat value="4" label="Languages negotiated & closed in, live" />
           </div>
         </div>
@@ -163,20 +179,20 @@ function Home() {
       {/* How it works */}
       <section className="container-page py-20 md:py-28">
         <Reveal>
-          <SectionHeading eyebrow="How it works" title="Diagnose. Build. Lead & embed." sub="A linear path with optional stops. Most clients start with a Diagnostic and decide what comes next from there." />
+          <SectionHeading eyebrow="How it works" title="Think. Build. Run." sub="A linear path with optional stops. Most clients start with a Diagnostic and decide what comes next from there." />
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Step n="01" title="Diagnose" body="Stakeholder interviews, CRM/data audit and a MEDDPICC-based pipeline review scored against the four readiness pillars." />
-          <Step n="02" title="Build" body="In 90 days I co-build the system with your reps playbook, battle cards, cadences, dashboards tested on live deals." />
-          <Step n="03" title="Lead & embed" body="Fractional leadership on top deals plus handover to a trained internal owner. No ongoing dependency." />
+          <Step n="01 Think" title="Diagnose" body="Stakeholder interviews, CRM/data audit and a MEDDPICC-based pipeline review scored against the four readiness pillars." />
+          <Step n="02 Build" title="Build" body="In 90 days I co-build the system with your reps, playbook, battle cards, cadences, dashboards tested on live deals." />
+          <Step n="03 Run" title="Run" body="Fractional leadership on top deals plus handover to a trained internal owner. No ongoing dependency." />
         </div>
       </section>
 
       {/* CTA band */}
       <CTABand
         title="Join the Founding Cohort."
-        sub="A launch-and-learn phase with −20% pricing for the first clients. Goal: referenceable results and a validated plan within ~90 days."
-        primary={{ label: "Book a call", to: "/contact", variant: "energy" }}
+        sub="A launch-and-learn phase with −20% pricing for the first five clients. The goal: referenceable results and a validated plan within ~90 days."
+        primary={{ label: "Score your team (free)", href: "/scorecard", variant: "energy" }}
         secondary={{ label: "View pricing", to: "/services" }}
       />
     </>
