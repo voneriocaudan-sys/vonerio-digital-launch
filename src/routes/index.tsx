@@ -262,5 +262,23 @@ function Step({ n, title, body }: { n: string; title: string; body: string }) {
   );
 }
 
-// CheckItem imported but currently unused on home kept for future modular use
+function TimelineStep({ n, title, body }: { n: string; title: string; body: string }) {
+  return (
+    <Reveal>
+      <li className="relative flex flex-col items-start">
+        <span
+          className="relative z-10 inline-flex h-12 w-12 items-center justify-center rounded-full border border-border bg-card font-semibold text-[var(--color-violet)] shadow-sm dark:text-[var(--color-magenta)]"
+          style={{ fontFamily: "var(--font-display)" }}
+        >
+          {n}
+        </span>
+        <h3 className="mt-5 text-lg font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>{title}</h3>
+        <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
+      </li>
+    </Reveal>
+  );
+}
+
+// Step and CheckItem retained for potential reuse
+void Step;
 void CheckItem;
