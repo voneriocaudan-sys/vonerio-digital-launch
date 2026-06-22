@@ -159,11 +159,11 @@ function OfferingBlock({
 }
 
 const FAQS = [
-  { q: "What is the Founding Cohort?", a: "A launch-and-learn phase. The goal is 3–5 referenceable cases and a validated price/channel/offer combination within ~90 days, capped at five clients. Founding Cohort clients get −20% on flagship tiers in exchange for a reference once results land." },
-  { q: "Do I need a Diagnostic before System Building?", a: "Usually, but not always. The Diagnostic is what makes the Build precise, it defines which gaps to close first. If you already have a clear, recent read on your sales org, we can fast-track a mini-assessment in week one of the Build." },
-  { q: "What does \"outcome-linked payment\" mean?", a: "The final installment of a System Build is due when a real adoption signal fires, e.g. 2+ reps have logged a qualified deal using the new standard or 30 days post-handover, whichever comes first. You pay the last part once it's in use." },
-  { q: "Is there a guarantee?", a: "Yes, on the Diagnostic: if it doesn't surface at least three specific, actionable priorities, the fee is waived. It's paid on delivery, so there's no deposit at risk." },
-  { q: "Who is this for?", a: "B2B software and tech-services companies, roughly $2M–$30M ARR, running a sales-led motion with 3–15+ reps teams that have outgrown founder-led selling but can't yet justify a $200K+ full-time VP of Sales. Below that, start with a Pulse Check or a Trial Sprint." },
+  { q: "What is the Founding Cohort?", a: "A launch-and-learn phase. The goal is 3-5 referenceable cases and a validated price, channel and offer within about 90 days. Founding Cohort clients get -20% on flagship tiers in exchange for a reference once results land." },
+  { q: "Do I need a Diagnostic before System Building?", a: "Usually yes, but a week-1 fast-track mini-assessment exists if you want to move straight into a build." },
+  { q: "What does \"outcome-linked payment\" mean?", a: "The final installment is due on a real adoption signal, for example reps logging qualified deals on the new standard, not on elapsed time." },
+  { q: "Is there a guarantee?", a: "Yes. On the Standard Diagnostic, the fee is waived if it does not surface at least three priorities worth acting on." },
+  { q: "Who is this for?", a: "B2B software and tech-services teams, $2M-$30M ARR, 3-15+ reps, deals from $20K." },
 ];
 
 function FAQ() {
