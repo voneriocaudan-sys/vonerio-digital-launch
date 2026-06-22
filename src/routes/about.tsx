@@ -62,31 +62,21 @@ function About() {
         </div>
       </section>
 
-      {/* Track record */}
-      <section className="bg-[var(--color-indigo)] text-white">
+      {/* Methodology — personal framing */}
+      <section className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
         <div className="container-page py-16 md:py-20">
-          <div className="grid gap-10 md:grid-cols-3">
-            <Track value="$26M+" label="Personally closed across 50+ enterprise deals" />
-            <Track value="323%" label="Peak quota attainment FY23 on a $5M target" />
-            <Track value="$2.7M" label="New-logo expansion across 5 LatAm countries" />
-          </div>
-        </div>
-      </section>
-
-      {/* Methodology */}
-      <section id="methodology" className="container-page py-20 md:py-28">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Methodology"
-            title="Four pillars twenty deliverables."
-            sub="Sourced from the AI-Powered Enterprise Sales Cycle playbook. All 20 sub-items map to a named Vonerio deliverable none of the output is generic; every artifact closes a specific gap."
-          />
-        </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-2">
-          <Reveal><PillarCard n="01" title="Own Your Territory" items={["Define ICP", "Sector analysis", "Account tiering", "Account-based marketing", "Account growth plan"]} /></Reveal>
-          <Reveal delay={80}><PillarCard n="02" title="Full Offering Expertise" items={["Define UVP", "Positioning", "Entry offers", "Packaging & pricing", "Sales battle cards"]} /></Reveal>
-          <Reveal delay={120}><PillarCard n="03" title="Know Your Customers" items={["Map buying committee", "Primary pain points", "Relationship history", "Internal context", "Decision-making process"]} /></Reveal>
-          <Reveal delay={180}><PillarCard n="04" title="Sales Enablement" items={["CRM", "Call intelligence & coaching", "Scripts & templates", "Prospecting KPIs", "Dashboards & reports"]} /></Reveal>
+          <Reveal>
+            <div className="max-w-3xl">
+              <div className="text-eyebrow mb-3">Methodology</div>
+              <h2 className="text-h2">The same system, sized to your team.</h2>
+              <p className="mt-5 text-[1.0625rem] leading-relaxed text-muted-foreground">
+                Everything I teach distils into four pillars: know your territory, master your offering, understand your customer's buying process, and equip your team with the right tools and data. I built this over ten years of live deals. Now I co-build it with your reps so it becomes yours.
+              </p>
+              <div className="mt-6">
+                <CTAButton to="/" variant="ghost">See the full framework</CTAButton>
+              </div>
+            </div>
+          </Reveal>
         </div>
       </section>
 
