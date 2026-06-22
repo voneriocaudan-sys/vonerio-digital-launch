@@ -55,7 +55,7 @@ export function StatBlock({ value, suffix, label, dark = false }: { value: strin
     <div>
       <div className={`font-display text-4xl font-semibold tracking-tight md:text-5xl ${dark ? "text-white" : "text-foreground"}`} style={{ fontFamily: "var(--font-display)" }}>
         {value}
-        {suffix && <span className="text-[var(--color-tangerine)]">{suffix}</span>}
+        {suffix && <span className="text-[var(--color-tangerine-ink)] dark:text-[var(--color-tangerine)]">{suffix}</span>}
       </div>
       <div className={`mt-2 text-sm ${dark ? "text-[var(--color-amethyst)]" : "text-muted-foreground"}`}>{label}</div>
     </div>

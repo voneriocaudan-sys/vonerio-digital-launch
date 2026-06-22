@@ -343,7 +343,7 @@ function Scorecard() {
                         style={{ fontFamily: "var(--font-display)" }}
                       >
                         {overallPct}
-                        <span className="text-[var(--color-tangerine)]">%</span>
+                        <span className="text-[var(--color-tangerine-ink)] dark:text-[var(--color-tangerine)]">%</span>
                       </div>
                       <div className="mt-3 text-lg font-medium">{band.title}</div>
                     </div>
@@ -363,7 +363,7 @@ function Scorecard() {
                           <span className={p.name === weakest?.name ? "font-semibold text-foreground" : "text-foreground"}>
                             {p.name}
                             {p.name === weakest?.name && (
-                              <span className="ml-2 rounded-full bg-[var(--color-tangerine)]/15 px-2 py-0.5 text-xs font-medium text-[var(--color-tangerine)]">
+                              <span className="ml-2 rounded-full bg-[var(--color-tangerine)]/15 px-2 py-0.5 text-xs font-medium text-[var(--color-tangerine-ink)] dark:text-[var(--color-tangerine)]">
                                 weakest
                               </span>
                             )}
