@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { ArrowRight, ArrowUpRight, CheckCircle2, Loader2 } from "lucide-react";
 import { Pill, CTAButton } from "@/components/ui-bits";
 import { Reveal } from "@/components/Reveal";
+import { track } from "@/lib/analytics";
 
 export const Route = createFileRoute("/scorecard")({
   head: () => ({
@@ -77,8 +78,13 @@ function Scorecard() {
 
   const setAnswer = (qIdx: number, value: number) => {
     setAnswers((prev) => {
+      const wasEmpty = prev.every((a) => a === null);
       const next = [...prev];
       next[qIdx] = value;
+      if (wasEmpty) track("scorecard_start");
+      if (next.every((a) => a !== null) && prev.some((a) => a === null)) {
+        track("scorecard_complete");
+      }
       return next;
     });
   };
@@ -171,6 +177,7 @@ function Scorecard() {
     }
     setSubmitting(false);
     setRevealed(true);
+    track("scorecard_email_captured", { overall_pct: overallPct, band: band.title });
     if (typeof window !== "undefined") {
       setTimeout(() => {
         document.getElementById("result")?.scrollIntoView({ behavior: "smooth", block: "start" });

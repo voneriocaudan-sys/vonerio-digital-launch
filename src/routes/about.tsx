@@ -79,7 +79,7 @@ function About() {
         <Reveal>
           <SectionHeading
             eyebrow="Methodology"
-            title="Four pillars · twenty deliverables."
+            title="Four pillars twenty deliverables."
             sub="Sourced from the AI-Powered Enterprise Sales Cycle playbook. All 20 sub-items map to a named Vonerio deliverable none of the output is generic; every artifact closes a specific gap."
           />
         </Reveal>

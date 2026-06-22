@@ -3,6 +3,7 @@ import { SearchCheck, Blocks, Compass, TrendingUp, ShieldCheck, Users, Handshake
 import { Pill, SectionHeading, CTAButton, StatBlock, CheckItem, CTABand } from "@/components/ui-bits";
 import { OverviewCard, PillarCard } from "@/components/OfferingCard";
 import { Reveal } from "@/components/Reveal";
+import { COHORT_SPOTS_LEFT } from "@/lib/cohort";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -29,7 +30,7 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="container-page grid items-center gap-12 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-24 lg:py-28">
           <Reveal>
-            <Pill tone="tangerine">Founding Cohort open, 5 spots, −20% for first clients</Pill>
+            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · −20% for first clients</Pill>
             <h1 className="text-hero mt-6">
               Build a sales system{" "}
               <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
@@ -78,7 +79,7 @@ function Home() {
       {/* Trust strip */}
       <section className="border-y border-border bg-[var(--color-mist)]/60 dark:bg-[var(--color-indigo)]/20">
         <div className="container-page flex flex-col items-center gap-6 py-8 md:flex-row md:justify-between md:gap-8 md:py-7">
-          <span className="text-eyebrow">Methodology trained &amp; certified in</span>
+          <span className="text-eyebrow">Methodology trained in</span>
           <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium text-foreground/80">
             <li>MEDDPICC</li>
             <li className="text-border">·</li>
