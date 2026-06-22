@@ -16,7 +16,7 @@ export function Footer() {
             <a href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white">
               <Linkedin className="h-4 w-4" />
             </a>
-            <a href="mailto:contact@vonerio.com" aria-label="Email" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white">
+            <a href="mailto:loic.caudan@vonerio.com" aria-label="Email" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/15 transition hover:border-white/40 hover:text-white">
               <Mail className="h-4 w-4" />
             </a>
           </div>
@@ -32,7 +32,7 @@ export function Footer() {
           <FooterLink to="/contact">Contact</FooterLink>
         </FooterCol>
         <FooterCol title="Get in touch">
-          <a className="block text-sm text-[var(--color-amethyst)] transition hover:text-white" href="mailto:contact@vonerio.com">contact@vonerio.com</a>
+          <a className="block text-sm text-[var(--color-amethyst)] transition hover:text-white" href="mailto:loic.caudan@vonerio.com">loic.caudan@vonerio.com</a>
           <Link to="/contact" className="block text-sm text-[var(--color-amethyst)] transition hover:text-white">Book a call</Link>
         </FooterCol>
       </div>
