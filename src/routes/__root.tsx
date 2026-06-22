@@ -76,8 +76,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" },
-      // Preload the LCP founder portrait (used on home + about hero).
-      { rel: "preload", as: "image", href: "/src/assets/loic-caudan.jpg", fetchpriority: "high" },
     ],
     scripts: [
       // Plausible analytics. Swap data-domain for your own (or replace with
