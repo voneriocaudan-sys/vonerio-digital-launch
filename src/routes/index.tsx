@@ -192,9 +192,10 @@ function Home() {
       {/* Proof stats band */}
       <section className="bg-[var(--color-indigo)] text-white">
         <div className="container-page py-16 md:py-20">
-          <div className="grid gap-10 md:grid-cols-3">
+          <div className="grid gap-10 md:grid-cols-4">
             <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
             <ProofStat value="$55M" label="First Vonerio B-Case" />
+            <ProofStat value="1" label="Diagnostic delivered (4 pillars, segmentation, plan)" />
             <ProofStat value="4" label="Languages negotiated & closed in, live" />
           </div>
         </div>
