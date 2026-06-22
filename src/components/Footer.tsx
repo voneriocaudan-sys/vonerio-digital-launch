@@ -39,7 +39,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="container-page flex flex-col items-start justify-between gap-2 py-6 text-xs text-[var(--color-amethyst)]/80 md:flex-row md:items-center">
           <span>© {year} Vonerio. All rights reserved.</span>
-          <span>EMEA · APAC · LatAm</span>
+          <span>Working remotely across APAC &amp; EMEA.</span>
         </div>
       </div>
     </footer>
