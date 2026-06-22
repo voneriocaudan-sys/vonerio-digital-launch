@@ -70,7 +70,7 @@ function Contact() {
             <ul className="space-y-7">
               <Info icon={Mail} title="Email" lines={[<a key="m" href="mailto:contact@vonerio.com" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">contact@vonerio.com</a>]} />
               <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
-              <Info icon={Globe} title="Regions" lines={["EMEA · APAC · LatAm", "Fluent in English, French, Spanish & Portuguese (Bahasa Indonesia ongoing)."]} />
+              <Info icon={Globe} title="Where I work?" lines={["Remotely across APAC & EMEA.", "Fluent in English, French, Spanish & Portuguese; Bahasa Indonesia ongoing."]} />
               <Info icon={Clock} title="Response time" lines={["Within 1 business day.", "Founding Cohort enquiries are prioritized."]} />
             </ul>
 
@@ -143,7 +143,7 @@ function Contact() {
         <div role="status" className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 px-4">
           <div className="flex items-center gap-3 rounded-full bg-[var(--color-indigo)] px-5 py-3 text-sm text-white shadow-2xl">
             <CheckCircle2 className="h-4 w-4 text-[var(--color-tangerine)]" />
-            Message sent I'll reply within 1 business day.
+            Message sent, I'll reply within 1 business day.
           </div>
         </div>
       )}
@@ -181,5 +181,25 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
     </div>
   );
 }
+function SchedulingWidget() {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-7 md:p-8">
+      <div className="mb-4 flex items-center gap-3">
+        <Calendar className="h-5 w-5 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" />
+        <h3 className="text-lg font-medium text-foreground">Book a 20-min scoping call</h3>
+      </div>
+      <div className="relative min-h-[420px] overflow-hidden rounded-xl bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10">
+        {/* Replace this placeholder with your Calendly inline embed or Cal.com iframe */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+          <p className="text-sm font-medium text-foreground">Scheduling widget placeholder</p>
+          <p className="mt-2 max-w-xs text-xs text-muted-foreground">
+            Swap this block for your Calendly or Cal.com inline embed. The contact form below stays available as a fallback.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Pull SectionHeading import out to avoid lint warnings on unused.
 void SectionHeading;
