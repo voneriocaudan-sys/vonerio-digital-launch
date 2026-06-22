@@ -186,7 +186,14 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
 
 function SchedulingWidget() {
   return (
-    <div className="rounded-2xl border border-border bg-card p-7 md:p-8">
+    <div
+      className="rounded-2xl border border-border bg-card p-7 md:p-8"
+      onClick={() => {
+        // Fires when the user engages with the scheduling area (placeholder
+        // until Cal.com/Calendly inline embed is dropped in).
+        import("@/lib/analytics").then((m) => m.track("scheduling_booking_click"));
+      }}
+    >
       <div className="mb-4 flex items-center gap-3">
         <Calendar className="h-5 w-5 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" />
         <h3 className="text-lg font-medium text-foreground">Book a 20-min scoping call</h3>
