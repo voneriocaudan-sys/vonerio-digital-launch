@@ -43,8 +43,8 @@ export const Route = createFileRoute("/")({
 });
 
 import HERO_IMG from "@/assets/loic-caudan.jpg";
-// NOTE: Why-section imagery uses Unsplash placeholder. Swap for real Vonerio brand photography in production.
-const WHY_IMG = "https://images.unsplash.com/photo-1573164574511-73c773193279?auto=format&fit=crop&w=1400&q=80";
+import WHY_IMG from "@/assets/why-vonerio-team.jpg.asset.json";
+
 
 function Home() {
   return (
