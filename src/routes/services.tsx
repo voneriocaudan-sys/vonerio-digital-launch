@@ -82,8 +82,8 @@ function Services() {
       <OfferingBlock
         id="fractional"
         eyebrow="03 · Fractional CRO"
-        title="CRO-level leadership, on shared time."
-        intro="Pipeline governance, forecasting, and hands-on coaching on your top 3–5 strategic deals without a $200K+ full-time hire. Try a 6-week sprint first; $5,000 credits toward conversion."
+        title="A senior closer in your top deals, on shared time."
+        intro="I work your top strategic deals directly: on the calls with the buyer's decision-makers, running the negotiation and pushing to closed, alongside your reps. I coach the team as we go and keep the pipeline and forecast honest. You get a peer-level operator in the deals, plus the governance to keep them moving, without a $200K+ full-time hire. The same motion I used to close $26M+ myself, carrying a quota. Try a 6-week sprint first."
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
