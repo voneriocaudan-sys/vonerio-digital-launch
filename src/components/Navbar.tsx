@@ -51,14 +51,14 @@ export function Navbar() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <ThemeToggle />
-          <Link
-            to="/contact"
+          <a
+            href="/contact?interest=diagnostic"
             data-track="cta_diagnostic_click"
             data-track-location="navbar"
             className="text-sm font-medium text-muted-foreground transition hover:text-foreground focus-visible:outline-none focus-visible:underline"
           >
             Book a diagnostic
-          </Link>
+          </a>
           <a
             href="/scorecard"
             data-track="cta_score_click"
