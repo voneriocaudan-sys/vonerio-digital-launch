@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Mail, Linkedin, Globe, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Linkedin, Globe, Clock, Send, CheckCircle2, Calendar } from "lucide-react";
 import { SectionHeading, Pill } from "@/components/ui-bits";
 import { Reveal } from "@/components/Reveal";
 
@@ -50,6 +50,19 @@ function Contact() {
         </Reveal>
       </section>
 
+      <section className="container-page pb-8 md:pb-12">
+        <Reveal>
+          <div className="flex flex-col gap-4 rounded-2xl border border-[var(--color-violet)]/20 bg-[var(--color-violet)]/5 p-6 md:flex-row md:items-center md:justify-between md:p-8 dark:bg-[var(--color-violet)]/10">
+            <p className="text-base leading-relaxed text-foreground md:text-lg">
+              Not ready to talk yet? Score your team against the four pillars (free), instant read, no call required.
+            </p>
+            <a href="/scorecard" className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-full bg-[var(--color-violet)] px-5 py-2.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
+              Score your team
+            </a>
+          </div>
+        </Reveal>
+      </section>
+
       <section className="container-page pb-24 md:pb-32">
         <div className="grid gap-12 md:grid-cols-[1fr_1.2fr] md:gap-16">
           {/* Left: contact info */}
@@ -57,7 +70,7 @@ function Contact() {
             <ul className="space-y-7">
               <Info icon={Mail} title="Email" lines={[<a key="m" href="mailto:contact@vonerio.com" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">contact@vonerio.com</a>]} />
               <Info icon={Linkedin} title="LinkedIn" lines={[<a key="l" href="https://www.linkedin.com/in/lcaudan/" target="_blank" rel="noreferrer" className="text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]">Connect with Loïc Caudan</a>]} />
-              <Info icon={Globe} title="Regions" lines={["EMEA · APAC · LatAm", "Fluent in English, French, Spanish & Portuguese (Bahasa Indonesia ongoing)."]} />
+              <Info icon={Globe} title="Where I work?" lines={["Remotely across APAC & EMEA.", "Fluent in English, French, Spanish & Portuguese; Bahasa Indonesia ongoing."]} />
               <Info icon={Clock} title="Response time" lines={["Within 1 business day.", "Founding Cohort enquiries are prioritized."]} />
             </ul>
 
@@ -69,59 +82,62 @@ function Contact() {
             </div>
           </Reveal>
 
-          {/* Right: form */}
+          {/* Right: scheduling + form */}
           <Reveal delay={100}>
-            <form
-              action="https://formsubmit.co/loic.caudan@vonerio.com"
-              method="POST"
-              className="rounded-2xl border border-border bg-card p-7 md:p-8"
-            >
-              <input type="hidden" name="_subject" value="New Vonerio enquiry from the website" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value={nextUrl} />
-              <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
+            <div className="space-y-8">
+              <SchedulingWidget />
+              <form
+                action="https://formsubmit.co/loic.caudan@vonerio.com"
+                method="POST"
+                className="rounded-2xl border border-border bg-card p-7 md:p-8"
+              >
+                <input type="hidden" name="_subject" value="New Vonerio enquiry from the website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value={nextUrl} />
+                <input type="text" name="_honey" style={{ display: "none" }} tabIndex={-1} autoComplete="off" />
 
-              <div className="grid gap-5">
-                <Field label="Full name" name="name" required />
-                <Field label="Work email" name="email" type="email" required />
-                <Field label="Company" name="company" required />
-                <div>
-                  <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground">
-                    Contact number <span className="text-muted-foreground font-normal">(WhatsApp or Telegram preferred include country prefix)</span>
-                  </label>
-                  <input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    inputMode="tel"
-                    autoComplete="tel"
-                    pattern="^\+[0-9\s().-]{6,}$"
-                    title="Include your country prefix, e.g. +33 6 12 34 56 78"
-                    placeholder="e.g. +33 6 12 34 56 78"
-                    className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30"
-                  />
+                <div className="grid gap-5">
+                  <Field label="Full name" name="name" required />
+                  <Field label="Work email" name="email" type="email" required />
+                  <Field label="Company" name="company" required />
+                  <div>
+                    <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground">
+                      Contact number <span className="text-muted-foreground font-normal">(WhatsApp or Telegram preferred include country prefix)</span>
+                    </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      inputMode="tel"
+                      autoComplete="tel"
+                      pattern="^\+[0-9\s().-]{6,}$"
+                      title="Include your country prefix, e.g. +33 6 12 34 56 78"
+                      placeholder="e.g. +33 6 12 34 56 78"
+                      className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="interest" className="mb-2 block text-sm font-medium text-foreground">I'm interested in</label>
+                    <select id="interest" name="interest" required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30">
+                      <option value="">Select an option…</option>
+                      <option>Diagnostic</option>
+                      <option>System Building</option>
+                      <option>Fractional CRO</option>
+                      <option>Not sure yet help me choose</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">What are you trying to fix?</label>
+                    <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition placeholder:text-muted-foreground focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30" placeholder="A short note on your team, pipeline and where it's stuck." />
+                  </div>
+                  <button type="submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-violet)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
+                    <Send className="h-4 w-4" /> Send message
+                  </button>
+                  <p className="text-xs text-muted-foreground">Goes straight to contact@vonerio.com · No spam, ever.</p>
                 </div>
-                <div>
-                  <label htmlFor="interest" className="mb-2 block text-sm font-medium text-foreground">I'm interested in</label>
-                  <select id="interest" name="interest" required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30">
-                    <option value="">Select an option…</option>
-                    <option>Diagnostic</option>
-                    <option>System Building</option>
-                    <option>Fractional CRO</option>
-                    <option>Not sure yet help me choose</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground">What are you trying to fix?</label>
-                  <textarea id="message" name="message" rows={5} required className="w-full rounded-lg border border-border bg-background px-4 py-3 text-sm text-foreground transition focus:border-[var(--color-violet)] focus:outline-none focus:ring-2 focus:ring-[var(--color-violet)]/30" placeholder="A short note on your team, pipeline and where it's stuck." />
-                </div>
-                <button type="submit" className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--color-violet)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
-                  <Send className="h-4 w-4" /> Send message
-                </button>
-                <p className="text-xs text-muted-foreground">Goes straight to contact@vonerio.com · No spam, ever.</p>
-              </div>
-            </form>
+              </form>
+            </div>
           </Reveal>
         </div>
       </section>
@@ -130,7 +146,7 @@ function Contact() {
         <div role="status" className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 px-4">
           <div className="flex items-center gap-3 rounded-full bg-[var(--color-indigo)] px-5 py-3 text-sm text-white shadow-2xl">
             <CheckCircle2 className="h-4 w-4 text-[var(--color-tangerine)]" />
-            Message sent I'll reply within 1 business day.
+            Message sent, I'll reply within 1 business day.
           </div>
         </div>
       )}
@@ -168,5 +184,26 @@ function Field({ label, name, type = "text", required }: { label: string; name: 
     </div>
   );
 }
+
+function SchedulingWidget() {
+  return (
+    <div className="rounded-2xl border border-border bg-card p-7 md:p-8">
+      <div className="mb-4 flex items-center gap-3">
+        <Calendar className="h-5 w-5 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" />
+        <h3 className="text-lg font-medium text-foreground">Book a 20-min scoping call</h3>
+      </div>
+      <div className="relative min-h-[420px] overflow-hidden rounded-xl bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10">
+        {/* Replace this placeholder with your Calendly inline embed or Cal.com iframe */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+          <p className="text-sm font-medium text-foreground">Scheduling widget placeholder</p>
+          <p className="mt-2 max-w-xs text-xs text-muted-foreground">
+            Swap this block for your Calendly or Cal.com inline embed. The contact form below stays available as a fallback.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // Pull SectionHeading import out to avoid lint warnings on unused.
 void SectionHeading;
