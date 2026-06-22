@@ -9,12 +9,35 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Vonerio Build a sales system your team runs without you" },
-      { name: "description", content: "AI amplifies whatever's already there including the mess. Vonerio builds the sales system, clean data and process your AI actually needs. Enterprise rigor for $2M–$30M ARR teams. $26M+ closed by the operator behind it." },
+      { name: "description", content: "Fractional sales leadership for $2M–$30M ARR B2B teams. AI amplifies the mess, Vonerio builds the clean-data sales system your AI needs. $26M+ closed." },
       { property: "og:title", content: "Vonerio Build a sales system your team runs without you" },
-      { property: "og:description", content: "Diagnose. Build. Run. The sales system and the clean foundation your AI can finally act on." },
+      { property: "og:description", content: "Fractional sales leadership for $2M–$30M ARR B2B teams. AI amplifies the mess, Vonerio builds the clean-data sales system your AI needs. $26M+ closed." },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Vonerio",
+          url: "https://vonerio.com",
+          logo: "https://vonerio.com/favicon-512.png",
+          image: "https://vonerio.com/vonerio-social.png",
+          description:
+            "Fractional sales leadership for B2B software and tech-services companies, diagnose, build and run the sales system and the clean-data foundation your AI needs.",
+          founder: {
+            "@type": "Person",
+            name: "Loïc Caudan",
+            jobTitle: "Fractional CRO",
+            sameAs: "https://www.linkedin.com/in/lcaudan/",
+          },
+          areaServed: ["APAC", "EMEA"],
+          email: "loic.caudan@vonerio.com",
+        }),
+      },
+    ],
   }),
   component: Home,
 });
