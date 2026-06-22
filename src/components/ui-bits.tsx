@@ -73,7 +73,7 @@ export function CheckItem({ children }: { children: ReactNode }) {
   );
 }
 
-export function CTABand({ title, sub, dark = true, primary, secondary }: { title: ReactNode; sub: ReactNode; dark?: boolean; primary: { label: string; to?: string; href?: string; variant?: "energy" | "primary" }; secondary?: { label: string; to?: string; hash?: string } }) {
+export function CTABand({ title, sub, dark = true, primary, secondary }: { title: ReactNode; sub: ReactNode; dark?: boolean; primary: { label: string; to?: string; href?: string; variant?: "energy" | "primary" }; secondary?: { label: string; to?: string; href?: string; hash?: string } }) {
   return (
     <section className={dark ? "bg-[var(--color-indigo)] text-white" : "bg-[var(--color-mist)]"}>
       <div className="container-page py-20 md:py-28">
@@ -85,7 +85,7 @@ export function CTABand({ title, sub, dark = true, primary, secondary }: { title
           <div className="flex flex-wrap items-center gap-3 md:justify-end">
             <CTAButton variant={primary.variant ?? "energy"} to={primary.to} href={primary.href}>{primary.label}</CTAButton>
             {secondary && (
-              <CTAButton variant={dark ? "darkGhost" : "ghost"} to={secondary.to} hash={secondary.hash}>{secondary.label}</CTAButton>
+              <CTAButton variant={dark ? "darkGhost" : "ghost"} to={secondary.to} href={secondary.href} hash={secondary.hash}>{secondary.label}</CTAButton>
             )}
           </div>
         </div>
