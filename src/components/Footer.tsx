@@ -28,7 +28,7 @@ export function Footer() {
         </FooterCol>
         <FooterCol title="Company">
           <FooterLink to="/about">About</FooterLink>
-          <FooterLink to="/about" hash="methodology">Methodology</FooterLink>
+          <FooterLink to="/" hash="methodology">Methodology</FooterLink>
           <FooterLink to="/contact">Contact</FooterLink>
         </FooterCol>
         <FooterCol title="Get in touch">
