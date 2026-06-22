@@ -152,8 +152,8 @@ function Home() {
           <Reveal>
             <SectionHeading
               eyebrow="Methodology"
-              title="Four pillars of enterprise sales readiness."
-              sub="Twenty sub-items, each tied to a named deliverable. No generic templates, every artifact closes a specific gap."
+              title="Four pillars of sales readiness."
+              sub="Twenty sub-items, each tied to a named deliverable. No generic templates. Every artifact closes a specific gap."
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
