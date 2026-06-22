@@ -177,13 +177,13 @@ function Home() {
           <Reveal delay={100}>
             <SectionHeading
               eyebrow="Why Vonerio"
-              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">not a consultant's template.</span></>}
+              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">built in real deals, made to be yours.</span></>}
             />
             <ul className="mt-8 space-y-5">
               <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
               <Why icon={Users} title="Co-built with your reps." body="Each artifact is tested on a real deal before it's finalized." />
               <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to a real adoption signal, not elapsed time." />
-              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system no ongoing dependency." />
+              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No ongoing dependency." />
             </ul>
           </Reveal>
         </div>
