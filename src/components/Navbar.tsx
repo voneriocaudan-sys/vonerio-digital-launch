@@ -92,14 +92,14 @@ export function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              to="/contact"
+            <a
+              href="/contact?interest=diagnostic"
               data-track="cta_diagnostic_click"
               data-track-location="navbar_mobile"
               className="mt-2 inline-flex items-center justify-center rounded-full border border-border px-5 py-3 text-sm font-medium text-foreground"
             >
               Book a diagnostic
-            </Link>
+            </a>
             <a
               href="/scorecard"
               data-track="cta_score_click"
