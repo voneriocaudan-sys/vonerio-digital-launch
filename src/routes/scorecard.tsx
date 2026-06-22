@@ -352,6 +352,10 @@ function Scorecard() {
                     </p>
                   </div>
 
+                  <p className="mt-6 text-sm text-muted-foreground">
+                    Want to keep this? Take a screenshot, your results live on this page, not in your inbox.
+                  </p>
+
                   <div className="mt-10 space-y-4">
                     {pillarScores.map((p) => (
                       <div key={p.name}>
