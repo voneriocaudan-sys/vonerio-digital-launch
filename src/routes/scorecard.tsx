@@ -393,7 +393,7 @@ function Scorecard() {
                   )}
 
                   <div className="mt-10 flex flex-wrap gap-3">
-                    <CTAButton variant="energy" to="/contact">Book a diagnostic</CTAButton>
+                    <CTAButton variant="energy" href="/contact?interest=diagnostic">Book a diagnostic</CTAButton>
                     <CTAButton variant="ghost" to="/contact">Talk to Loïc</CTAButton>
                   </div>
                 </div>
