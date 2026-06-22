@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SectionHeading, CTABand, Pill } from "@/components/ui-bits";
-import { PillarCard } from "@/components/OfferingCard";
+import { SectionHeading, CTABand, Pill, CTAButton } from "@/components/ui-bits";
 import { Reveal } from "@/components/Reveal";
 
 export const Route = createFileRoute("/about")({
