@@ -87,7 +87,7 @@ function Services() {
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
-        ctaHref="/contact"
+        ctaHref="/contact?interest=fractional"
         cards={FRACTIONAL_CARDS}
       />
 
