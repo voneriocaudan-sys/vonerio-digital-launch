@@ -315,7 +315,7 @@ function Scorecard() {
                   <button
                     type="submit"
                     disabled={!allAnswered || submitting}
-                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--color-tangerine)] px-6 py-3.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(255,107,53,0.7)] transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[var(--color-tangerine)] px-6 py-3.5 text-sm font-medium text-[#1A1A1A] shadow-[0_10px_28px_-12px_rgba(255,107,53,0.7)] transition hover:brightness-95 disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <ArrowRight className="h-4 w-4" />}
                     {submitting ? "Scoring…" : "See my result"}
