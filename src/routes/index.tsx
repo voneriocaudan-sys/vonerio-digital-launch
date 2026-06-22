@@ -127,7 +127,7 @@ function Home() {
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           <Reveal><OverviewCard n="01" icon={SearchCheck} title="Think → Diagnostic" body="A data-driven read on what is slowing the pipeline, scored against the 4-pillar readiness framework. You get a prioritized plan and a clear map of which data is clean, dirty or missing. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
           <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="Build → System Building" body="In 90 days I build one system with your reps, playbook, qualification standard, battle cards, cadences, and a CRM configuration spec your admin implements. This is where your single source of truth gets built: one process, clean data, and every rep, sales lead and marketer aligned." to="/services" hash="system-building" /></Reveal>
-          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Run → Fractional CRO" body="CRO-level leadership on shared time, pipeline governance, forecasting, hands-on coaching on your top deals. The discipline that keeps the data clean and the forecast trustworthy. Try a 6-week sprint first." to="/services" hash="fractional" /></Reveal>
+          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Run → Fractional CRO" body="A senior closer on your top deals, on shared time. I get on the calls and run the negotiations, coach your reps, and keep the forecast honest. CRO-level leadership without a $200K+ hire. Try a 6-week sprint first." to="/services" hash="fractional" /></Reveal>
         </div>
       </section>
 
