@@ -177,6 +177,7 @@ function Scorecard() {
     }
     setSubmitting(false);
     setRevealed(true);
+    track("scorecard_email_captured", { overall_pct: overallPct, band: band.title });
     if (typeof window !== "undefined") {
       setTimeout(() => {
         document.getElementById("result")?.scrollIntoView({ behavior: "smooth", block: "start" });
