@@ -25,7 +25,7 @@ const PILLARS: Pillar[] = [
   {
     name: "Own Your Territory",
     questions: [
-      "We have a written, agreed ICP that both sales and marketing use (Who · Revenue · Stage / funding · Headcount / team size · Primary verticals · Economic buyer · Why-now trigger · Geography · Walk away from).",
+      "We have a written, agreed ICP that both sales and marketing use.",
       "Our accounts are tiered (e.g. strategic / high-potential / broad) with a clear rule for what goes where.",
       "Each priority account has a documented growth or pursuit plan.",
     ],
@@ -50,7 +50,7 @@ const PILLARS: Pillar[] = [
     name: "Sales Enablement",
     questions: [
       "Our CRM is a true single source of truth, clean, current, and trusted enough to forecast from.",
-      "We have standardized scripts, sequences, and templates that reps actually use and are performant.",
+      "We have standardized scripts, sequences, and templates that reps actually use.",
       "We track prospecting and pipeline KPIs on a live dashboard the whole team can see.",
     ],
   },
@@ -394,7 +394,7 @@ function Scorecard() {
 
                   <div className="mt-10 flex flex-wrap gap-3">
                     <CTAButton variant="energy" to="/contact">Book a diagnostic</CTAButton>
-                    <CTAButton variant="ghost" to="/services">See how System Building closes these gaps</CTAButton>
+                    <CTAButton variant="ghost" to="/contact">Talk to Loïc</CTAButton>
                   </div>
                 </div>
 
