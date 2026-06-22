@@ -144,7 +144,7 @@ function Contact() {
       {showToast && (
         <div role="status" className="fixed bottom-6 left-1/2 z-50 -translate-x-1/2 px-4">
           <div className="flex items-center gap-3 rounded-full bg-[var(--color-indigo)] px-5 py-3 text-sm text-white shadow-2xl">
-            <CheckCircle2 className="h-4 w-4 text-[var(--color-tangerine-ink)] dark:text-[var(--color-tangerine)]" />
+            <CheckCircle2 className="h-4 w-4 text-[var(--color-tangerine)]" />
             Message sent, I'll reply within 1 business day.
           </div>
         </div>

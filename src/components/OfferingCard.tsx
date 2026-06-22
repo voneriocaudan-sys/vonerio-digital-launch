@@ -41,7 +41,7 @@ export function PricingCard({ name, tagline, price, priceNote, badge, features, 
   return (
     <div className={`relative flex h-full flex-col rounded-2xl border bg-card p-7 transition ${featured ? "border-[var(--color-violet)] shadow-[0_24px_60px_-28px_rgba(123,63,228,0.55)] dark:border-[var(--color-magenta)]" : "border-border"}`}>
       {featured && ribbon && (
-        <span className="absolute -top-3 left-7 inline-flex items-center rounded-full bg-[var(--color-tangerine)] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-[#1A1A1A]">
+        <span className="absolute -top-3 left-7 inline-flex items-center rounded-full bg-[var(--color-tangerine)] px-3 py-1 text-[11px] font-semibold uppercase tracking-wider text-white">
           {ribbon}
         </span>
       )}
@@ -51,7 +51,7 @@ export function PricingCard({ name, tagline, price, priceNote, badge, features, 
         <div className="font-display text-3xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>{price}</div>
         {priceNote && <div className="mt-1 text-xs text-muted-foreground">{priceNote}</div>}
         {badge && (
-          <span className="mt-3 inline-flex rounded-full bg-[var(--color-tangerine)]/10 px-2.5 py-1 text-[11px] font-medium text-[var(--color-tangerine-ink)] dark:text-[var(--color-tangerine)]">
+          <span className="mt-3 inline-flex rounded-full bg-[var(--color-tangerine)]/10 px-2.5 py-1 text-[11px] font-medium text-[var(--color-tangerine)]">
             {badge}
           </span>
         )}
