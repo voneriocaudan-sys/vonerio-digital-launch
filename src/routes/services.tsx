@@ -45,10 +45,10 @@ function Services() {
     <>
       <section className="container-page py-16 md:py-24">
         <Reveal>
-          <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · −20% on flagship tiers</Pill>
-          <h1 className="text-hero mt-6 max-w-4xl">Offerings sized to your team not a one-size-fits-all retainer.</h1>
+          <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
+          <h1 className="text-hero mt-6 max-w-4xl">Offerings sized to your team, not a one-size-fits-all retainer.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Three offerings, Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits; the path is linear and the stops are optional. Founding Cohort clients get −20% on flagship tiers.
+            Three offerings: Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits; the path is linear and the stops are optional. Founding Cohort clients get -20% on flagship tiers.
           </p>
         </Reveal>
       </section>
