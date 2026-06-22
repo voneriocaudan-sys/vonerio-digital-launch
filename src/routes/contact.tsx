@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Mail, Linkedin, Globe, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Mail, Linkedin, Globe, Clock, Send, CheckCircle2, Calendar } from "lucide-react";
 import { SectionHeading, Pill } from "@/components/ui-bits";
 import { Reveal } from "@/components/Reveal";
 
@@ -47,6 +47,19 @@ function Contact() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             I'll reply personally and point you to the right starting point usually a Diagnostic or a 6-week Trial Sprint. Founding Cohort spots are limited.
           </p>
+        </Reveal>
+      </section>
+
+      <section className="container-page pb-8 md:pb-12">
+        <Reveal>
+          <div className="flex flex-col gap-4 rounded-2xl border border-[var(--color-violet)]/20 bg-[var(--color-violet)]/5 p-6 md:flex-row md:items-center md:justify-between md:p-8 dark:bg-[var(--color-violet)]/10">
+            <p className="text-base leading-relaxed text-foreground md:text-lg">
+              Not ready to talk yet? Score your team against the four pillars (free), instant read, no call required.
+            </p>
+            <a href="/scorecard" className="inline-flex shrink-0 items-center justify-center gap-1.5 rounded-full bg-[var(--color-violet)] px-5 py-2.5 text-sm font-medium text-white shadow-[0_10px_28px_-12px_rgba(123,63,228,0.7)] transition hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]">
+              Score your team
+            </a>
+          </div>
         </Reveal>
       </section>
 
