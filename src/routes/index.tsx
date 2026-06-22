@@ -200,15 +200,19 @@ function Home() {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Where to start */}
       <section className="container-page py-20 md:py-28">
         <Reveal>
-          <SectionHeading eyebrow="How it works" title="Think. Build. Run." sub="A linear path with optional stops. Most clients start with a Diagnostic and decide what comes next from there." />
+          <SectionHeading eyebrow="Where to start" title="A linear path with optional stops." sub="Most clients start with a Diagnostic and decide what comes next from there." />
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Step n="01 Think" title="Diagnose" body="Stakeholder interviews, CRM/data audit and a MEDDPICC-based pipeline review scored against the four readiness pillars." />
-          <Step n="02 Build" title="Build" body="In 90 days I co-build the system with your reps, playbook, battle cards, cadences, dashboards tested on live deals." />
-          <Step n="03 Run" title="Run" body="Fractional leadership on top deals plus handover to a trained internal owner. No ongoing dependency." />
+        <div className="relative mt-16">
+          {/* connector line */}
+          <div aria-hidden className="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent md:block" />
+          <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
+            <TimelineStep n="01" title="Diagnostic" body="Stakeholder interviews, a CRM/data audit and a MEDDPICC-based pipeline review, scored against the four readiness pillars." />
+            <TimelineStep n="02" title="Co-build with your reps" body="In 90 days we build the system together: playbook, battle cards, cadences and dashboards, tested on live deals." />
+            <TimelineStep n="03" title="Run your top deals, then hand over" body="I work your top 2-5 deals directly, then hand the system to a trained internal owner. No ongoing dependency." />
+          </ol>
         </div>
       </section>
 
