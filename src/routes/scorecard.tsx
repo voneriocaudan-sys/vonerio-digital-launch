@@ -8,7 +8,7 @@ import { track } from "@/lib/analytics";
 export const Route = createFileRoute("/scorecard")({
   head: () => ({
     meta: [
-      { title: "Sales Readiness Scorecard — Vonerio" },
+      { title: "Sales Readiness Scorecard, Vonerio" },
       { name: "description", content: "Twelve questions, three minutes. Score your team across the four readiness pillars and get a recommended starting point." },
       { property: "og:title", content: "How ready is your sales organization for scale, and for AI?" },
       { property: "og:description", content: "Twelve questions, three minutes. Get a score across the four readiness pillars and a recommended next step." },
@@ -41,7 +41,7 @@ const PILLARS: Pillar[] = [
   {
     name: "Know Your Customers",
     questions: [
-      "We map the buying committee — roles, authority, influence — before the first serious meeting.",
+      "We map the buying committee, roles, authority, influence, before the first serious meeting.",
       "We document each account's primary pains, decision process, and timeline in one place.",
       "Our reps qualify against a shared standard (e.g. MEDDPICC) and it is reflected in the CRM.",
     ],
@@ -49,7 +49,7 @@ const PILLARS: Pillar[] = [
   {
     name: "Sales Enablement",
     questions: [
-      "Our CRM is a true single source of truth — clean, current, and trusted enough to forecast from.",
+      "Our CRM is a true single source of truth, clean, current, and trusted enough to forecast from.",
       "We have standardized scripts, sequences, and templates that reps actually use and are performant.",
       "We track prospecting and pipeline KPIs on a live dashboard the whole team can see.",
     ],
@@ -118,7 +118,7 @@ function Scorecard() {
       };
     }
     return {
-      title: "Repeatable — now make it AI-ready",
+      title: "Repeatable, now make it AI-ready",
       message: "You're a candidate for System Building or a Fractional CRO sprint to tighten the data layer and increase your revenue.",
     };
   }, [overallPct]);
@@ -127,11 +127,11 @@ function Scorecard() {
     if (!weakest) return "";
     const reads: Record<string, string> = {
       "Own Your Territory":
-        "your ICP, account tiering, and pursuit plans aren't crisp enough — reps default to whoever picks up the phone.",
+        "your ICP, account tiering, and pursuit plans aren't crisp enough, reps default to whoever picks up the phone.",
       "Full Offering Expertise":
-        "positioning, battle cards, and entry offers aren't sharp enough — deals stall on \"why now, why you\".",
+        "positioning, battle cards, and entry offers aren't sharp enough, deals stall on \"why now, why you\".",
       "Know Your Customers":
-        "buying committees and qualification aren't documented consistently — forecasts wobble because the customer picture is thin.",
+        "buying committees and qualification aren't documented consistently, forecasts wobble because the customer picture is thin.",
       "Sales Enablement":
         "your CRM and reporting can't yet be trusted as a single source of truth, which is exactly what blocks AI.",
     };
@@ -150,7 +150,7 @@ function Scorecard() {
     setSubmitting(true);
 
     const payload = {
-      _subject: `Scorecard lead — ${overallPct}% (${band.title})`,
+      _subject: `Scorecard lead, ${overallPct}% (${band.title})`,
       email,
       overall_pct: `${overallPct}%`,
       band: band.title,
@@ -161,7 +161,7 @@ function Scorecard() {
       ...Object.fromEntries(
         answers.map((a, i) => [
           `q${i + 1}`,
-          a === null ? "" : `${a} — ${SCALE.find((s) => s.value === a)?.label ?? ""}`,
+          a === null ? "" : `${a}, ${SCALE.find((s) => s.value === a)?.label ?? ""}`,
         ]),
       ),
     };
@@ -173,7 +173,7 @@ function Scorecard() {
         body: JSON.stringify(payload),
       });
     } catch {
-      // Non-blocking — still show the user their result.
+      // Non-blocking, still show the user their result.
     }
     setSubmitting(false);
     setRevealed(true);
@@ -383,7 +383,7 @@ function Scorecard() {
                   {weakest && (
                     <div className="mt-10 rounded-xl border-l-2 border-[var(--color-tangerine)] bg-[var(--color-mist)]/60 px-5 py-4 dark:bg-white/5">
                       <p className="text-[0.95rem] leading-relaxed">
-                        Your weakest pillar is <span className="font-semibold">{weakest.name}</span> — {weakestRead}
+                        Your weakest pillar is <span className="font-semibold">{weakest.name}</span>, {weakestRead}
                       </p>
                     </div>
                   )}
