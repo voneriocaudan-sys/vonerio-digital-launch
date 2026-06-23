@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SearchCheck, Blocks, Compass, TrendingUp, ShieldCheck, Users, Handshake } from "lucide-react";
+import { SearchCheck, Blocks, Compass, ShieldCheck, Users, Handshake } from "lucide-react";
 import { Pill, SectionHeading, CTAButton, StatBlock, CheckItem, CTABand } from "@/components/ui-bits";
 import { OverviewCard, PillarCard } from "@/components/OfferingCard";
 import { Reveal } from "@/components/Reveal";
