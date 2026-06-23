@@ -203,7 +203,7 @@ function Home() {
       {/* Where to start */}
       <section className="container-page py-20 md:py-28">
         <Reveal>
-          <SectionHeading eyebrow="Where to start" title="A linear path with optional stops." sub="Most clients start with a Diagnostic and decide what comes next from there." />
+          <SectionHeading eyebrow="Where to start" title="Start small. The path is linear, the stops optional." sub="Most clients begin with a Diagnostic and decide what's next from the findings. You're never locked into the whole journey." />
         </Reveal>
         <div className="relative mt-16">
           {/* connector line */}
