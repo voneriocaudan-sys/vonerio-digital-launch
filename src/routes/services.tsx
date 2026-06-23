@@ -82,8 +82,8 @@ function Services() {
       <OfferingBlock
         id="fractional"
         eyebrow="03 · Fractional CRO"
-        title="A senior closer in your top deals, on shared time."
-        intro="I work your top strategic deals directly: on the calls with the buyer's decision-makers, running the negotiation and pushing to closed, alongside your reps. I coach the team as we go and keep the pipeline and forecast honest. You get a peer-level operator in the deals, plus the governance to keep them moving, without a $200K+ full-time hire. The same motion I used to close $26M+ myself, carrying a quota. Try a 6-week sprint first."
+        title="A revenue leader who still closes, on shared time."
+        intro="On shared time, I take ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: I get on the calls with the buyer's decision-makers, run the negotiation, and close the deals that decide your quarter, alongside your reps. It's the same motion I used to close $26M+ myself, carrying a quota. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven, not a 50-person org built. Try a 6-week sprint first."
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
@@ -149,7 +149,7 @@ function OfferingBlock({
       {open && (
         <div className="mt-8 grid gap-6 md:grid-cols-3">
           {cards.map((c, i) => (
-            <Reveal key={c.name} delay={i * 80}><PricingCard {...c} /></Reveal>
+            <Reveal key={c.name} delay={i * 80}><PricingCard {...c} href={ctaHref} /></Reveal>
           ))}
         </div>
       )}

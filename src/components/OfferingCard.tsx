@@ -34,9 +34,9 @@ export function PillarCard({ n, title, items }: { n: string; title: string; item
   );
 }
 
-export function PricingCard({ name, tagline, price, priceNote, badge, features, featured, ribbon }: {
+export function PricingCard({ name, tagline, price, priceNote, badge, features, featured, ribbon, href }: {
   name: string; tagline: string; price: string; priceNote?: string; badge?: string;
-  features: string[]; featured?: boolean; ribbon?: string;
+  features: string[]; featured?: boolean; ribbon?: string; href?: string;
 }) {
   return (
     <div className={`relative flex h-full flex-col rounded-2xl border bg-card p-7 transition ${featured ? "border-[var(--color-violet)] shadow-[0_24px_60px_-28px_rgba(123,63,228,0.55)] dark:border-[var(--color-magenta)]" : "border-border"}`}>
@@ -59,12 +59,12 @@ export function PricingCard({ name, tagline, price, priceNote, badge, features, 
       <ul className="mt-6 flex-1 space-y-2.5 border-t border-border pt-6">
         {features.map((f) => <CheckItem key={f}>{f}</CheckItem>)}
       </ul>
-      <Link
-        to="/contact"
+      <a
+        href={href || "/contact"}
         className={`mt-7 inline-flex items-center justify-center gap-1.5 rounded-full px-5 py-3 text-sm font-medium transition ${featured ? "bg-[var(--color-violet)] text-white hover:bg-[var(--color-royal)] dark:bg-[var(--color-magenta)] dark:hover:bg-[var(--color-violet)]" : "border border-border bg-background text-foreground hover:bg-accent"}`}
       >
         Start the conversation <ArrowUpRight className="h-4 w-4" />
-      </Link>
+      </a>
     </div>
   );
 }
