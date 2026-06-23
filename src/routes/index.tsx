@@ -54,7 +54,7 @@ function Home() {
         {/* Decorative system graphic */}
         <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
           <svg
-            className="absolute left-1/2 top-1/2 h-[900px] w-[1400px] -translate-x-1/2 -translate-y-1/2 opacity-[0.18] dark:opacity-25"
+            className="absolute left-1/2 top-1/2 h-[900px] w-[1400px] -translate-x-1/2 -translate-y-1/2 opacity-[0.14] dark:opacity-30"
             viewBox="0 0 1400 900"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
