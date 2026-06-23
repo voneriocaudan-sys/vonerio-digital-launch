@@ -51,50 +51,66 @@ function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="container-page grid items-center gap-12 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-24 lg:py-28">
+        {/* Decorative system graphic */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+          <svg
+            className="absolute left-1/2 top-1/2 h-[900px] w-[1400px] -translate-x-1/2 -translate-y-1/2 opacity-[0.18] dark:opacity-25"
+            viewBox="0 0 1400 900"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g stroke="var(--color-violet)" strokeWidth="1.25" strokeLinecap="round">
+              <path d="M250 250 L520 200 L780 320 L1080 240 L1180 470" />
+              <path d="M200 540 L460 600 L720 520 L960 640 L1220 580" />
+              <path d="M340 760 L580 700 L820 780 L1060 720" />
+              <path d="M520 200 L460 600" />
+              <path d="M780 320 L720 520" />
+              <path d="M1080 240 L960 640" />
+              <path d="M580 700 L720 520" />
+              <path d="M820 780 L960 640" />
+            </g>
+            <g fill="var(--color-violet)">
+              <circle cx="250" cy="250" r="4" />
+              <circle cx="520" cy="200" r="5" />
+              <circle cx="780" cy="320" r="4" />
+              <circle cx="1080" cy="240" r="5" />
+              <circle cx="1180" cy="470" r="4" />
+              <circle cx="200" cy="540" r="4" />
+              <circle cx="460" cy="600" r="5" />
+              <circle cx="720" cy="520" r="6" />
+              <circle cx="960" cy="640" r="5" />
+              <circle cx="1220" cy="580" r="4" />
+              <circle cx="340" cy="760" r="4" />
+              <circle cx="580" cy="700" r="5" />
+              <circle cx="820" cy="780" r="4" />
+              <circle cx="1060" cy="720" r="4" />
+            </g>
+          </svg>
+        </div>
+        <div className="container-page py-16 md:py-24 lg:py-28">
           <Reveal>
-            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
-            <h1 className="text-hero mt-6">
-              Build a sales system{" "}
-              <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
-            </h1>
-            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
-              Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
-            </p>
-            <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted-foreground">
-              Enterprise rigor, built on $26M+ in closed deals. Sized for a team that can't justify a $200K VP of Sales.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
-              <CTAButton href="/contact?interest=diagnostic" variant="ghost">Book a diagnostic</CTAButton>
+            <div className="mx-auto max-w-3xl text-center">
+              <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
+              <h1 className="text-hero mt-6">
+                Build a sales system{" "}
+                <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
+              </h1>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Enterprise rigor, built on $26M+ in closed deals. Sized for a team that can't justify a $200K VP of Sales.
+              </p>
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
+                <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
+                <CTAButton href="/contact?interest=diagnostic" variant="ghost">Book a diagnostic</CTAButton>
+              </div>
             </div>
-            <dl className="mt-12 grid grid-cols-3 gap-6 border-t border-border pt-8">
+            <dl className="mx-auto mt-14 grid max-w-3xl grid-cols-3 gap-6 border-t border-border pt-8">
               <StatBlock value="$26" suffix="M+" label="Personally closed" />
               <StatBlock value="214" suffix="%" label="Avg quota (peak 323%)" />
               <StatBlock value="50" suffix="+" label="Deals closed" />
             </dl>
-          </Reveal>
-
-          <Reveal delay={120}>
-            <div className="relative">
-              <div className="absolute -inset-4 -z-10 rounded-[28px] bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10" />
-              <img
-                src={HERO_IMG}
-                alt="Loïc Caudan, Founder of Vonerio Fractional CRO"
-                className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[0_40px_80px_-40px_rgba(46,26,71,0.45)]"
-                loading="eager"
-              />
-              <div className="absolute -bottom-6 -left-4 max-w-[260px] rounded-2xl border border-border bg-card/95 p-4 shadow-xl backdrop-blur md:-left-8">
-                <div className="flex items-center gap-3">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-[var(--color-mist)] text-[var(--color-violet)] dark:bg-[var(--color-violet)]/20 dark:text-[var(--color-magenta)]">
-                    <TrendingUp className="h-4 w-4" />
-                  </span>
-                  <div>
-                    <div className="text-sm font-semibold">Fractional CRO</div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </Reveal>
         </div>
       </section>
