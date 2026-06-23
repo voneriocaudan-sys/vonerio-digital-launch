@@ -43,7 +43,7 @@ export const Route = createFileRoute("/")({
 });
 
 import HERO_IMG from "@/assets/loic-caudan.jpg";
-import WHY_IMG from "@/assets/why-vonerio-team.jpg.asset.json";
+
 
 
 function Home() {
