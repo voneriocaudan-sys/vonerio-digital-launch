@@ -185,9 +185,29 @@ function Home() {
       <section className="container-page py-20 md:py-28">
         <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
           <Reveal>
-            <div className="relative">
-              <div className="absolute -inset-3 -z-10 rounded-[24px] bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10" />
-              <img src={WHY_IMG.url} alt="Vonerio at work with a client team" className="aspect-[4/5] w-full rounded-2xl object-cover" />
+            <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+              <div className="flex items-center gap-5">
+                <img
+                  src={HERO_IMG}
+                  alt="Loïc Caudan, Founder of Vonerio"
+                  className="h-24 w-24 shrink-0 rounded-full object-cover md:h-28 md:w-28"
+                  loading="lazy"
+                />
+                <div>
+                  <div className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+                    Loïc Caudan, Founder.
+                  </div>
+                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                    Ex-Accenture, 10+ years closing complex enterprise deals.
+                  </p>
+                  <a
+                    href="/about"
+                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]"
+                  >
+                    Read the full story →
+                  </a>
+                </div>
+              </div>
             </div>
           </Reveal>
           <Reveal delay={100}>
