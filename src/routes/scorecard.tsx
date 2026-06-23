@@ -209,7 +209,7 @@ function Scorecard() {
           <Pill>Free · ~3 minutes</Pill>
           <h1 className="text-hero mt-6 max-w-4xl">How ready is your sales organization for scale, and for AI?</h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Twelve questions, about three minutes. You'll get a score across the four readiness pillars and a recommended starting point. It's the same framework I use on day one of a Diagnostic.
+            Twelve questions, about three minutes. You'll get a score across the four readiness pillars and a recommended starting point. A fast snapshot of the same four pillars a Diagnostic examines in depth.
           </p>
         </Reveal>
       </section>
