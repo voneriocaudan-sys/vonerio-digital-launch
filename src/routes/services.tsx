@@ -95,9 +95,8 @@ function Services() {
 
       <CTABand
         title="Not sure where to start?"
-        sub="Score your team against the four pillars in a few minutes you'll get an instant read and a recommended starting point. Or tell me about your pipeline and I'll point you to the right first step."
-        primary={{ label: "Score your team (free)", to: "/scorecard", variant: "energy" }}
-        secondary={{ label: "Talk to Loïc", to: "/contact" }}
+        sub="Tell me about your pipeline and I'll point you to the right first step, usually a Diagnostic or a 6-week Trial Sprint."
+        primary={{ label: "Talk to Loïc", to: "/contact", variant: "primary" }}
       />
     </>
   );
