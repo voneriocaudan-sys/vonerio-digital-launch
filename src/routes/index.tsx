@@ -53,7 +53,7 @@ function Home() {
       <section className="relative overflow-hidden">
         <div className="container-page grid items-center gap-12 py-16 md:grid-cols-[1.05fr_1fr] md:gap-16 md:py-24 lg:py-28">
           <Reveal>
-            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% for first clients</Pill>
+            <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
             <h1 className="text-hero mt-6">
               Build a sales system{" "}
               <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
@@ -171,7 +171,7 @@ function Home() {
           <Reveal>
             <div className="relative">
               <div className="absolute -inset-3 -z-10 rounded-[24px] bg-[var(--color-mist)] dark:bg-[var(--color-violet)]/10" />
-              <img src={WHY_IMG.url} alt="Operator-grade enterprise sales work" className="aspect-[4/5] w-full rounded-2xl object-cover" />
+              <img src={WHY_IMG.url} alt="Vonerio at work with a client team" className="aspect-[4/5] w-full rounded-2xl object-cover" />
             </div>
           </Reveal>
           <Reveal delay={100}>
@@ -194,7 +194,7 @@ function Home() {
         <div className="container-page py-16 md:py-20">
           <div className="grid gap-10 md:grid-cols-3">
             <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
-            <ProofStat value="$55M" label="First Vonerio B-Case: a full Diagnostic delivered (4 pillars, segmentation, plan)" />
+            <ProofStat value="$55M" label="First client engagement: a full Diagnostic delivered (4 pillars, segmentation, plan)" />
             <ProofStat value="4" label="Languages negotiated & closed in, live" />
           </div>
         </div>
@@ -220,8 +220,8 @@ function Home() {
       <CTABand
         title="Join the Founding Cohort."
         sub="I'm building Vonerio's first case studies, so the first five clients get -20% on flagship engagements and more of my direct time, in exchange for a reference once the work pays off."
-        primary={{ label: "Score your team (free)", href: "/scorecard", variant: "energy" }}
-        secondary={{ label: "View pricing", to: "/services" }}
+        primary={{ label: "View pricing", to: "/services", variant: "primary" }}
+        secondary={{ label: "Book a diagnostic", href: "/contact?interest=diagnostic" }}
       />
     </>
   );

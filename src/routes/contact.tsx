@@ -125,7 +125,7 @@ function Contact() {
                 Founding Cohort · −20%
               </span>
               <span className="ml-3 text-xs text-muted-foreground">
-                First clients get reduced pricing in exchange for a reference once results land.
+                The first five clients get -20% on flagship engagements, in exchange for a reference once the work pays off.
               </span>
             </div>
           </div>
