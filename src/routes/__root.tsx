@@ -69,8 +69,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:title", content: "Vonerio Build a sales system your team runs without you" },
       { property: "og:description", content: "AI amplifies whatever's already there including the mess. Vonerio builds the sales system, clean data and process your AI actually needs. Enterprise rigor for $2M–$30M ARR teams. $26M+ closed by the operator behind it." },
       { name: "twitter:description", content: "AI amplifies whatever's already there including the mess. Vonerio builds the sales system, clean data and process your AI actually needs. Enterprise rigor for $2M–$30M ARR teams. $26M+ closed by the operator behind it." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xVgeoZfTC3Vz16YH5Kstbd1a0UN2/social-images/social-1782114729805-vonerio-social.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xVgeoZfTC3Vz16YH5Kstbd1a0UN2/social-images/social-1782114729805-vonerio-social.webp" },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xVgeoZfTC3Vz16YH5Kstbd1a0UN2/social-images/social-1782206249777-vonerio-icon.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/xVgeoZfTC3Vz16YH5Kstbd1a0UN2/social-images/social-1782206249777-vonerio-icon.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
