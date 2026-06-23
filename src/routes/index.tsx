@@ -220,8 +220,8 @@ function Home() {
       <CTABand
         title="Join the Founding Cohort."
         sub="I'm building Vonerio's first case studies, so the first five clients get -20% on flagship engagements and more of my direct time, in exchange for a reference once the work pays off."
-        primary={{ label: "Score your team (free)", href: "/scorecard", variant: "energy" }}
-        secondary={{ label: "View pricing", to: "/services" }}
+        primary={{ label: "View pricing", to: "/services", variant: "primary" }}
+        secondary={{ label: "Book a diagnostic", href: "/contact?interest=diagnostic" }}
       />
     </>
   );
