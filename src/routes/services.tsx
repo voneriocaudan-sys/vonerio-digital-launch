@@ -36,8 +36,8 @@ const SYSTEM_CARDS: Card[] = [
 
 const FRACTIONAL_CARDS: Card[] = [
   { name: "Trial Sprint", tagline: "Try it for 6 weeks before you commit to 3 months.", price: "$10,000", priceNote: "single invoice", badge: "$5,000 credits toward conversion", features: ["Negotiation & Closing on 2 named deals, over 6 weeks", "Written charter with 3 default KPIs", "Pipeline governance notes", "6 weeks, no commitment beyond"] },
-  { name: "Core", tagline: "Direct work on top deals, 2 days / month.", price: "$4,800/mo", priceNote: "Founding · list $6,000/mo (-20%)", badge: "List $6,000/mo · -20%", featured: true, ribbon: "Best value", features: ["Direct work on your top 3 deals (calls, negotiation, closing)", "Deal coaching for your reps", "MEDDPICC forecast governance", "3-month min, renews monthly"] },
-  { name: "Extended", tagline: "Weekly direct work, 5 days / month.", price: "$10,400/mo", priceNote: "Founding · list $13,000/mo (-20%)", badge: "List $13,000/mo · -20%", features: ["Weekly direct work on your top 3-5 deals", "Deal coaching across the team", "Board-level governance and updates", "3-month min, renews monthly"] },
+  { name: "Core", tagline: "CRO-level direction that still closes your top 3 deals. 2 days/month.", price: "$4,800/mo", priceNote: "Founding, list $6,000/mo (-20%)", badge: "List $6,000/mo · -20%", featured: true, ribbon: "Best value", features: ["Own the forecast and operating cadence", "Direct work on your top 3 deals (calls, negotiation, closing)", "Deal coaching + monthly review and pipeline governance", "3-month min, renews monthly"] },
+  { name: "Extended", tagline: "Revenue ownership, weekly closing, board-level governance. 5 days/month.", price: "$10,400/mo", priceNote: "Founding, list $13,000/mo (-20%)", badge: "List $13,000/mo · -20%", features: ["Own the number, plan and forecast", "Weekly direct work on your top 3-5 deals (calls, negotiation, closing)", "Deal coaching + board-level governance and updates", "3-month min, renews monthly"] },
 ];
 
 function Services() {
@@ -83,7 +83,7 @@ function Services() {
         id="fractional"
         eyebrow="03 · Fractional CRO"
         title="A revenue leader who still closes, on shared time."
-        intro="On shared time, I take ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: I get on the calls with the buyer's decision-makers, run the negotiation, and close the deals that decide your quarter, alongside your reps. It's the same motion I used to close $26M+ myself, carrying a quota. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven, not a 50-person org built. Try a 6-week sprint first."
+        intro="On shared time, I take ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: I get on the calls with the buyer's decision-makers, run the negotiation, and close the deals that decide your quarter, alongside your reps. It's the same motion I used to close $26M+ myself, carrying a quota. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven. Try a 6-week sprint first."
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
