@@ -211,7 +211,7 @@ function Home() {
           <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
             <TimelineStep n="01" title="Diagnose" body="Stakeholder interviews, a CRM/data audit and a MEDDPICC-based pipeline review, scored against the four readiness pillars." />
             <TimelineStep n="02" title="Co-build with your reps" body="In 90 days we build the system together: playbook, battle cards, cadences and dashboards, tested on live deals." />
-            <TimelineStep n="03" title="Run your top deals, then hand over" body="I work your top 2-5 deals directly, then hand the system to a trained internal owner. No ongoing dependency." />
+            <TimelineStep n="03" title="Run your top deals, then hand over" body="I own the number and close your top deals, then hand to a trained internal owner whenever you choose. No lock-in." />
           </ol>
         </div>
       </section>
