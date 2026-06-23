@@ -173,10 +173,10 @@ function Home() {
             />
           </Reveal>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            <Reveal><PillarCard n="01" title="Own Your Territory" items={["Define ICP", "Sector analysis", "Account tiering", "Account-Based Marketing", "Account growth plans"]} /></Reveal>
-            <Reveal delay={60}><PillarCard n="02" title="Full Offering Expertise" items={["Define UVP", "Positioning", "Entry offers", "Packaging & pricing", "Sales battle cards"]} /></Reveal>
-            <Reveal delay={120}><PillarCard n="03" title="Know Your Customers" items={["Map the buying committee", "Primary pain points", "Relationship history", "Internal Context", "Decision-making process"]} /></Reveal>
-            <Reveal delay={180}><PillarCard n="04" title="Sales Enablement" items={["CRM as single source of truth", "Call Intelligence & Coaching", "Scripts & templates", "Prospecting KPIs", "Dashboards & reports"]} /></Reveal>
+            <Reveal><PillarCard n="01" title="Own Your Territory" items={["Define ICP", "Sector Analysis", "Account Tiering", "Account-Based Marketing", "Account Growth Plans"]} /></Reveal>
+            <Reveal delay={60}><PillarCard n="02" title="Full Offering Expertise" items={["Define UVP", "Positioning", "Entry Offers", "Packaging & Pricing", "Sales Battle Cards"]} /></Reveal>
+            <Reveal delay={120}><PillarCard n="03" title="Know Your Customers" items={["Map The Buying Committee", "Primary Pain Points", "Relationship History", "Internal Context", "Decision-Making Process"]} /></Reveal>
+            <Reveal delay={180}><PillarCard n="04" title="Sales Enablement" items={["CRM As Single Source Of Truth", "Call Intelligence & Coaching", "Scripts & Templates", "Prospecting KPIs", "Dashboards & Reports"]} /></Reveal>
           </div>
         </div>
       </section>
