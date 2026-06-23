@@ -52,7 +52,7 @@ function About() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <div className="text-eyebrow">Founder · Fractional CRO</div>
+            <div className="text-eyebrow">Ex-Accenture · Fractional CRO</div>
             <h2 className="mt-3 text-h2">Loïc Caudan</h2>
             <blockquote className="mt-8 border-l-2 border-[var(--color-violet)] pl-6 text-xl leading-relaxed text-foreground md:text-2xl" style={{ fontFamily: "var(--font-display)" }}>
               "In 2023, I closed the largest infrastructure-to-application managed services deal in my Accenture portfolio.{" "}
@@ -60,7 +60,7 @@ function About() {
             </blockquote>
             <div className="mt-8 space-y-5 text-[1.0625rem] leading-relaxed text-muted-foreground">
               <p>That deal happened because I had a system: mapping the buying committee before the first call, building financial models the CFO could defend internally, and running a single negotiation across EMEA, LatAm, the US and APAC at once without losing the thread.</p>
-              <p>That wasn't luck or relationships. I've spent ten years refining that same system, selling complex enterprise technology, data platforms, cloud infrastructure, SaaS, into accounts with 10–15+ stakeholders, 12–18 month cycles and board-level sign-off. <span className="font-medium text-foreground">$26M+ closed as an individual contributor</span>: pipeline built, quota carried, deals closed. It's what I now build with teams through Vonerio.</p>
+              <p>I've spent ten years refining that same system, selling complex technology, data platforms, cloud infrastructure, SaaS, into accounts with 10–15+ stakeholders, 12–18 month cycles and board-level sign-off. <span className="font-medium text-foreground">$26M+ closed as an individual contributor</span>: pipeline built, quota carried, deals closed. It's what I now build with teams through Vonerio.</p>
               <p>Most fractional consultants have only ever sold to small teams. The discipline behind those numbers works just as well on a team of five. You get enterprise rigor, sized to a team that can't justify a full-time CRO.</p>
             </div>
           </Reveal>
