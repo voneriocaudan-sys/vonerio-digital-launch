@@ -182,23 +182,30 @@ function Home() {
       </section>
 
       {/* Why Vonerio */}
-      <section className="container-page py-20 md:py-28">
-        <div className="grid items-center gap-12 md:grid-cols-2 md:gap-16">
+      <section>
+        <div className="container-page py-20 md:py-28">
           <Reveal>
-            <div className="rounded-2xl border border-border bg-card p-6 md:p-8">
+            <SectionHeading
+              eyebrow="Why Vonerio"
+              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">built in real deals, made to be yours.</span></>}
+            />
+          </Reveal>
+
+          <Reveal>
+            <div className="mt-10 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
               <div className="flex items-center gap-5">
                 <img
                   src={HERO_IMG}
-                  alt="Loïc Caudan, Founder of Vonerio"
+                  alt="Loïc Caudan"
                   className="h-24 w-24 shrink-0 rounded-full object-cover md:h-28 md:w-28"
                   loading="lazy"
                 />
                 <div>
                   <div className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
-                    Loïc Caudan, Founder.
+                    Loïc Caudan, Founder & Fractional CRO.
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    Ex-Accenture, 10+ years closing complex enterprise deals.
+                    Ex-Accenture, 10+ years closing complex Enterprise & Mid-Market deals.
                   </p>
                   <a
                     href="/about"
@@ -210,28 +217,22 @@ function Home() {
               </div>
             </div>
           </Reveal>
-          <Reveal delay={100}>
-            <SectionHeading
-              eyebrow="Why Vonerio"
-              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">built in real deals, made to be yours.</span></>}
-            />
-            <ul className="mt-8 space-y-5">
-              <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
-              <Why icon={Users} title="Co-built with your reps." body="Each artifact is tested on a real deal before it's finalized." />
-              <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to a real adoption signal, not elapsed time." />
-              <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No ongoing dependency." />
-            </ul>
-          </Reveal>
-        </div>
-      </section>
 
-      {/* Proof stats band */}
-      <section className="bg-[var(--color-indigo)] text-white">
-        <div className="container-page py-16 md:py-20">
-          <div className="grid gap-10 md:grid-cols-3">
-            <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
-            <ProofStat value="$55M" label="First client engagement: a full Diagnostic delivered (4 pillars, segmentation, plan)" />
-            <ProofStat value="4" label="Languages negotiated & closed in, live" />
+          <ul className="mt-12 space-y-5">
+            <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
+            <Why icon={Users} title="Co-built with your reps." body="Each artifact is tested on a real deal before it's finalized." />
+            <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to a real adoption signal, not elapsed time." />
+            <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No ongoing dependency." />
+          </ul>
+        </div>
+
+        <div className="bg-[var(--color-indigo)] text-white">
+          <div className="container-page py-16 md:py-20">
+            <div className="grid gap-10 md:grid-cols-3">
+              <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
+              <ProofStat value="$55M" label="First client engagement (APAC): a full Diagnostic delivered (4 pillars, segmentation, plan)" />
+              <ProofStat value="4" label="Languages negotiated & closed in, live" />
+            </div>
           </div>
         </div>
       </section>
