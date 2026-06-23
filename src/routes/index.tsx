@@ -59,7 +59,7 @@ function Home() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g stroke="var(--color-violet)" strokeWidth="1.25" strokeLinecap="round">
+            <g stroke="var(--color-iris)" strokeWidth="1.25" strokeLinecap="round">
               <path d="M250 250 L520 200 L780 320 L1080 240 L1180 470" />
               <path d="M200 540 L460 600 L720 520 L960 640 L1220 580" />
               <path d="M340 760 L580 700 L820 780 L1060 720" />
@@ -69,7 +69,7 @@ function Home() {
               <path d="M580 700 L720 520" />
               <path d="M820 780 L960 640" />
             </g>
-            <g fill="var(--color-violet)">
+            <g fill="var(--color-iris)">
               <circle cx="250" cy="250" r="4" />
               <circle cx="520" cy="200" r="5" />
               <circle cx="780" cy="320" r="4" />
