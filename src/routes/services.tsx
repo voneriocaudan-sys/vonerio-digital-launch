@@ -83,7 +83,7 @@ function Services() {
         id="fractional"
         eyebrow="03 · Fractional CRO"
         title="A revenue leader who still closes, on shared time."
-        intro="On shared time, I take ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: I get on the calls with the buyer's decision-makers, run the negotiation, and close the deals that decide your quarter, alongside your reps. It's the same motion I used to close $26M+ myself, carrying a quota. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven, not a 50-person org built. Try a 6-week sprint first."
+        intro="On shared time, I take ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: I get on the calls with the buyer's decision-makers, run the negotiation, and close the deals that decide your quarter, alongside your reps. It's the same motion I used to close $26M+ myself, carrying a quota. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven. Try a 6-week sprint first."
         fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
