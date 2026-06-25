@@ -1,8 +1,9 @@
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, type LucideIcon } from "lucide-react";
+import type { ReactNode } from "react";
 import { CheckItem } from "./ui-bits";
 
-export function OverviewCard({ icon: Icon, title, body, to, hash, n }: { icon: LucideIcon; title: string; body: string; to: string; hash?: string; n: string }) {
+export function OverviewCard({ icon: Icon, title, body, to, hash, n }: { icon: LucideIcon; title: string; body: ReactNode; to: string; hash?: string; n: string }) {
   return (
     <Link to={to} hash={hash} className="group relative flex h-full flex-col rounded-2xl border border-border bg-card p-7 transition hover:-translate-y-0.5 hover:border-[var(--color-violet)]/40 hover:shadow-[0_24px_48px_-32px_rgba(123,63,228,0.4)]">
       <div className="flex items-center justify-between">
@@ -12,7 +13,7 @@ export function OverviewCard({ icon: Icon, title, body, to, hash, n }: { icon: L
         <span className="text-eyebrow">{n}</span>
       </div>
       <h3 className="mt-6 text-xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>{title}</h3>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{body}</p>
+      <div className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{body}</div>
       <span className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-violet)] dark:text-[var(--color-magenta)]">
         Learn more <ArrowUpRight className="h-4 w-4 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
       </span>
@@ -35,7 +36,7 @@ export function PillarCard({ n, title, items }: { n: string; title: string; item
 }
 
 export function PricingCard({ name, tagline, price, priceNote, badge, features, featured, ribbon, href }: {
-  name: string; tagline: string; price: string; priceNote?: string; badge?: string;
+  name: string; tagline: string; price: string; priceNote?: ReactNode; badge?: string;
   features: string[]; featured?: boolean; ribbon?: string; href?: string;
 }) {
   return (

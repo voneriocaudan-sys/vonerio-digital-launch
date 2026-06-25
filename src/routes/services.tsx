@@ -1,10 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import { SectionHeading, CTABand, Pill } from "@/components/ui-bits";
+import { SectionHeading, CTABand } from "@/components/ui-bits";
 import { PricingCard } from "@/components/OfferingCard";
 import { Reveal } from "@/components/Reveal";
-import { COHORT_SPOTS_LEFT } from "@/lib/cohort";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -24,20 +23,20 @@ type Card = Parameters<typeof PricingCard>[0];
 
 const DIAGNOSTIC_CARDS: Card[] = [
   { name: "Pulse Check", tagline: "A fast, low-risk read on one function, in a week.", price: "$4,500", priceNote: "flat fee", badge: "Already low-commitment", features: ["Single-function lightweight diagnostic", "1 pillar across 2–3 sub-items", "1-page prioritized findings, 3+ actions", "Delivered in 1 week, paid on delivery"] },
-  { name: "Standard", tagline: "A detailed action plan in 3–4 weeks.", price: "$9,600", priceNote: "Founding · list $12,000 (−20%)", badge: "List $12,000 · −20%", featured: true, ribbon: "Most popular", features: ["All 4 pillars scored at sub-item level (20)", "Component depth on 2 priority pillars", "Quick-wins vs. structural-fixes plan", "30% kickoff / 70% delivery"] },
-  { name: "Complex", tagline: "Multi-function and/or multi-geography, 15+ stakeholders.", price: "$16,000", priceNote: "Founding · list $20,000 (−20%)", badge: "List $20,000 · −20%", features: ["All 4 pillars, all 20 sub-items, full depth", "Replicated across every function/geo", "Root-cause framework (Process/People/Tools/Market)", "30% kickoff / 70% delivery"] },
+  { name: "Standard", tagline: "A detailed action plan in 3–4 weeks.", price: "$9,600", priceNote: <>Founding · <s>$12,000</s> list</>, featured: true, ribbon: "Most popular", features: ["All 4 pillars scored at sub-item level (20)", "Component depth on 2 priority pillars", "Quick-wins vs. structural-fixes plan", "30% kickoff / 70% delivery"] },
+  { name: "Complex", tagline: "Multi-function and/or multi-geography, 15+ stakeholders.", price: "$16,000", priceNote: <>Founding · <s>$20,000</s> list</>, features: ["All 4 pillars, all 20 sub-items, full depth", "Replicated across every function/geo", "Root-cause framework (Process/People/Tools/Market)", "30% kickoff / 70% delivery"] },
 ];
 
 const SYSTEM_CARDS: Card[] = [
-  { name: "Core Build", tagline: "Right-sized system build for small teams (≤5 reps).", price: "$17,600", priceNote: "Founding · list $22,000 (−20%)", badge: "List $22,000 · −20%", features: ["3 pillars, 1–2 priority sub-items each", "MEDDPICC standard + core playbook", "UVP definition, positioning & sales battle cards", "45 days · 50% kickoff / 50% handover"] },
-  { name: "Standard", tagline: "Full system built with your reps in 90 days, ready to scale.", price: "$33,600", priceNote: "Founding · list $42,000 (−20%)", badge: "List $42,000 · −20%", featured: true, ribbon: "Flagship", features: ["All 4 pillars, 12–16 priority sub-items", "Playbook, ICP, account tiering and growth Plan", "UVP definition, positioning & sales battle cards", "90 days, thirds · final third outcome-linked"] },
-  { name: "Complex", tagline: "8+ reps and/or multi-offering / multi-geography.", price: "$52,000", priceNote: "Founding · list $65,000 (−20%)", badge: "List $65,000 · −20%", features: ["All 4 pillars, all 20 sub-items", "Scaled across multiple BUs / geos", "Cross-functional build sessions", "90 days, thirds · final third outcome-linked"] },
+  { name: "Core Build", tagline: "Right-sized system build for small teams (≤5 reps).", price: "$17,600", priceNote: <>Founding · <s>$22,000</s> list</>, features: ["3 pillars, 1–2 priority sub-items each", "MEDDPICC standard + core playbook", "Unique Value Proposition (UVP), positioning and battle cards", "45 days · 50% kickoff / 50% handover"] },
+  { name: "Standard", tagline: "Full system built with your reps in 90 days, ready to scale.", price: "$33,600", priceNote: <>Founding · <s>$42,000</s> list</>, featured: true, ribbon: "Flagship", features: ["All 4 pillars, 12–16 priority sub-items", "Playbook, Ideal Customer Profile (ICP), account tiering and growth plan", "Unique Value Proposition (UVP), positioning and battle cards", "90 days, thirds · final third outcome-linked"] },
+  { name: "Complex", tagline: "8+ reps and/or multi-offering / multi-geography.", price: "$52,000", priceNote: <>Founding · <s>$65,000</s> list</>, features: ["All 4 pillars, all 20 sub-items", "Scaled across multiple business units and regions", "Cross-functional build sessions", "90 days, thirds · final third outcome-linked"] },
 ];
 
 const FRACTIONAL_CARDS: Card[] = [
   { name: "Trial Sprint", tagline: "Try it for 6 weeks before you commit to 3 months.", price: "$10,000", priceNote: "single invoice", badge: "$5,000 credits toward conversion", features: ["Negotiation & Closing on 2 named deals, over 6 weeks", "Written charter with 3 default KPIs", "Pipeline governance notes", "6 weeks, no commitment beyond"] },
-  { name: "Core", tagline: "CRO-level direction that still closes your top 3 deals. 2 days/month.", price: "$4,800/mo", priceNote: "Founding, list $6,000/mo (-20%)", badge: "List $6,000/mo · -20%", featured: true, ribbon: "Best value", features: ["Own the forecast and operating cadence", "Direct work on your top 3 deals (calls, negotiation, closing)", "Deal coaching + monthly review and pipeline governance", "3-month min, renews monthly"] },
-  { name: "Extended", tagline: "Revenue ownership, weekly closing, board-level governance. 5 days/month.", price: "$10,400/mo", priceNote: "Founding, list $13,000/mo (-20%)", badge: "List $13,000/mo · -20%", features: ["Own the number, plan and forecast", "Weekly direct work on your top 3-5 deals (calls, negotiation, closing)", "Deal coaching + board-level governance and updates", "3-month min, renews monthly"] },
+  { name: "Core", tagline: "CRO-level direction that still closes your top 3 deals. 2 days/month.", price: "$4,800/mo", priceNote: <>Founding · <s>$6,000/mo</s> list</>, featured: true, ribbon: "Best value", features: ["Own the forecast and operating cadence", "Direct work on your top 3 deals (calls, negotiation, closing)", "Deal coaching + monthly review and pipeline governance", "3-month min, renews monthly"] },
+  { name: "Extended", tagline: "Revenue ownership, weekly closing, board-level governance. 5 days/month.", price: "$10,400/mo", priceNote: <>Founding · <s>$13,000/mo</s> list</>, features: ["Own the number, plan and forecast", "Weekly direct work on your top 3-5 deals (calls, negotiation, closing)", "Deal coaching + board-level governance and updates", "3-month min, renews monthly"] },
 ];
 
 function Services() {
@@ -45,10 +44,9 @@ function Services() {
     <>
       <section className="container-page py-16 md:py-24">
         <Reveal>
-          <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
-          <h1 className="text-hero mt-6 max-w-4xl">Offerings sized to your team, not a one-size-fits-all retainer.</h1>
+          <h1 className="text-hero max-w-4xl">Offerings sized to your team, not a one-size-fits-all retainer.</h1>
           <p className="mt-6 max-w-3xl text-lg leading-relaxed text-muted-foreground">
-            Three offerings: Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits; the path is linear and the stops are optional. Founding Cohort clients get -20% on flagship tiers.
+            Three offerings: Diagnostic, System Building, Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments. Start with the one that fits.
           </p>
         </Reveal>
       </section>
@@ -58,7 +56,7 @@ function Services() {
         eyebrow="01 · Diagnostic"
         title="A data-driven read on what's broken."
         intro="Stakeholder interviews, a CRM/data audit, and a MEDDPICC-based pipeline review scored against the four readiness pillars, with a prioritized action plan. No deposit; money-back guarantee on the core deliverable."
-        fromLine="From $4,500 · Pulse Check → multi-geo deep dive"
+        fromLine="Pulse Check → multi-geo deep dive"
         primaryPrice="From $4,500"
         ctaLabel="Start with a Pulse Check"
         ctaHref="/contact?interest=diagnostic"
@@ -69,10 +67,10 @@ function Services() {
         <OfferingBlock
           id="system-building"
           eyebrow="02 · System Building"
-          title="I build the system with your reps and it sticks."
+          title="Vonerio builds the system with your reps, and it sticks."
           intro="Co-built live. Playbook, battle cards, cadences, a CRM configuration spec your admin implements, and a KPI dashboard design aligned into one single source of truth for reps, sales and marketing. The final payment is tied to a real adoption signal."
-          fromLine="From $22,000 · Core Build → multi-BU build"
-          primaryPrice="From $22,000"
+          fromLine="Founding · list $22,000 · Core Build → multi-region build"
+          primaryPrice="From $17,600"
           ctaLabel="Scope a System Build"
           ctaHref="/contact?interest=system-building"
           cards={SYSTEM_CARDS}
@@ -83,8 +81,8 @@ function Services() {
         id="fractional"
         eyebrow="03 · Fractional CRO"
         title="A revenue leader who still closes, on shared time."
-        intro="On shared time, I take ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: I get on the calls with the buyer's decision-makers, run the negotiation, and close the deals that decide your quarter, alongside your reps. It's the same motion I used to close $26M+ myself, carrying a quota. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven. Try a 6-week sprint first."
-        fromLine="From $4,800/mo · Trial Sprint, then Core or Extended"
+        intro="On shared time, Vonerio takes ownership of your revenue: the number and the plan to hit it, the operating cadence, a forecast your board can trust, and the team's coaching and discipline. That's the CRO half. The operator half is what most fractional CROs don't do: getting on the calls with the buyer's decision-makers, running the negotiation, and closing the deals that decide your quarter, alongside your reps. It's the same motion behind $26M+ in personally closed deals. CRO-level leadership without a $200K+ hire, sized for a team that needs revenue driven. Start with a 6-week sprint."
+        fromLine="Trial Sprint, then Core or Extended"
         primaryPrice="From $4,800/mo"
         ctaLabel="Start a Trial Sprint"
         ctaHref="/contact?interest=fractional"
@@ -95,7 +93,7 @@ function Services() {
 
       <CTABand
         title="Not sure where to start?"
-        sub="Tell me about your pipeline and I'll point you to the right first step, usually a Diagnostic or a 6-week Trial Sprint."
+        sub="Share your pipeline and Vonerio will point you to the right first step, usually a Diagnostic or a 6-week Trial Sprint."
         primary={{ label: "Talk to Loïc", to: "/contact", variant: "primary" }}
       />
     </>
