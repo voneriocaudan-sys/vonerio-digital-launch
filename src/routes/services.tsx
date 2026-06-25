@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { SectionHeading, CTABand } from "@/components/ui-bits";
 import { PricingCard } from "@/components/OfferingCard";
 import { Reveal } from "@/components/Reveal";
