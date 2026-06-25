@@ -1,6 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { SectionHeading, CTABand } from "@/components/ui-bits";
 import { PricingCard } from "@/components/OfferingCard";
 import { Reveal } from "@/components/Reveal";
@@ -164,35 +170,25 @@ const FAQS = [
 ];
 
 function FAQ() {
-  const [open, setOpen] = useState<number | null>(0);
   return (
     <section className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
       <div className="container-page py-20 md:py-28">
         <Reveal>
           <SectionHeading eyebrow="FAQ" title="Questions before we start." />
         </Reveal>
-        <div className="mt-10 mx-auto max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card">
-          {FAQS.map((item, i) => {
-            const isOpen = open === i;
-            return (
-              <div key={item.q}>
-                <button
-                  type="button"
-                  onClick={() => setOpen(isOpen ? null : i)}
-                  className="block w-full text-left"
-                  aria-expanded={isOpen}
-                >
-                  <div className="flex items-center justify-between gap-6 px-6 py-5">
-                    <span className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>{item.q}</span>
-                    <ChevronDown className={`h-5 w-5 shrink-0 transition ${isOpen ? "rotate-180 text-[var(--color-violet)] dark:text-[var(--color-magenta)]" : "text-muted-foreground"}`} />
-                  </div>
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 text-sm leading-relaxed text-muted-foreground">{item.a}</div>
-                )}
-              </div>
-            );
-          })}
+        <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border bg-card">
+          <Accordion type="single" collapsible defaultValue="item-0">
+            {FAQS.map((item, i) => (
+              <AccordionItem key={item.q} value={`item-${i}`}>
+                <AccordionTrigger className="px-6 text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+                  {item.q}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 text-sm leading-relaxed text-muted-foreground">
+                  {item.a}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>
