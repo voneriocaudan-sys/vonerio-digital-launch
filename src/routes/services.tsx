@@ -177,7 +177,7 @@ function FAQ() {
           <SectionHeading eyebrow="FAQ" title="Questions before we start." />
         </Reveal>
         <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border bg-card">
-          <Accordion type="single" collapsible defaultValue="item-0">
+          <Accordion type="single" collapsible>
             {FAQS.map((item, i) => (
               <AccordionItem key={item.q} value={`item-${i}`}>
                 <AccordionTrigger className="px-6 text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
