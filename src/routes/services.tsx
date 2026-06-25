@@ -170,26 +170,43 @@ const FAQS = [
 ];
 
 function FAQ() {
+  const [open, setOpen] = useState(false);
   return (
     <section className="bg-[var(--color-mist)] dark:bg-[var(--color-indigo)]/30">
       <div className="container-page py-20 md:py-28">
         <Reveal>
           <SectionHeading eyebrow="FAQ" title="Questions before we start." />
         </Reveal>
-        <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border bg-card">
-          <Accordion type="single" collapsible>
-            {FAQS.map((item, i) => (
-              <AccordionItem key={item.q} value={`item-${i}`}>
-                <AccordionTrigger className="px-6 text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
-                  {item.q}
-                </AccordionTrigger>
-                <AccordionContent className="px-6 text-sm leading-relaxed text-muted-foreground">
-                  {item.a}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
+        {!open && (
+          <Reveal delay={100}>
+            <div className="mt-10 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setOpen(true)}
+                className="inline-flex items-center justify-center rounded-full bg-[var(--color-violet)] px-6 py-3 text-sm font-medium text-white transition hover:opacity-90 dark:bg-[var(--color-magenta)]"
+              >
+                Open FAQ
+                <ChevronDown className="ml-2 h-4 w-4" />
+              </button>
+            </div>
+          </Reveal>
+        )}
+        {open && (
+          <div className="mt-10 mx-auto max-w-3xl rounded-2xl border border-border bg-card">
+            <Accordion type="single" collapsible>
+              {FAQS.map((item, i) => (
+                <AccordionItem key={item.q} value={`item-${i}`}>
+                  <AccordionTrigger className="px-6 text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+                    {item.q}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-6 text-sm leading-relaxed text-muted-foreground">
+                    {item.a}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        )}
       </div>
     </section>
   );
