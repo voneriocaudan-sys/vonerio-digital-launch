@@ -1,9 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SearchCheck, Blocks, Compass, ShieldCheck, Users, Handshake } from "lucide-react";
-import { Pill, SectionHeading, CTAButton, StatBlock, CheckItem, CTABand } from "@/components/ui-bits";
+import { SectionHeading, CTAButton, CheckItem, CTABand } from "@/components/ui-bits";
 import { OverviewCard, PillarCard } from "@/components/OfferingCard";
 import { Reveal } from "@/components/Reveal";
-import { COHORT_SPOTS_LEFT } from "@/lib/cohort";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -90,60 +89,110 @@ function Home() {
         <div className="container-page py-16 md:py-24 lg:py-28">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
-              <Pill tone="tangerine">Founding Cohort · {COHORT_SPOTS_LEFT} spot{COHORT_SPOTS_LEFT === 1 ? "" : "s"} · -20% on flagship tiers</Pill>
-              <h1 className="text-hero mt-6">
+              <h1 className="text-hero">
                 Build a sales system{" "}
                 <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
               </h1>
               <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
                 Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Enterprise rigor, built on $26M+ in closed deals. Sized for a team that can't justify a $200K VP of Sales.
-              </p>
               <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
                 <CTAButton href="/contact?interest=diagnostic" variant="ghost">Book a diagnostic</CTAButton>
               </div>
             </div>
-            <dl className="mx-auto mt-14 grid max-w-3xl grid-cols-3 gap-6 border-t border-border pt-8">
-              <StatBlock value="$26" suffix="M+" label="Personally closed" />
-              <StatBlock value="214" suffix="%" label="Avg quota (peak 323%)" />
-              <StatBlock value="50" suffix="+" label="Deals closed" />
-            </dl>
           </Reveal>
         </div>
       </section>
 
       {/* Trust strip */}
       <section className="border-y border-border bg-[var(--color-mist)]/60 dark:bg-[var(--color-indigo)]/20">
-        <div className="container-page flex flex-col items-center gap-6 py-8 md:flex-row md:justify-between md:gap-8 md:py-7">
-          <span className="text-eyebrow">Methodology trained in</span>
-          <ul className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm font-medium text-foreground/80">
-            <li>MEDDPICC</li>
-            <li className="text-border">·</li>
-            <li>Challenger</li>
-            <li className="text-border">·</li>
-            <li>Harvard Negotiation</li>
-            <li className="text-border">·</li>
-            <li>Value-Based Selling</li>
-          </ul>
+        <div className="container-page flex flex-col gap-5 py-8 md:py-9">
+          <p className="text-center text-sm leading-relaxed text-foreground/80 md:text-base">
+            Built on $26M+ in closed deals, across 50+ enterprise and mid-market deals, at 214% average quota (peak 323%). Sized for a team that can't justify a $200K VP of Sales.
+          </p>
+          <div className="flex flex-col items-center gap-3 border-t border-border/60 pt-5 md:flex-row md:justify-center md:gap-6">
+            <span className="text-eyebrow">Methodology trained in</span>
+            <ul className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-foreground/80">
+              <li>MEDDPICC</li>
+              <li className="text-border">·</li>
+              <li>Challenger</li>
+              <li className="text-border">·</li>
+              <li>Harvard Negotiation</li>
+              <li className="text-border">·</li>
+              <li>Value-based selling</li>
+            </ul>
+          </div>
         </div>
       </section>
 
-      {/* What I do */}
+      {/* What Vonerio does */}
       <section className="container-page py-20 md:py-28">
         <Reveal>
           <SectionHeading
-            eyebrow="What I do"
+            eyebrow="What Vonerio does"
             title="Think. Build. Run."
-            sub="Three steps that fix your sales organization and turn it into one clean foundation AI can run on."
+            sub="Three steps that turn inconsistent selling into one clean system your team and your AI can run on."
           />
         </Reveal>
         <div className="mt-12 grid gap-6 md:grid-cols-3">
-          <Reveal><OverviewCard n="01" icon={SearchCheck} title="Think → Diagnostic" body="A data-driven read on what is slowing the pipeline, scored against the 4-pillar readiness framework. You get a prioritized plan and a clear map of which data is clean, dirty or missing. From a 1-week Pulse Check to a multi-geo deep dive." to="/services" hash="diagnostic" /></Reveal>
-          <Reveal delay={80}><OverviewCard n="02" icon={Blocks} title="Build → System Building" body="In 90 days I build one system with your reps, playbook, qualification standard, battle cards, cadences, and a CRM configuration spec your admin implements. This is where your single source of truth gets built: one process, clean data, and every rep, sales lead and marketer aligned." to="/services" hash="system-building" /></Reveal>
-          <Reveal delay={160}><OverviewCard n="03" icon={Compass} title="Run → Fractional CRO" body="On shared time, I own the number and the system to hit it: the plan, the operating cadence, a forecast your board can trust, and the team. Unlike most fractional CROs, I also get on the calls and close the deals that decide the quarter. CRO-level leadership without a $200K+ hire. Try a 6-week sprint first." to="/services" hash="fractional" /></Reveal>
+          <Reveal>
+            <OverviewCard
+              n="01"
+              icon={SearchCheck}
+              title="Think → Diagnostic"
+              body={
+                <>
+                  <p>A data-driven read on what's slowing the pipeline.</p>
+                  <ul className="mt-3 space-y-2">
+                    <CheckItem>Scored against the four readiness pillars</CheckItem>
+                    <CheckItem>A prioritized plan, plus a map of which data is clean, dirty or missing</CheckItem>
+                    <CheckItem>From a one-week check to a multi-region deep dive</CheckItem>
+                  </ul>
+                </>
+              }
+              to="/services"
+              hash="diagnostic"
+            />
+          </Reveal>
+          <Reveal delay={80}>
+            <OverviewCard
+              n="02"
+              icon={Blocks}
+              title="Build → System Building"
+              body={
+                <>
+                  <p>One system, built with your reps in 90 days.</p>
+                  <ul className="mt-3 space-y-2">
+                    <CheckItem>Playbook, qualification standard, battle cards, cadences</CheckItem>
+                    <CheckItem>A CRM setup your admin implements</CheckItem>
+                    <CheckItem>One process, clean data, every rep and marketer aligned</CheckItem>
+                  </ul>
+                </>
+              }
+              to="/services"
+              hash="system-building"
+            />
+          </Reveal>
+          <Reveal delay={160}>
+            <OverviewCard
+              n="03"
+              icon={Compass}
+              title="Run → Fractional CRO"
+              body={
+                <>
+                  <p>A revenue leader who still closes.</p>
+                  <ul className="mt-3 space-y-2">
+                    <CheckItem>Owns the number, the plan, the forecast and the cadence</CheckItem>
+                    <CheckItem>Gets on the calls and closes the deals that decide the quarter</CheckItem>
+                    <CheckItem>Senior leadership without a $200K+ hire. Start with a 6-week sprint</CheckItem>
+                  </ul>
+                </>
+              }
+              to="/services"
+              hash="fractional"
+            />
+          </Reveal>
         </div>
       </section>
 
@@ -153,9 +202,9 @@ function Home() {
           <Reveal>
             <div className="max-w-3xl">
               <div className="text-eyebrow mb-4 text-[var(--color-tangerine)]">Why it matters now</div>
-              <h2 className="text-h2 text-white">AI amplifies whatever is already there, including the mess.</h2>
+              <h2 className="text-h2 text-white">AI amplifies whatever's already there, including the mess.</h2>
               <p className="mt-5 text-[1.0625rem] leading-relaxed text-[var(--color-amethyst)]">
-                AI sales tools fail on dirty data and undefined process. Think → Build → Run gives you one process, one source of truth, and data your AI and AI-augmented reps can actually trust, so you ramp faster, scale, and add revenue. The same three steps that fix your sales org are what make it AI-ready.
+                AI sales tools fail on dirty data and loose process. Think, Build and Run give you one process, one source of truth, and data your tools and your team can actually trust, so you ramp faster and scale. The same three steps that fix your sales also make it AI-ready.
               </p>
             </div>
           </Reveal>
@@ -187,12 +236,19 @@ function Home() {
           <Reveal>
             <SectionHeading
               eyebrow="Why Vonerio"
-              title={<>An operator's system <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">built in real deals, made to be yours.</span></>}
+              title={<>An operator's system, <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">built in real deals, made to be yours.</span></>}
             />
           </Reveal>
 
+          <ul className="mt-12 space-y-5">
+            <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
+            <Why icon={Users} title="Co-built with your reps." body="Each piece is tested on a real deal before it's final." />
+            <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to real adoption, not elapsed time." />
+            <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No lock-in." />
+          </ul>
+
           <Reveal>
-            <div className="mt-10 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
+            <div className="mt-12 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
               <div className="flex items-center gap-5">
                 <img
                   src={HERO_IMG}
@@ -205,7 +261,7 @@ function Home() {
                     Loïc Caudan, Founder & Fractional CRO.
                   </div>
                   <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    Ex-Accenture, 10+ years closing complex Enterprise & Mid-Market deals.
+                    Ex-Accenture, 10+ years closing complex enterprise and mid-market deals.
                   </p>
                   <a
                     href="/about"
@@ -217,21 +273,14 @@ function Home() {
               </div>
             </div>
           </Reveal>
-
-          <ul className="mt-12 space-y-5">
-            <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
-            <Why icon={Users} title="Co-built with your reps." body="Each artifact is tested on a real deal before it's finalized." />
-            <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to a real adoption signal, not elapsed time." />
-            <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No ongoing dependency." />
-          </ul>
         </div>
 
         <div className="bg-[var(--color-indigo)] text-white">
           <div className="container-page py-16 md:py-20">
             <div className="grid gap-10 md:grid-cols-3">
-              <ProofStat value="$16.2M" label="Largest single deal across 12 countries in 18 months" />
-              <ProofStat value="$55M" label="First client engagement (APAC): a full Diagnostic delivered (4 pillars, segmentation, plan)" />
-              <ProofStat value="4" label="Languages negotiated & closed in, live" />
+              <ProofStat value="$16.2M" label="Largest single deal" />
+              <ProofStat value="$55M" label="First engagement (APAC, full Diagnostic delivered)" />
+              <ProofStat value="4" label="Languages closed in" />
             </div>
           </div>
         </div>
@@ -246,9 +295,9 @@ function Home() {
           {/* connector line */}
           <div aria-hidden className="pointer-events-none absolute left-0 right-0 top-6 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent md:block" />
           <ol className="grid gap-10 md:grid-cols-3 md:gap-8">
-            <TimelineStep n="01" title="Diagnose" body="Stakeholder interviews, a CRM/data audit and a MEDDPICC-based pipeline review, scored against the four readiness pillars." />
-            <TimelineStep n="02" title="Co-build with your reps" body="In 90 days we build the system together: playbook, battle cards, cadences and dashboards, tested on live deals." />
-            <TimelineStep n="03" title="Run your top deals, then hand over" body="I own the number and close your top deals, then hand to a trained internal owner whenever you choose. No lock-in." />
+            <TimelineStep n="01" title="Diagnose" body="Find what's slowing the pipeline." />
+            <TimelineStep n="02" title="Co-build with your reps" body="Build the system together, tested on live deals." />
+            <TimelineStep n="03" title="Run your top deals, hand over when ready" body="Vonerio owns the number and closes your top deals, then hands to a trained internal owner whenever you choose. No lock-in." />
           </ol>
         </div>
       </section>
@@ -256,7 +305,7 @@ function Home() {
       {/* CTA band */}
       <CTABand
         title="Join the Founding Cohort."
-        sub="I'm building Vonerio's first case studies, so the first five clients get -20% on flagship engagements and more of my direct time, in exchange for a reference once the work pays off."
+        sub="Vonerio is building its first case studies, so the first five clients get -20% on flagship engagements and more direct time, in exchange for a reference once the work pays off."
         primary={{ label: "View pricing", to: "/services", variant: "primary" }}
         secondary={{ label: "Book a diagnostic", href: "/contact?interest=diagnostic" }}
       />
@@ -287,18 +336,6 @@ function ProofStat({ value, label }: { value: string; label: string }) {
   );
 }
 
-function Step({ n, title, body }: { n: string; title: string; body: string }) {
-  return (
-    <Reveal>
-      <div className="flex h-full flex-col rounded-2xl border border-border bg-card p-7">
-        <span className="text-eyebrow">{n}</span>
-        <h3 className="mt-3 text-xl font-semibold tracking-tight" style={{ fontFamily: "var(--font-display)" }}>{title}</h3>
-        <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{body}</p>
-      </div>
-    </Reveal>
-  );
-}
-
 function TimelineStep({ n, title, body }: { n: string; title: string; body: string }) {
   return (
     <Reveal>
@@ -315,7 +352,3 @@ function TimelineStep({ n, title, body }: { n: string; title: string; body: stri
     </Reveal>
   );
 }
-
-// Step and CheckItem retained for potential reuse
-void Step;
-void CheckItem;
