@@ -240,39 +240,49 @@ function Home() {
             />
           </Reveal>
 
-          <ul className="mt-12 space-y-5">
-            <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
-            <Why icon={Users} title="Co-built with your reps." body="Each piece is tested on a real deal before it's final." />
-            <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to real adoption, not elapsed time." />
-            <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No lock-in." />
-          </ul>
+          <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-16">
+            <div>
+              <ul className="space-y-5">
+                <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
+                <Why icon={Users} title="Co-built with your reps." body="Each piece is tested on a real deal before it's final." />
+                <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to real adoption, not elapsed time." />
+                <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No lock-in." />
+              </ul>
 
-          <Reveal>
-            <div className="mt-12 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
-              <div className="flex items-center gap-5">
-                <img
-                  src={HERO_IMG}
-                  alt="Loïc Caudan"
-                  className="h-24 w-24 shrink-0 rounded-full object-cover md:h-28 md:w-28"
-                  loading="lazy"
-                />
-                <div>
-                  <div className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
-                    Loïc Caudan, Founder & Fractional CRO.
+              <Reveal>
+                <div className="mt-10 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
+                  <div className="flex items-center gap-5">
+                    <img
+                      src={HERO_IMG}
+                      alt="Loïc Caudan"
+                      className="h-24 w-24 shrink-0 rounded-full object-cover md:h-28 md:w-28"
+                      loading="lazy"
+                    />
+                    <div>
+                      <div className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+                        Loïc Caudan, Founder & Fractional CRO.
+                      </div>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                        Ex-Accenture, 10+ years closing complex enterprise and mid-market deals.
+                      </p>
+                      <a
+                        href="/about"
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]"
+                      >
+                        Read the full story →
+                      </a>
+                    </div>
                   </div>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    Ex-Accenture, 10+ years closing complex enterprise and mid-market deals.
-                  </p>
-                  <a
-                    href="/about"
-                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]"
-                  >
-                    Read the full story →
-                  </a>
                 </div>
-              </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            <Reveal delay={80}>
+              <div className="lg:order-last">
+                <SystemVisual />
+              </div>
+            </Reveal>
+          </div>
         </div>
 
         <div className="bg-[var(--color-indigo)] text-white">
