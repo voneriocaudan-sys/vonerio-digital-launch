@@ -88,18 +88,21 @@ function Home() {
         </div>
         <div className="container-page py-16 md:py-24 lg:py-28">
           <Reveal>
-            <div className="mx-auto max-w-3xl text-center">
-              <h1 className="text-hero">
-                Build a sales system{" "}
-                <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
-              </h1>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-3">
-                <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
-                <CTAButton href="/contact?interest=diagnostic" variant="ghost">Book a diagnostic</CTAButton>
+            <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,520px)] lg:gap-16">
+              <div className="mx-auto max-w-3xl text-center lg:mx-0 lg:max-w-none lg:text-left">
+                <h1 className="text-hero">
+                  Build a sales system{" "}
+                  <span className="text-[var(--color-violet)] dark:text-[var(--color-magenta)]">your team runs without you.</span>
+                </h1>
+                <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                  Vonerio diagnoses what's slowing your pipeline, builds one system with your reps, and runs it until it sticks. You're left with clean data and a defined process your AI can finally act on.
+                </p>
+                <div className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start">
+                  <CTAButton href="/scorecard" variant="primary">Score your team (free)</CTAButton>
+                  <CTAButton href="/contact?interest=diagnostic" variant="ghost">Book a diagnostic</CTAButton>
+                </div>
               </div>
+              <HeroSystemGraphic />
             </div>
           </Reveal>
         </div>
@@ -125,6 +128,22 @@ function Home() {
           </div>
         </div>
       </section>
+
+      {/* Risk-reversal strip */}
+      <section className="border-b border-border">
+        <div className="container-page py-4 md:py-5">
+          <ul className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-center text-sm text-foreground/75 md:gap-x-8">
+            <li>No deposit</li>
+            <li aria-hidden className="text-border">·</li>
+            <li>Money-back on the diagnostic</li>
+            <li aria-hidden className="text-border">·</li>
+            <li>Payment tied to real adoption</li>
+            <li aria-hidden className="text-border">·</li>
+            <li>No lock-in</li>
+          </ul>
+        </div>
+      </section>
+
 
       {/* What Vonerio does */}
       <section className="container-page py-20 md:py-28">
