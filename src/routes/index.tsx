@@ -371,3 +371,167 @@ function TimelineStep({ n, title, body }: { n: string; title: string; body: stri
     </Reveal>
   );
 }
+
+function HeroSystemGraphic() {
+  // Scattered → ordered network. Left side: loose, faint points.
+  // Right side: a tidy 4x4 grid of nodes connected into one system.
+  // Middle: curved connectors resolving chaos into structure.
+  return (
+    <div className="relative mx-auto aspect-square w-full max-w-[420px] lg:max-w-[520px]">
+      <svg
+        role="img"
+        aria-label="Scattered data points resolving into one connected system"
+        viewBox="0 0 600 600"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-full w-full"
+      >
+        <defs>
+          <linearGradient id="hero-connector" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stopColor="var(--color-iris)" stopOpacity="0.15" />
+            <stop offset="55%" stopColor="var(--color-violet)" stopOpacity="0.55" />
+            <stop offset="100%" stopColor="var(--color-violet)" stopOpacity="0.9" />
+          </linearGradient>
+          <radialGradient id="hero-halo" cx="0.72" cy="0.5" r="0.55">
+            <stop offset="0%" stopColor="var(--color-violet)" stopOpacity="0.18" />
+            <stop offset="100%" stopColor="var(--color-violet)" stopOpacity="0" />
+          </radialGradient>
+        </defs>
+
+        {/* Soft halo behind the ordered grid */}
+        <rect x="0" y="0" width="600" height="600" fill="url(#hero-halo)" />
+
+        {/* Scattered / faint points (the mess) */}
+        <g className="hero-scatter" fill="var(--color-iris)">
+          <circle cx="52" cy="128" r="3" opacity="0.55" />
+          <circle cx="96" cy="88" r="2.4" opacity="0.4" />
+          <circle cx="118" cy="212" r="3.5" opacity="0.6" />
+          <circle cx="46" cy="284" r="2.6" opacity="0.35" />
+          <circle cx="152" cy="330" r="3" opacity="0.5" />
+          <circle cx="70" cy="410" r="3.2" opacity="0.55" />
+          <circle cx="132" cy="482" r="2.6" opacity="0.4" />
+          <circle cx="34" cy="512" r="3" opacity="0.35" />
+          <circle cx="184" cy="72" r="2.6" opacity="0.45" />
+          <circle cx="204" cy="418" r="3" opacity="0.5" />
+          <circle cx="88" cy="352" r="2.2" opacity="0.35" />
+          <circle cx="160" cy="168" r="2.4" opacity="0.4" />
+        </g>
+
+        {/* Converging connectors (chaos resolving into order) */}
+        <g
+          stroke="url(#hero-connector)"
+          strokeWidth="1.25"
+          strokeLinecap="round"
+          fill="none"
+          className="hero-flow"
+        >
+          <path d="M52 128 C 200 150, 260 200, 340 220" />
+          <path d="M118 212 C 220 220, 280 250, 340 300" />
+          <path d="M46 284 C 200 290, 270 310, 340 300" />
+          <path d="M152 330 C 240 340, 290 360, 340 380" />
+          <path d="M70 410 C 210 400, 280 400, 340 380" />
+          <path d="M132 482 C 240 460, 300 440, 340 460" />
+          <path d="M204 418 C 260 420, 300 430, 340 460" />
+          <path d="M184 72 C 260 120, 310 170, 340 220" />
+        </g>
+
+        {/* Ordered grid: one clean, connected system */}
+        {(() => {
+          const cols = 4;
+          const rows = 4;
+          const startX = 360;
+          const startY = 190;
+          const gap = 60;
+          const nodes: { x: number; y: number }[] = [];
+          for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+              nodes.push({ x: startX + c * gap, y: startY + r * gap });
+            }
+          }
+          const lines: { x1: number; y1: number; x2: number; y2: number }[] = [];
+          for (let r = 0; r < rows; r++) {
+            for (let c = 0; c < cols; c++) {
+              if (c < cols - 1) {
+                lines.push({
+                  x1: startX + c * gap,
+                  y1: startY + r * gap,
+                  x2: startX + (c + 1) * gap,
+                  y2: startY + r * gap,
+                });
+              }
+              if (r < rows - 1) {
+                lines.push({
+                  x1: startX + c * gap,
+                  y1: startY + r * gap,
+                  x2: startX + c * gap,
+                  y2: startY + (r + 1) * gap,
+                });
+              }
+            }
+          }
+          return (
+            <g>
+              <g
+                stroke="var(--color-violet)"
+                strokeOpacity="0.55"
+                strokeWidth="1.2"
+                strokeLinecap="round"
+              >
+                {lines.map((l, i) => (
+                  <line key={`l${i}`} x1={l.x1} y1={l.y1} x2={l.x2} y2={l.y2} />
+                ))}
+              </g>
+              <g fill="var(--color-violet)" className="hero-grid-nodes">
+                {nodes.map((n, i) => (
+                  <circle key={`n${i}`} cx={n.x} cy={n.y} r={4.5} />
+                ))}
+              </g>
+              {/* Emphasis pulse on a central hub */}
+              <circle
+                cx={startX + gap * 1.5}
+                cy={startY + gap * 1.5}
+                r="7"
+                fill="var(--color-violet)"
+                className="hero-hub"
+              />
+            </g>
+          );
+        })()}
+      </svg>
+
+      <style>{`
+        @keyframes heroPulse {
+          0%, 100% { opacity: 0.55; transform: scale(1); }
+          50% { opacity: 1; transform: scale(1.08); }
+        }
+        @keyframes heroFlow {
+          0% { stroke-dashoffset: 24; }
+          100% { stroke-dashoffset: 0; }
+        }
+        @keyframes heroDrift {
+          0%, 100% { opacity: 0.35; }
+          50% { opacity: 0.7; }
+        }
+        .hero-flow path {
+          stroke-dasharray: 4 6;
+          animation: heroFlow 6s linear infinite;
+        }
+        .hero-hub {
+          transform-origin: center;
+          transform-box: fill-box;
+          animation: heroPulse 3.2s ease-in-out infinite;
+        }
+        .hero-scatter circle {
+          animation: heroDrift 5s ease-in-out infinite;
+        }
+        .hero-scatter circle:nth-child(2n) { animation-delay: 0.8s; }
+        .hero-scatter circle:nth-child(3n) { animation-delay: 1.6s; }
+        @media (prefers-reduced-motion: reduce) {
+          .hero-flow path,
+          .hero-hub,
+          .hero-scatter circle { animation: none; }
+        }
+      `}</style>
+    </div>
+  );
+}
