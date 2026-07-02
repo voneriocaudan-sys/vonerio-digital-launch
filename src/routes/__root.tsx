@@ -79,6 +79,35 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" },
     ],
     scripts: [
+      // Organization / ProfessionalService JSON-LD (sitewide)
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "@id": "https://vonerio.com/#organization",
+          name: "Vonerio",
+          url: "https://vonerio.com",
+          description:
+            "Fractional sales leadership for B2B software and tech-services teams: diagnose, build and run the sales system so revenue does not depend on one or two people.",
+          founder: {
+            "@type": "Person",
+            name: "Loïc Caudan",
+            jobTitle: "Fractional CRO",
+            sameAs: "https://www.linkedin.com/in/lcaudan/",
+          },
+          areaServed: ["APAC", "EMEA"],
+          email: "loic.caudan@vonerio.com",
+          sameAs: ["https://www.linkedin.com/company/vonerio/"],
+          contactPoint: {
+            "@type": "ContactPoint",
+            email: "loic.caudan@vonerio.com",
+            contactType: "sales",
+            areaServed: ["APAC", "EMEA"],
+            availableLanguage: ["English", "French"],
+          },
+        }),
+      },
       // Plausible (privacy-friendly analytics)
       {
         async: true,
