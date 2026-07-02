@@ -240,39 +240,49 @@ function Home() {
             />
           </Reveal>
 
-          <ul className="mt-12 space-y-5">
-            <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
-            <Why icon={Users} title="Co-built with your reps." body="Each piece is tested on a real deal before it's final." />
-            <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to real adoption, not elapsed time." />
-            <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No lock-in." />
-          </ul>
+          <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center lg:gap-16">
+            <div>
+              <ul className="space-y-5">
+                <Why icon={ShieldCheck} title="Built while carrying quota." body="Every framework was used on live, multi-million-dollar deals first." />
+                <Why icon={Users} title="Co-built with your reps." body="Each piece is tested on a real deal before it's final." />
+                <Why icon={Handshake} title="Outcome-linked payments." body="Final installments are tied to real adoption, not elapsed time." />
+                <Why icon={Compass} title="Designed for handover." body="A trained internal owner inherits the system. No lock-in." />
+              </ul>
 
-          <Reveal>
-            <div className="mt-12 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
-              <div className="flex items-center gap-5">
-                <img
-                  src={HERO_IMG}
-                  alt="Loïc Caudan"
-                  className="h-24 w-24 shrink-0 rounded-full object-cover md:h-28 md:w-28"
-                  loading="lazy"
-                />
-                <div>
-                  <div className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
-                    Loïc Caudan, Founder & Fractional CRO.
+              <Reveal>
+                <div className="mt-10 max-w-xl rounded-2xl border border-border bg-card p-6 md:p-8">
+                  <div className="flex items-center gap-5">
+                    <img
+                      src={HERO_IMG}
+                      alt="Loïc Caudan"
+                      className="h-24 w-24 shrink-0 rounded-full object-cover md:h-28 md:w-28"
+                      loading="lazy"
+                    />
+                    <div>
+                      <div className="text-base font-semibold" style={{ fontFamily: "var(--font-display)" }}>
+                        Loïc Caudan, Founder & Fractional CRO.
+                      </div>
+                      <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
+                        Ex-Accenture, 10+ years closing complex enterprise and mid-market deals.
+                      </p>
+                      <a
+                        href="/about"
+                        className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]"
+                      >
+                        Read the full story →
+                      </a>
+                    </div>
                   </div>
-                  <p className="mt-1 text-sm leading-relaxed text-muted-foreground">
-                    Ex-Accenture, 10+ years closing complex enterprise and mid-market deals.
-                  </p>
-                  <a
-                    href="/about"
-                    className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-[var(--color-violet)] hover:underline dark:text-[var(--color-magenta)]"
-                  >
-                    Read the full story →
-                  </a>
                 </div>
-              </div>
+              </Reveal>
             </div>
-          </Reveal>
+
+            <Reveal delay={80}>
+              <div className="lg:order-last">
+                <SystemVisual />
+              </div>
+            </Reveal>
+          </div>
         </div>
 
         <div className="bg-[var(--color-indigo)] text-white">
@@ -350,5 +360,145 @@ function TimelineStep({ n, title, body }: { n: string; title: string; body: stri
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{body}</p>
       </li>
     </Reveal>
+  );
+}
+
+function SystemVisual() {
+  // Scattered points (left) resolving into an ordered grid + network (right).
+  const scatter = [
+    { x: 40, y: 60 }, { x: 90, y: 130 }, { x: 60, y: 220 }, { x: 120, y: 300 },
+    { x: 30, y: 360 }, { x: 150, y: 90 }, { x: 100, y: 400 }, { x: 170, y: 250 },
+    { x: 55, y: 460 }, { x: 140, y: 470 }, { x: 180, y: 180 }, { x: 75, y: 500 },
+  ];
+  // 4x5 clean grid on right side
+  const gridCols = 4;
+  const gridRows = 5;
+  const gx0 = 340;
+  const gy0 = 80;
+  const gdx = 80;
+  const gdy = 90;
+  const grid: { x: number; y: number }[] = [];
+  for (let r = 0; r < gridRows; r++) {
+    for (let c = 0; c < gridCols; c++) {
+      grid.push({ x: gx0 + c * gdx, y: gy0 + r * gdy });
+    }
+  }
+  // Connection lines along the grid (horizontal + vertical + a few diagonals)
+  const idx = (r: number, c: number) => r * gridCols + c;
+  const lines: { a: number; b: number }[] = [];
+  for (let r = 0; r < gridRows; r++) {
+    for (let c = 0; c < gridCols - 1; c++) lines.push({ a: idx(r, c), b: idx(r, c + 1) });
+  }
+  for (let c = 0; c < gridCols; c++) {
+    for (let r = 0; r < gridRows - 1; r++) lines.push({ a: idx(r, c), b: idx(r + 1, c) });
+  }
+  // A few diagonals for depth
+  lines.push({ a: idx(0, 0), b: idx(1, 1) });
+  lines.push({ a: idx(2, 1), b: idx(3, 2) });
+  lines.push({ a: idx(1, 2), b: idx(2, 3) });
+
+  return (
+    <div className="relative mx-auto w-full max-w-[560px] aspect-square">
+      <div
+        aria-hidden
+        className="absolute inset-0 rounded-3xl"
+        style={{
+          background:
+            "radial-gradient(circle at 78% 45%, color-mix(in oklab, var(--color-violet) 14%, transparent), transparent 60%)",
+        }}
+      />
+      <svg
+        viewBox="0 0 700 560"
+        role="img"
+        aria-label="Abstract visualization: scattered data points resolving into one connected system"
+        className="relative h-full w-full"
+      >
+        <defs>
+          <linearGradient id="wv-line" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="var(--color-iris)" stopOpacity="0.35" />
+            <stop offset="1" stopColor="var(--color-violet)" stopOpacity="0.9" />
+          </linearGradient>
+          <linearGradient id="wv-fade" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stopColor="var(--color-mist)" stopOpacity="0" />
+            <stop offset="0.5" stopColor="var(--color-iris)" stopOpacity="0.35" />
+            <stop offset="1" stopColor="var(--color-violet)" stopOpacity="0.9" />
+          </linearGradient>
+        </defs>
+
+        {/* Bridging strokes from scatter to grid */}
+        <g stroke="url(#wv-fade)" strokeWidth="1" strokeLinecap="round" fill="none">
+          {scatter.slice(0, 8).map((p, i) => {
+            const target = grid[(i * 3) % grid.length];
+            return (
+              <path
+                key={`b-${i}`}
+                d={`M${p.x},${p.y} C${(p.x + target.x) / 2},${p.y} ${(p.x + target.x) / 2},${target.y} ${target.x},${target.y}`}
+                opacity="0.5"
+              />
+            );
+          })}
+        </g>
+
+        {/* Scattered points (dim) */}
+        <g fill="var(--color-iris)">
+          {scatter.map((p, i) => (
+            <circle
+              key={`s-${i}`}
+              cx={p.x}
+              cy={p.y}
+              r={2 + (i % 3) * 0.6}
+              opacity={0.35 + ((i * 37) % 50) / 200}
+            >
+              <animate
+                attributeName="opacity"
+                values={`${0.25};${0.55};${0.25}`}
+                dur={`${4 + (i % 4)}s`}
+                begin={`${(i % 5) * 0.3}s`}
+                repeatCount="indefinite"
+              />
+            </circle>
+          ))}
+        </g>
+
+        {/* Grid connection lines */}
+        <g stroke="url(#wv-line)" strokeWidth="1.25" strokeLinecap="round">
+          {lines.map((l, i) => {
+            const a = grid[l.a];
+            const b = grid[l.b];
+            return <line key={`l-${i}`} x1={a.x} y1={a.y} x2={b.x} y2={b.y} opacity="0.7" />;
+          })}
+        </g>
+
+        {/* Grid nodes */}
+        <g>
+          {grid.map((p, i) => (
+            <g key={`g-${i}`}>
+              <circle cx={p.x} cy={p.y} r="10" fill="var(--color-violet)" opacity="0.08" />
+              <circle cx={p.x} cy={p.y} r="4.5" fill="var(--color-violet)">
+                <animate
+                  attributeName="opacity"
+                  values="0.75;1;0.75"
+                  dur={`${3 + (i % 5) * 0.5}s`}
+                  begin={`${(i % 6) * 0.25}s`}
+                  repeatCount="indefinite"
+                />
+              </circle>
+            </g>
+          ))}
+        </g>
+
+        {/* Pulse traveling along one path (subtle) */}
+        <g>
+          <circle r="3" fill="var(--color-magenta)">
+            <animateMotion
+              dur="6s"
+              repeatCount="indefinite"
+              path={`M${grid[0].x},${grid[0].y} L${grid[3].x},${grid[3].y} L${grid[3 + gridCols * 2].x},${grid[3 + gridCols * 2].y} L${grid[gridCols * 4].x},${grid[gridCols * 4].y}`}
+            />
+            <animate attributeName="opacity" values="0;1;1;0" dur="6s" repeatCount="indefinite" />
+          </circle>
+        </g>
+      </svg>
+    </div>
   );
 }
