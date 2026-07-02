@@ -29,7 +29,9 @@ export function Footer() {
         <FooterCol title="Company">
           <FooterLink to="/about">About</FooterLink>
           <FooterLink to="/" hash="methodology">Methodology</FooterLink>
+          <FooterLink to="/faq">FAQ</FooterLink>
           <FooterLink to="/contact">Contact</FooterLink>
+          <FooterLink to="/ai">For AI and LLMs</FooterLink>
         </FooterCol>
         <FooterCol title="Get in touch">
           <a className="block text-sm text-[var(--color-amethyst)] transition hover:text-white" href="mailto:loic.caudan@vonerio.com">loic.caudan@vonerio.com</a>

@@ -18,9 +18,52 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Three offerings: Diagnostic, System Building and Fractional CRO. Fixed prices, fixed timelines, outcome-linked payments." },
       { property: "og:title", content: "Services Vonerio" },
       { property: "og:description", content: "Diagnostic, System Building and Fractional CRO sized to your team." },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: "https://vonerio.com/services" },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: "https://vonerio.com/services" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Service",
+              "@id": "https://vonerio.com/services#diagnostic",
+              name: "Diagnostic",
+              serviceType: "Sales diagnostic",
+              url: "https://vonerio.com/services#diagnostic",
+              description:
+                "A data-driven read on what is slowing the pipeline, scored against four readiness pillars, with a prioritized action plan. See the Services page for current prices and tiers.",
+              provider: { "@type": "Organization", name: "Vonerio", url: "https://vonerio.com" },
+              areaServed: ["APAC", "EMEA"],
+            },
+            {
+              "@type": "Service",
+              "@id": "https://vonerio.com/services#system-building",
+              name: "System Building",
+              serviceType: "Sales system build",
+              url: "https://vonerio.com/services#system-building",
+              description:
+                "Co-built with your reps: playbook, MEDDPICC-based qualification standard, battle cards, cadences, CRM configuration spec and a KPI dashboard design. Final payment tied to a real adoption signal. See the Services page for current prices and tiers.",
+              provider: { "@type": "Organization", name: "Vonerio", url: "https://vonerio.com" },
+              areaServed: ["APAC", "EMEA"],
+            },
+            {
+              "@type": "Service",
+              "@id": "https://vonerio.com/services#fractional",
+              name: "Fractional CRO",
+              serviceType: "Fractional sales leadership",
+              url: "https://vonerio.com/services#fractional",
+              description:
+                "Revenue ownership on shared time: the number, the plan, the operating cadence and forecast, plus getting on the calls and closing your top deals alongside your reps. See the Services page for current prices and tiers.",
+              provider: { "@type": "Organization", name: "Vonerio", url: "https://vonerio.com" },
+              areaServed: ["APAC", "EMEA"],
+            },
+          ],
+        }),
+      },
+    ],
   }),
   component: Services,
 });
